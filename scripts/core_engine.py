@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-NoMoreWalls-Pro | Extreme Core Engine (Final Fixed Version)
-修复了 safe_b64_decode 参数丢失导致的 SyntaxError。
-修复了 SS 节点解析错误 (unknown method)。
+NoMoreWalls-Pro | Extreme Core Engine (Enhanced Version)
+1. 修复了存档加载时未校验 SS 方法的问题
+2. 在生成配置前进行最终清洗
+3. 彻底杜绝非法加密方法
 """
 
 import os
@@ -35,7 +36,7 @@ MAX_LATENCY_MS = int(os.getenv("MAX_LATENCY_MS", "500"))
 CONCURRENCY = int(os.getenv("CONCURRENCY", "60"))
 ARCHIVE_KEEP = int(os.getenv("ARCHIVE_KEEP", "10"))
 
-# SS 加密方法白名单 (只允许标准方法，防止乱码)
+# SS 加密方法白名单 (严格匹配)
 VALID_SS_METHODS = {
     "aes-128-gcm", "aes-192-gcm", "aes-256-gcm",
     "aes-128-cfb", "aes-192-cfb", "aes-256-cfb",
@@ -55,18 +56,24 @@ logger = logging.getLogger("ExtremeEngine")
 
 # ================= 协议解析器 =================
 def safe_b64_decode(raw_text: str) -> str:
-    """安全 Base64 解码 - 修复参数丢失问题"""
+    """安全 Base64 解码"""
     try:
         if not raw_text:
             return ""
         raw_text = raw_text.strip()
-        # 补齐 Base64 填充
         padding = 4 - len(raw_text) % 4
         if padding != 4:
             raw_text += "=" * padding
         return base64.b64decode(raw_text).decode("utf-8", errors="ignore")
     except Exception:
         return ""
+
+def is_valid_ss_method(cipher: str) -> bool:
+    """校验 SS 加密方法是否在白名单内"""
+    if not cipher:
+        return False
+    cipher = cipher.strip().lower()
+    return cipher in VALID_SS_METHODS
 
 def parse_vmess(link: str) -> Optional[Dict[str, Any]]:
     try:
@@ -94,14 +101,8 @@ def parse_vmess(link: str) -> Optional[Dict[str, Any]]:
         return None
 
 def parse_ss(link: str) -> Optional[Dict[str, Any]]:
-    """
-    修复：增加白名单校验，只允许标准加密方法
-    """
     try:
-        # 移除 ss:// 前缀
         raw_content = link[5:]
-        
-        # 1. 分离备注 (#)
         remark = ""
         if "#" in raw_content:
             raw_content, remark = raw_content.split("#", 1)
@@ -109,11 +110,8 @@ def parse_ss(link: str) -> Optional[Dict[str, Any]]:
         
         cipher, password, server, port = "", "", "", ""
         
-        # 2. 尝试查找 @ 分隔符 (SIP002 格式: base64(method:pass)@host:port)
         if "@" in raw_content:
             user_info, server_info = raw_content.split("@", 1)
-            
-            # 解析服务器信息 (host:port)
             if server_info.startswith("["):
                 match = re.match(r'\[([^\]]+)\]:(\d+)', server_info)
                 if match:
@@ -126,25 +124,18 @@ def parse_ss(link: str) -> Optional[Dict[str, Any]]:
                 else:
                     return None
             
-            # 解析用户信息 (cipher:password)
-            # 尝试 Base64 解码 user_info
             decoded_user = safe_b64_decode(user_info)
-            
             if ":" in decoded_user:
-                # 解码成功且包含冒号
                 parts = decoded_user.split(":", 1)
                 if len(parts) == 2:
                     cipher, password = parts
                 else:
                     return None
             elif ":" in user_info:
-                # 尝试直接按明文处理 (较少见)
                 cipher, password = user_info.split(":", 1)
             else:
                 return None
-                
         else:
-            # 3. 没有 @，尝试整体 Base64 解码 (旧版格式: base64(method:pass@host:port))
             decoded_full = safe_b64_decode(raw_content)
             if "@" in decoded_full:
                 u_info, s_info = decoded_full.split("@", 1)
@@ -156,17 +147,13 @@ def parse_ss(link: str) -> Optional[Dict[str, Any]]:
             else:
                 return None
 
-        # 4. 【关键修复】校验加密方法白名单
-        cipher = cipher.strip().lower()
-        if not cipher or cipher not in VALID_SS_METHODS:
-            logger.debug(f"Invalid SS method detected: '{cipher}'. Skipping node.")
+        # 严格校验
+        if not is_valid_ss_method(cipher):
             return None
             
-        # 清理端口号中的非法字符 (如 ?plugin=...)
         if "?" in port:
             port = port.split("?")[0]
             
-        # 校验端口
         try:
             port_int = int(port)
             if port_int < 1 or port_int > 65535:
@@ -183,7 +170,7 @@ def parse_ss(link: str) -> Optional[Dict[str, Any]]:
             "password": password,
             "udp": True
         }
-    except Exception as e:
+    except Exception:
         return None
 
 def parse_trojan(link: str) -> Optional[Dict[str, Any]]:
@@ -262,6 +249,14 @@ def parse_node(raw_link: str) -> Optional[Dict[str, Any]]:
                 return node
     return None
 
+def validate_node(node: Dict[str, Any]) -> bool:
+    """二次校验节点合法性"""
+    if not node:
+        return False
+    if node.get("type") == "ss":
+        return is_valid_ss_method(node.get("cipher", ""))
+    return True
+
 # ================= 数据抓取 =================
 def fetch_subscriptions() -> List[Dict[str, Any]]:
     if not SOURCES_FILE.exists():
@@ -314,11 +309,16 @@ def load_archives() -> List[Dict[str, Any]]:
         try:
             data = yaml.safe_load(f.read_text(encoding="utf-8"))
             if data and isinstance(data, dict) and "proxies" in data:
-                merged.extend(data["proxies"])
+                # 【关键修复】加载时也进行校验
+                for node in data["proxies"]:
+                    if validate_node(node):
+                        merged.append(node)
+                    else:
+                        logger.debug(f"Discarding invalid node from archive: {node.get('server')}")
         except Exception as e:
             logger.debug(f"Failed to load archive {f.name}: {e}")
             
-    logger.info(f"Loaded {len(merged)} nodes from {len(archive_files)} archives.")
+    logger.info(f"Loaded {len(merged)} valid nodes from {len(archive_files)} archives.")
     return merged
 
 def deduplicate(nodes: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
@@ -326,6 +326,9 @@ def deduplicate(nodes: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     unique = []
     for node in nodes:
         if not node.get("server") or not node.get("port"):
+            continue
+        # 二次校验
+        if not validate_node(node):
             continue
         key_str = f"{node.get('type')}:{node.get('server')}:{node.get('port')}:{node.get('uuid', node.get('password', ''))}"
         h = hashlib.sha256(key_str.encode()).hexdigest()
@@ -413,12 +416,17 @@ def generate_config(tested_nodes: List[Dict[str, Any]]):
         
     template = yaml.safe_load(CONFIG_TEMPLATE.read_text(encoding="utf-8"))
     
-    if not tested_nodes:
-        logger.warning("No nodes passed speed test. Generating empty config.")
-        
-    node_names = [n["name"] for n in tested_nodes if n.get("name")]
+    # 【关键修复】最终清洗，确保没有非法节点
+    clean_nodes = [n for n in tested_nodes if validate_node(n)]
+    if len(clean_nodes) != len(tested_nodes):
+        logger.warning(f"Filtered out {len(tested_nodes) - len(clean_nodes)} invalid nodes before generating config.")
     
-    template["proxies"] = tested_nodes
+    if not clean_nodes:
+        logger.warning("No valid nodes passed all checks. Generating empty config.")
+        
+    node_names = [n["name"] for n in clean_nodes if n.get("name")]
+    
+    template["proxies"] = clean_nodes
     
     for group in template.get("proxy-groups", []):
         if group["type"] in ("url-test", "fallback", "load-balance"):
@@ -436,7 +444,7 @@ def generate_config(tested_nodes: List[Dict[str, Any]]):
 # ================= 主流程 =================
 def main():
     logger.info("="*50)
-    logger.info("🚀 NoMoreWalls-Pro Extreme Engine Start (Final Fixed)")
+    logger.info("🚀 NoMoreWalls-Pro Extreme Engine Start (Enhanced)")
     logger.info("="*50)
     
     new_nodes = fetch_subscriptions()
