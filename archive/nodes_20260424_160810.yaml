@@ -1,470 +1,3 @@
-mixed-port: 7890
-socks-port: 7891
-allow-lan: true
-mode: rule
-log-level: info
-ipv6: false
-unified-delay: true
-tcp-concurrent: true
-find-process-mode: strict
-keep-alive-idle: 600
-keep-alive-interval: 30
-interface-name: en0
-sniffer:
-  enable: true
-  sniff:
-    HTTP:
-      ports:
-      - 80
-      - 8080-8880
-      override-destination: true
-    TLS:
-      ports:
-      - 443
-      - 8443
-      override-destination: true
-    QUIC:
-      ports:
-      - 443
-      - 8443
-  skip-domain:
-  - Mijia Cloud
-  - dlg.io.mi.com
-  - push.apple.com
-dns:
-  enable: true
-  listen: 0.0.0.0:53
-  ipv6: false
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
-  - '*.lan'
-  - '*.local'
-  - time.*.com
-  - ntp.*.com
-  - +.push.apple.com
-  - captive.apple.com
-  nameserver:
-  - https://1.1.1.1/dns-query
-  - https://8.8.8.8/dns-query
-  - https://dns.alidns.com/dns-query
-  fallback:
-  - https://9.9.9.9/dns-query
-  - https://208.67.222.222/dns-query
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-    - 240.0.0.0/4
-    - 0.0.0.0/8
-    - 127.0.0.0/8
-proxy-groups:
-- name: 🚀 智能优选
-  type: url-test
-  proxies: &id001
-  - 🇺🇸 美国 | vless | 691
-  - 🇺🇸 美国 | vless | 658
-  - 🇺🇸 美国 | vless | 529
-  - 🇺🇸 美国 | vmess | 583
-  - 🇺🇸 美国 | vless | 97
-  - 🏳️ Fastly | vless | 25
-  - 🇺🇸 美国 | vless | 23
-  - 🇺🇸 美国 | vless | 580
-  - 🏳️ CF节点 | vmess | 11
-  - 🇺🇸 美国 | vmess | 226
-  - 🇲🇭 MH | vless | 09
-  - 🏳️ CF节点 | vmess | 13
-  - 🇺🇸 美国 | vless | 293
-  - 🇺🇸 美国 | vless | 499
-  - 🇫🇷 法国 | vless | 02
-  - 🇺🇸 美国 | vless | 447
-  - 🇺🇸 美国 | vless | 424
-  - 🇺🇸 美国 | vless | 518
-  - 🏳️ CF节点 | vless | 26
-  - 🇺🇸 美国 | vless | 147
-  - 🇺🇸 美国 | vless | 325
-  - 🏳️ CF节点 | vless | 29
-  - 🇺🇸 美国 | vless | 292
-  - 🏳️ CF节点 | vmess | 07
-  - 🇺🇸 美国 | vless | 181
-  - 🇺🇸 美国 | vless | 337
-  - 🇺🇸 美国 | vless | 241
-  - 🏳️ CF节点 | vless | 15
-  - 🇺🇸 美国 | vless | 224
-  - 🇮🇪 爱尔兰 | vless | 04
-  - 🇩🇪 德国 | vmess | 01
-  - 🇺🇸 美国 | vless | 273
-  - 🇺🇸 美国 | vless | 349
-  - 🇺🇸 美国 | vless | 576
-  - 🇺🇸 美国 | vless | 111
-  - 🇺🇸 美国 | vless | 425
-  - 🇬🇧 英国 | vless | 04
-  - 🇺🇸 美国 | vless | 287
-  - 🇺🇸 美国 | vless | 366
-  - 🇺🇸 美国 | vless | 428
-  - 🇺🇸 美国 | vless | 452
-  - 🇺🇸 美国 | vless | 517
-  - 🇺🇸 美国 | vless | 179
-  - 🇺🇸 美国 | vless | 502
-  - 🇺🇸 美国 | vless | 153
-  - 🇺🇸 美国 | vless | 162
-  - 🇺🇸 美国 | vless | 367
-  - 🇺🇸 美国 | vless | 438
-  - 🇺🇸 美国 | vless | 441
-  - 🇺🇸 美国 | vless | 467
-  - 🇺🇸 美国 | vless | 511
-  - 🏳️ CF节点 | vless | 09
-  - 🇺🇸 美国 | vless | 90
-  - 🇺🇸 美国 | vless | 168
-  - 🇺🇸 美国 | vless | 344
-  - 🏳️ CF节点 | vless | 10
-  - 🇺🇸 美国 | vless | 294
-  - 🇺🇸 美国 | vless | 376
-  - 🇺🇸 美国 | vless | 419
-  - 🇺🇸 美国 | vless | 513
-  - 🇺🇸 美国 | vless | 158
-  - 🇺🇸 美国 | vless | 374
-  - 🇺🇸 美国 | vmess | 177
-  - 🇺🇸 美国 | vless | 216
-  - 🇺🇸 美国 | vless | 372
-  - 🇺🇸 美国 | vless | 437
-  - 🇩🇪 德国 | vmess | 03
-  - 🇺🇸 美国 | vless | 119
-  - 🇺🇸 美国 | vless | 248
-  - 🇺🇸 美国 | vless | 345
-  - 🇺🇸 美国 | vless | 508
-  - 🏳️ CF节点 | vless | 04
-  - 🏳️ CF节点 | vless | 22
-  - 🇺🇸 美国 | vless | 266
-  - 🇺🇸 美国 | vless | 339
-  - 🇺🇸 美国 | vless | 291
-  - 🏳️ CF节点 | vless | 02
-  - 🇺🇸 美国 | vless | 117
-  - 🇺🇸 美国 | vless | 379
-  - 🇺🇸 美国 | vless | 423
-  - 🇺🇸 美国 | vless | 381
-  - 🇺🇸 美国 | vless | 399
-  - 🇺🇸 美国 | vless | 549
-  - 🇩🇪 德国 | vmess | 147
-  - 🇺🇸 美国 | vless | 378
-  - 🇺🇸 美国 | vless | 409
-  - 🇺🇸 美国 | vless | 403
-  - 🇺🇸 美国 | vless | 303
-  - 🇺🇸 美国 | vmess | 647
-  - 🇺🇸 美国 | vless | 322
-  - 🇺🇸 美国 | vless | 404
-  - 🇷🇺 俄罗斯 | vmess | 02
-  - 🇺🇸 美国 | vless | 308
-  - 🇺🇸 美国 | vless | 464
-  - 🇺🇸 美国 | vless | 199
-  - 🇺🇸 美国 | vless | 361
-  - 🇺🇸 美国 | vless | 01
-  - 🇺🇸 美国 | vless | 146
-  - 🇷🇺 俄罗斯 | vless | 05
-  - 🇧🇷 巴西 | vmess | 01
-  - 🇺🇸 美国 | vless | 570
-  - 🇺🇸 美国 | vless | 217
-  - 🇺🇸 美国 | vless | 195
-  - 🇺🇸 美国 | vless | 605
-  - 🇺🇸 美国 | vless | 377
-  - 🇩🇪 德国 | vmess | 151
-  - 🇺🇸 美国 | vmess | 645
-  - 🇺🇸 美国 | vless | 496
-  - 🇺🇸 美国 | vmess | 95
-  - 🇺🇸 美国 | vless | 219
-  - 🇺🇸 美国 | vless | 110
-  - 🇺🇸 美国 | vless | 455
-  - 🇺🇸 美国 | vless | 589
-  - 🇺🇸 美国 | vless | 412
-  - 🇺🇸 美国 | vless | 386
-  - 🇺🇸 美国 | vless | 443
-  - 🏳️ Fastly | ss | 02
-  - 🏳️ Fastly | vless | 17
-  - 🇺🇸 美国 | vless | 385
-  - 🇺🇸 美国 | vless | 418
-  - 🇺🇸 美国 | trojan | 94
-  - 🏳️ Fastly | ss | 21
-  - 🇺🇸 美国 | vless | 309
-  - 🏳️ CF节点 | vless | 18
-  - 🇺🇸 美国 | vless | 305
-  - 🇺🇸 美国 | trojan | 569
-  - 🇺🇸 美国 | vless | 260
-  - 🏳️ Fastly | vless | 15
-  - 🇺🇸 美国 | vless | 449
-  - 🏳️ CF节点 | vless | 06
-  - 🇺🇸 美国 | vless | 414
-  - 🏳️ Fastly | vless | 18
-  - 🏳️ Fastly | vless | 12
-  - 🏳️ Fastly | vless | 26
-  - 🇺🇸 美国 | trojan | 590
-  - 🇺🇸 美国 | vless | 222
-  - 🇺🇸 美国 | vmess | 39
-  - 🇺🇸 美国 | vless | 343
-  - 🏳️ Fastly | vless | 09
-  - 🏳️ Fastly | vless | 11
-  - 🏳️ Fastly | vless | 29
-  - 🇺🇸 美国 | vless | 435
-  - 🏳️ Fastly | vless | 03
-  - 🇺🇸 美国 | vless | 78
-  - 🏳️ Fastly | ss | 16
-  - 🇺🇸 美国 | vmess | 568
-  - 🇺🇸 美国 | vless | 593
-  - 🇺🇸 美国 | vless | 567
-  - 🇺🇸 美国 | vless | 563
-  - 🇺🇸 美国 | vless | 585
-  - 🇮🇪 爱尔兰 | vless | 01
-  - 🇺🇸 美国 | vless | 269
-  - 🇺🇸 美国 | vless | 143
-  - 🇺🇸 美国 | vless | 495
-  - 🇺🇸 美国 | vless | 448
-  - 🇺🇸 美国 | vless | 128
-  - 🇺🇸 美国 | vless | 135
-  - 🇺🇸 美国 | vless | 285
-  - 🇺🇸 美国 | vmess | 327
-  - 🏳️ CF节点 | vmess | 20
-  - 🇺🇸 美国 | vless | 102
-  - 🇺🇸 美国 | vless | 225
-  - 🇺🇸 美国 | vless | 295
-  - 🇺🇸 美国 | vless | 252
-  - 🇺🇸 美国 | vless | 375
-  - 🏳️ CF节点 | vmess | 08
-  - 🏳️ CF节点 | vmess | 23
-  - 🇺🇸 美国 | vless | 586
-  - 🇺🇸 美国 | vless | 272
-  - 🇺🇸 美国 | vless | 382
-  - 🇺🇸 美国 | vless | 394
-  - 🇷🇺 俄罗斯 | ss | 01
-  - 🏳️ Fastly | vless | 08
-  - 🇺🇸 美国 | vless | 69
-  - 🇺🇸 美国 | vless | 93
-  - 🇺🇸 美国 | vmess | 289
-  - 🇺🇸 美国 | vless | 475
-  - 🏳️ CF节点 | vmess | 14
-  - 🏳️ Fastly | vless | 01
-  - 🇺🇸 美国 | vless | 468
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: true
-  max-failed-times: 3
-- name: 🌏 亚洲低延迟
-  type: url-test
-  proxies: *id001
-  url: http://cp.cloudflare.com/generate_204
-  interval: 300
-  tolerance: 30
-  lazy: true
-  max-failed-times: 3
-  filter: (?i)(hk|tw|sg|jp|kr|asia|港|台|新|日|韩)
-- name: 🌍 欧美大带宽
-  type: url-test
-  proxies: *id001
-  url: http://cp.cloudflare.com/generate_204
-  interval: 300
-  tolerance: 80
-  lazy: true
-  max-failed-times: 3
-  filter: (?i)(us|de|fr|nl|uk|eu|美|德|法|荷|英|欧)
-- name: 🎬 流媒体解锁
-  type: fallback
-  proxies: *id001
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  lazy: true
-- name: 🎮 游戏加速
-  type: url-test
-  proxies: *id001
-  url: stun://stun.l.google.com:19302
-  interval: 180
-  tolerance: 20
-  lazy: false
-  max-failed-times: 2
-  filter: (?i)(game|low|latency|udp|专线|游戏|加速)
-- name: 🤖 AI 与开发者
-  type: url-test
-  proxies: *id001
-  url: https://openai.com
-  interval: 300
-  tolerance: 100
-  lazy: true
-  max-failed-times: 3
-  filter: (?i)(us|jp|sg|ai|dev|open|claude|github)
-- name: 📱 社交通讯
-  type: url-test
-  proxies: *id001
-  url: https://www.google.com/generate_204
-  interval: 300
-  tolerance: 60
-  lazy: true
-  max-failed-times: 3
-  filter: (?i)(social|chat|msg|im|telegram|whatsapp|signal)
-- name: 🌐 全局代理
-  type: select
-  proxies:
-  - 🇺🇸 美国 | vless | 691
-  - 🇺🇸 美国 | vless | 658
-  - 🇺🇸 美国 | vless | 529
-  - 🇺🇸 美国 | vmess | 583
-  - 🇺🇸 美国 | vless | 97
-  - 🏳️ Fastly | vless | 25
-  - 🇺🇸 美国 | vless | 23
-  - 🇺🇸 美国 | vless | 580
-  - 🏳️ CF节点 | vmess | 11
-  - 🇺🇸 美国 | vmess | 226
-  - 🇲🇭 MH | vless | 09
-  - 🏳️ CF节点 | vmess | 13
-  - 🇺🇸 美国 | vless | 293
-  - 🇺🇸 美国 | vless | 499
-  - 🇫🇷 法国 | vless | 02
-  - 🚀 智能优选
-  - 🌏 亚洲低延迟
-  - 🌍 欧美大带宽
-  - 🎬 流媒体解锁
-  - 🎮 游戏加速
-  - 🤖 AI 与开发者
-  - 📱 社交通讯
-- name: 🐟 漏网之鱼
-  type: select
-  proxies:
-  - 🇺🇸 美国 | vless | 691
-  - 🇺🇸 美国 | vless | 658
-  - 🇺🇸 美国 | vless | 529
-  - 🇺🇸 美国 | vmess | 583
-  - 🇺🇸 美国 | vless | 97
-  - 🏳️ Fastly | vless | 25
-  - 🇺🇸 美国 | vless | 23
-  - 🇺🇸 美国 | vless | 580
-  - 🏳️ CF节点 | vmess | 11
-  - 🇺🇸 美国 | vmess | 226
-  - 🇲🇭 MH | vless | 09
-  - 🏳️ CF节点 | vmess | 13
-  - 🇺🇸 美国 | vless | 293
-  - 🇺🇸 美国 | vless | 499
-  - 🇫🇷 法国 | vless | 02
-  - 🚀 智能优选
-  - 🌐 全局代理
-rules:
-- DOMAIN-KEYWORD,motv,🚀 智能优选
-- DOMAIN-KEYWORD,mytv,🚀 智能优选
-- DOMAIN-KEYWORD,mgtv,🚀 智能优选
-- DOMAIN-KEYWORD,hitv,🚀 智能优选
-- DOMAIN-KEYWORD,admarvel,REJECT
-- DOMAIN-KEYWORD,applovin,REJECT
-- DOMAIN-KEYWORD,mobfox,REJECT
-- DOMAIN-KEYWORD,telemetry,REJECT
-- DOMAIN-SUFFIX,adservice.google.com,REJECT
-- DOMAIN-SUFFIX,doubleclick.net,REJECT
-- DOMAIN-SUFFIX,googleadservices.com,REJECT
-- DOMAIN-KEYWORD,analytics,REJECT
-- DOMAIN-KEYWORD,tracking,REJECT
-- DOMAIN-KEYWORD,beacon,REJECT
-- DOMAIN-SUFFIX,netflix.com,🎬 流媒体解锁
-- DOMAIN-SUFFIX,nflxext.com,🎬 流媒体解锁
-- DOMAIN-SUFFIX,nflximg.com,🎬 流媒体解锁
-- DOMAIN-SUFFIX,nflxvideo.net,🎬 流媒体解锁
-- DOMAIN-SUFFIX,disneyplus.com,🎬 流媒体解锁
-- DOMAIN-SUFFIX,disneystreaming.com,🎬 流媒体解锁
-- DOMAIN-SUFFIX,bamgrid.com,🎬 流媒体解锁
-- DOMAIN-SUFFIX,youtube.com,🎬 流媒体解锁
-- DOMAIN-SUFFIX,youtube-nocookie.com,🎬 流媒体解锁
-- DOMAIN-SUFFIX,googlevideo.com,🎬 流媒体解锁
-- DOMAIN-KEYWORD,ytimg,🎬 流媒体解锁
-- DOMAIN-KEYWORD,netflix,🎬 流媒体解锁
-- DOMAIN-KEYWORD,disney,🎬 流媒体解锁
-- DOMAIN-KEYWORD,primevideo,🎬 流媒体解锁
-- DOMAIN-KEYWORD,spotify,🎬 流媒体解锁
-- DOMAIN-SUFFIX,hbo.com,🎬 流媒体解锁
-- DOMAIN-SUFFIX,hbomax.com,🎬 流媒体解锁
-- DOMAIN-SUFFIX,peacocktv.com,🎬 流媒体解锁
-- DOMAIN-SUFFIX,paramountplus.com,🎬 流媒体解锁
-- DOMAIN-SUFFIX,dazn.com,🎬 流媒体解锁
-- DOMAIN-SUFFIX,openai.com,🤖 AI 与开发者
-- DOMAIN-SUFFIX,chatgpt.com,🤖 AI 与开发者
-- DOMAIN-KEYWORD,openai,🤖 AI 与开发者
-- DOMAIN-SUFFIX,anthropic.com,🤖 AI 与开发者
-- DOMAIN-KEYWORD,claude,🤖 AI 与开发者
-- DOMAIN-SUFFIX,googleapis.com,🤖 AI 与开发者
-- DOMAIN-SUFFIX,github.com,🤖 AI 与开发者
-- DOMAIN-SUFFIX,github.io,🤖 AI 与开发者
-- DOMAIN-SUFFIX,githubusercontent.com,🤖 AI 与开发者
-- DOMAIN-SUFFIX,gitlab.com,🤖 AI 与开发者
-- DOMAIN-KEYWORD,stackoverflow,🤖 AI 与开发者
-- DOMAIN-KEYWORD,docker,🤖 AI 与开发者
-- DOMAIN-SUFFIX,aws.amazon.com,🤖 AI 与开发者
-- DOMAIN-KEYWORD,cloudflare,🤖 AI 与开发者
-- DOMAIN-SUFFIX,vercel.app,🤖 AI 与开发者
-- DOMAIN-SUFFIX,netlify.app,🤖 AI 与开发者
-- DOMAIN-SUFFIX,steampowered.com,🎮 游戏加速
-- DOMAIN-SUFFIX,steamcontent.com,🎮 游戏加速
-- DOMAIN-SUFFIX,epicgames.com,🎮 游戏加速
-- DOMAIN-SUFFIX,blizzard.com,🎮 游戏加速
-- DOMAIN-SUFFIX,ea.com,🎮 游戏加速
-- DOMAIN-KEYWORD,xbox,🎮 游戏加速
-- DOMAIN-KEYWORD,playstation,🎮 游戏加速
-- DOMAIN-SUFFIX,discord.com,🎮 游戏加速
-- DOMAIN-KEYWORD,discordapp,🎮 游戏加速
-- PROCESS-NAME,steam.exe,🎮 游戏加速
-- PROCESS-NAME,EpicGamesLauncher.exe,🎮 游戏加速
-- PROCESS-NAME,discord.exe,🎮 游戏加速
-- DOMAIN-SUFFIX,google.com,📱 社交通讯
-- DOMAIN-SUFFIX,gmail.com,📱 社交通讯
-- DOMAIN-KEYWORD,gmail,📱 社交通讯
-- DOMAIN-SUFFIX,facebook.com,📱 社交通讯
-- DOMAIN-SUFFIX,fbcdn.net,📱 社交通讯
-- DOMAIN-KEYWORD,facebook,📱 社交通讯
-- DOMAIN-SUFFIX,instagram.com,📱 社交通讯
-- DOMAIN-SUFFIX,twitter.com,📱 社交通讯
-- DOMAIN-SUFFIX,x.com,📱 社交通讯
-- DOMAIN-SUFFIX,twimg.com,📱 社交通讯
-- DOMAIN-SUFFIX,telegram.org,📱 社交通讯
-- DOMAIN-SUFFIX,t.me,📱 社交通讯
-- DOMAIN-SUFFIX,whatsapp.net,📱 社交通讯
-- DOMAIN-KEYWORD,whatsapp,📱 社交通讯
-- DOMAIN-SUFFIX,tiktok.com,📱 社交通讯
-- DOMAIN-KEYWORD,tiktok,📱 社交通讯
-- DOMAIN-SUFFIX,signal.org,📱 社交通讯
-- DOMAIN-SUFFIX,threema.ch,📱 社交通讯
-- DOMAIN-SUFFIX,icloud.com,🌐 全局代理
-- DOMAIN-SUFFIX,apple.com,🌐 全局代理
-- DOMAIN-KEYWORD,apple,🌐 全局代理
-- DOMAIN-KEYWORD,icloud,🌐 全局代理
-- DOMAIN-SUFFIX,mzstatic.com,DIRECT
-- DOMAIN,api-glb-sea.smoot.apple.com,DIRECT
-- DOMAIN-SUFFIX,microsoft.com,🌐 全局代理
-- DOMAIN-KEYWORD,microsoft,🌐 全局代理
-- DOMAIN-SUFFIX,windowsupdate.com,DIRECT
-- DOMAIN-SUFFIX,office365.com,DIRECT
-- DOMAIN-KEYWORD,office,DIRECT
-- DOMAIN-SUFFIX,akamai.net,DIRECT
-- DOMAIN-SUFFIX,akamaized.net,DIRECT
-- DOMAIN-SUFFIX,cloudfront.net,🌐 全局代理
-- DOMAIN-KEYWORD,amazonaws,🌐 全局代理
-- DOMAIN-SUFFIX,cn,DIRECT
-- DOMAIN-KEYWORD,-cn,DIRECT
-- DOMAIN-KEYWORD,china,DIRECT
-- DOMAIN-KEYWORD,baidu,DIRECT
-- DOMAIN-KEYWORD,taobao,DIRECT
-- DOMAIN-KEYWORD,alibaba,DIRECT
-- DOMAIN-KEYWORD,qq,DIRECT
-- DOMAIN-KEYWORD,weixin,DIRECT
-- DOMAIN-KEYWORD,wechat,DIRECT
-- DOMAIN-KEYWORD,jd,DIRECT
-- DOMAIN-KEYWORD,mi,DIRECT
-- DOMAIN-KEYWORD,huawei,DIRECT
-- DOMAIN-SUFFIX,163.com,DIRECT
-- DOMAIN-SUFFIX,netease.com,DIRECT
-- DOMAIN-SUFFIX,bilibili.com,DIRECT
-- DOMAIN-SUFFIX,iqiyi.com,DIRECT
-- DOMAIN-SUFFIX,youku.com,DIRECT
-- DOMAIN-SUFFIX,douyin.com,DIRECT
-- DOMAIN-SUFFIX,toutiao.com,DIRECT
-- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
-- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
-- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
-- GEOIP,LAN,DIRECT,no-resolve
-- GEOIP,CN,DIRECT,no-resolve
-- GEOIP,PRIVATE,DIRECT,no-resolve
-- MATCH,🐟 漏网之鱼
 proxies:
 - name: 🇺🇸 美国 | vless | 691
   type: vless
@@ -476,8 +9,6 @@ proxies:
   servername: www.amazon.com
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 2.91
 - name: 🇺🇸 美国 | vless | 658
   type: vless
   server: 132.226.147.10
@@ -488,8 +19,6 @@ proxies:
   servername: musicstatus.tv.apple.com
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 3.44
 - name: 🇺🇸 美国 | vless | 529
   type: vless
   server: 74.211.100.81
@@ -504,7 +33,6 @@ proxies:
     path: /proxyip=ProxyIP.CMLiussss.net
     headers:
       Host: sni.skylee4.cloudns.ch
-  _latency_ms: 7.85
 - name: 🇺🇸 美国 | vmess | 583
   type: vmess
   server: 148.135.33.226
@@ -521,7 +49,6 @@ proxies:
     path: /
     headers:
       Host: ''
-  _latency_ms: 7.92
 - name: 🇺🇸 美国 | vless | 97
   type: vless
   server: 38.55.111.81
@@ -536,7 +63,6 @@ proxies:
     path: /?ed=2560&https://t.me/WangCai2🇨🇳security=tls
     headers:
       Host: sni.111000.dns.army
-  _latency_ms: 7.95
 - name: 🏳️ Fastly | vless | 25
   type: vless
   server: 151.101.3.6
@@ -547,8 +73,6 @@ proxies:
   servername: 2a02:26f0:5d00:138f::2a1
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 8.03
 - name: 🇺🇸 美国 | vless | 23
   type: vless
   server: 74.48.179.37
@@ -563,7 +87,6 @@ proxies:
     path: /danfengfp=chromesecurity=tls
     headers:
       Host: s3vz.user-service.chinav.indevs.in
-  _latency_ms: 8.07
 - name: 🇺🇸 美国 | vless | 580
   type: vless
   server: 64.186.230.135
@@ -578,7 +101,6 @@ proxies:
     path: /proxyip=proxyip.cmliussss.netsecurity=tls
     headers:
       Host: sn1.skylee5.cloudns.ch
-  _latency_ms: 8.18
 - name: 🏳️ CF节点 | vmess | 11
   type: vmess
   server: 172.67.207.209
@@ -595,7 +117,6 @@ proxies:
     path: /bb
     headers:
       Host: hao.huaqian.icu
-  _latency_ms: 8.31
 - name: 🇺🇸 美国 | vmess | 226
   type: vmess
   server: 198.62.62.199
@@ -612,7 +133,6 @@ proxies:
     path: /f08369d1-5ee7-4b16-d786-30bce12fc33c
     headers:
       Host: ous3.dean52.top
-  _latency_ms: 8.31
 - name: 🇲🇭 MH | vless | 09
   type: vless
   server: 185.207.199.138
@@ -627,7 +147,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 8.33
 - name: 🏳️ CF节点 | vmess | 13
   type: vmess
   server: 172.67.189.8
@@ -644,7 +163,6 @@ proxies:
     path: /hgcefomn
     headers:
       Host: ''
-  _latency_ms: 8.35
 - name: 🇺🇸 美国 | vless | 293
   type: vless
   server: 63.141.128.3
@@ -659,7 +177,6 @@ proxies:
     path: /
     headers:
       Host: qyi.fqjd663.ggff.net
-  _latency_ms: 8.35
 - name: 🇺🇸 美国 | vless | 499
   type: vless
   server: 135.84.73.153
@@ -674,7 +191,6 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳 @WangCai2security=tls
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 8.36
 - name: 🇫🇷 法国 | vless | 02
   type: vless
   server: 185.16.110.42
@@ -689,7 +205,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.37
 - name: 🇺🇸 美国 | vless | 447
   type: vless
   server: 63.141.128.3
@@ -704,7 +219,6 @@ proxies:
     path: /
     headers:
       Host: qyi.fqjd663.ggff.net
-  _latency_ms: 8.37
 - name: 🇺🇸 美国 | vless | 424
   type: vless
   server: 209.94.90.149
@@ -715,8 +229,6 @@ proxies:
   servername: myopen.tencan.ir
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 8.39
 - name: 🇺🇸 美国 | vless | 518
   type: vless
   server: 135.84.73.9
@@ -731,7 +243,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.v6.navy
-  _latency_ms: 8.39
 - name: 🏳️ CF节点 | vless | 26
   type: vless
   server: 104.16.149.66
@@ -746,7 +257,6 @@ proxies:
     path: /
     headers:
       Host: mute-violet-c674.poviy66273.workers.dev
-  _latency_ms: 8.4
 - name: 🇺🇸 美国 | vless | 147
   type: vless
   server: 209.102.207.120
@@ -761,7 +271,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.v6.navy
-  _latency_ms: 8.4
 - name: 🇺🇸 美国 | vless | 325
   type: vless
   server: 160.153.1.50
@@ -776,7 +285,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 8.4
 - name: 🏳️ CF节点 | vless | 29
   type: vless
   server: 104.16.164.44
@@ -791,7 +299,6 @@ proxies:
     path: /
     headers:
       Host: amirvpn.amirhm00100.workers.dev
-  _latency_ms: 8.41
 - name: 🇺🇸 美国 | vless | 292
   type: vless
   server: 192.169.222.42
@@ -806,7 +313,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.41
 - name: 🏳️ CF节点 | vmess | 07
   type: vmess
   server: 198.41.193.110
@@ -823,7 +329,6 @@ proxies:
     path: /blue
     headers:
       Host: ''
-  _latency_ms: 8.43
 - name: 🇺🇸 美国 | vless | 181
   type: vless
   server: 135.84.73.40
@@ -838,7 +343,6 @@ proxies:
     path: /
     headers:
       Host: edtunnel-eiz.pages.dev
-  _latency_ms: 8.43
 - name: 🇺🇸 美国 | vless | 337
   type: vless
   server: 216.24.57.42
@@ -853,7 +357,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.43
 - name: 🇺🇸 美国 | vless | 241
   type: vless
   server: 160.153.1.156
@@ -868,7 +371,6 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳 @WangCai2security=tls
     headers:
       Host: sni.111000.v6.navy
-  _latency_ms: 8.44
 - name: 🏳️ CF节点 | vless | 15
   type: vless
   server: 172.64.149.54
@@ -883,7 +385,6 @@ proxies:
     path: / @ProxyVPN11
     headers:
       Host: chosenflyesqt-q3y28ipf-v2.chosen-fly-esqt.workers.dev
-  _latency_ms: 8.45
 - name: 🇺🇸 美国 | vless | 224
   type: vless
   server: 192.0.63.42
@@ -898,7 +399,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.45
 - name: 🇮🇪 爱尔兰 | vless | 04
   type: vless
   server: 37.0.6.40
@@ -913,7 +413,6 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳@WangCai2security=tls
     headers:
       Host: edtunnel-eiz.pages.dev
-  _latency_ms: 8.46
 - name: 🇩🇪 德国 | vmess | 01
   type: vmess
   server: 82.198.246.250
@@ -926,8 +425,6 @@ proxies:
   servername: ''
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 8.48
 - name: 🇺🇸 美国 | vless | 273
   type: vless
   server: 209.102.207.162
@@ -942,7 +439,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 8.48
 - name: 🇺🇸 美国 | vless | 349
   type: vless
   server: 198.62.62.127
@@ -957,7 +453,6 @@ proxies:
     path: /O1w0n3vYgFKYs7EzNAvLPvOpflow=
     headers:
       Host: apii.onlineshoppingez.ir
-  _latency_ms: 8.48
 - name: 🇺🇸 美国 | vless | 576
   type: vless
   server: 154.26.177.151
@@ -972,7 +467,6 @@ proxies:
     path: /proxyip=ProxyIP.CMLiussss.net
     headers:
       Host: sni.skylee4.cloudns.ch
-  _latency_ms: 8.48
 - name: 🇺🇸 美国 | vless | 111
   type: vless
   server: 209.94.90.238
@@ -987,7 +481,6 @@ proxies:
     path: /
     headers:
       Host: sni.jpmj.dev
-  _latency_ms: 8.49
 - name: 🇺🇸 美国 | vless | 425
   type: vless
   server: 45.40.154.139
@@ -1002,7 +495,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 8.51
 - name: 🇬🇧 英国 | vless | 04
   type: vless
   server: 217.163.76.254
@@ -1017,7 +509,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.v6.navy
-  _latency_ms: 8.53
 - name: 🇺🇸 美国 | vless | 287
   type: vless
   server: 160.153.1.76
@@ -1032,7 +523,6 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳 @WangCai2security=tls
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 8.53
 - name: 🇺🇸 美国 | vless | 366
   type: vless
   server: 208.103.161.137
@@ -1047,7 +537,6 @@ proxies:
     path: /danfeng?ed=2560&Telegram🇨🇳+@WangCai2fp=chromesecurity=tls
     headers:
       Host: WangCai.443888.xyz
-  _latency_ms: 8.53
 - name: 🇺🇸 美国 | vless | 428
   type: vless
   server: 104.238.69.42
@@ -1062,7 +551,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.53
 - name: 🇺🇸 美国 | vless | 452
   type: vless
   server: 216.24.57.4
@@ -1077,7 +565,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 8.53
 - name: 🇺🇸 美国 | vless | 517
   type: vless
   server: 135.84.74.155
@@ -1092,7 +579,6 @@ proxies:
     path: /?Telegram🇨🇳 @WangCai2=
     headers:
       Host: sni.111000.v6.navy
-  _latency_ms: 8.53
 - name: 🇺🇸 美国 | vless | 179
   type: vless
   server: 135.84.72.18
@@ -1107,7 +593,6 @@ proxies:
     path: /?Telegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2=
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 8.54
 - name: 🇺🇸 美国 | vless | 502
   type: vless
   server: 45.40.151.191
@@ -1122,7 +607,6 @@ proxies:
     path: /
     headers:
       Host: sni.my111000.tech
-  _latency_ms: 8.55
 - name: 🇺🇸 美国 | vless | 153
   type: vless
   server: 160.153.1.51
@@ -1137,7 +621,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.v6.navy
-  _latency_ms: 8.56
 - name: 🇺🇸 美国 | vless | 162
   type: vless
   server: 50.62.195.238
@@ -1152,7 +635,6 @@ proxies:
     path: /fp=chromesecurity=tls
     headers:
       Host: sni.jpmj.dev
-  _latency_ms: 8.56
 - name: 🇺🇸 美国 | vless | 367
   type: vless
   server: 199.34.228.182
@@ -1167,7 +649,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 8.56
 - name: 🇺🇸 美国 | vless | 438
   type: vless
   server: 192.0.63.138
@@ -1182,7 +663,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 8.56
 - name: 🇺🇸 美国 | vless | 441
   type: vless
   server: 135.84.73.100
@@ -1197,7 +677,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 8.56
 - name: 🇺🇸 美国 | vless | 467
   type: vless
   server: 160.153.1.198
@@ -1212,7 +691,6 @@ proxies:
     path: /?Telegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2=
     headers:
       Host: sni.111000.v6.navy
-  _latency_ms: 8.56
 - name: 🇺🇸 美国 | vless | 511
   type: vless
   server: 135.84.74.90
@@ -1227,7 +705,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 8.57
 - name: 🏳️ CF节点 | vless | 09
   type: vless
   server: 104.18.203.232
@@ -1238,8 +715,6 @@ proxies:
   servername: 104.18.203.232
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 8.58
 - name: 🇺🇸 美国 | vless | 90
   type: vless
   server: 107.172.252.164
@@ -1250,8 +725,6 @@ proxies:
   servername: s0.awsstatic.com
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 8.58
 - name: 🇺🇸 美国 | vless | 168
   type: vless
   server: 135.84.74.65
@@ -1266,7 +739,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 8.58
 - name: 🇺🇸 美国 | vless | 344
   type: vless
   server: 135.84.64.157
@@ -1281,7 +753,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.v6.navy
-  _latency_ms: 8.59
 - name: 🏳️ CF节点 | vless | 10
   type: vless
   server: 104.21.48.147
@@ -1296,7 +767,6 @@ proxies:
     path: /64.181.218.67=443
     headers:
       Host: afrcloud22.mmv.kr
-  _latency_ms: 8.6
 - name: 🇺🇸 美国 | vless | 294
   type: vless
   server: 135.84.64.66
@@ -1311,7 +781,6 @@ proxies:
     path: /?Telegram🇨🇳@WangCai2=
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 8.61
 - name: 🇺🇸 美国 | vless | 376
   type: vless
   server: 160.153.1.138
@@ -1326,7 +795,6 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳 @WangCai2security=tls
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 8.61
 - name: 🇺🇸 美国 | vless | 419
   type: vless
   server: 72.167.242.42
@@ -1341,7 +809,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.61
 - name: 🇺🇸 美国 | vless | 513
   type: vless
   server: 192.200.160.253
@@ -1356,7 +823,6 @@ proxies:
     path: /
     headers:
       Host: qyi.fqjd663.ggff.net
-  _latency_ms: 8.61
 - name: 🇺🇸 美国 | vless | 158
   type: vless
   server: 199.34.230.158
@@ -1371,7 +837,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 8.62
 - name: 🇺🇸 美国 | vless | 374
   type: vless
   server: 63.141.128.110
@@ -1382,8 +847,6 @@ proxies:
   servername: n1.n1server.org
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 8.62
 - name: 🇺🇸 美国 | vmess | 177
   type: vmess
   server: 69.84.182.16
@@ -1400,7 +863,6 @@ proxies:
     path: /
     headers:
       Host: e130917c-1b58-4136-b2d9-76dc920e0add.add97ee8-0f14-48a3-b2cd-979c56742e64.loseyourip.com
-  _latency_ms: 8.65
 - name: 🇺🇸 美国 | vless | 216
   type: vless
   server: 45.40.153.42
@@ -1415,7 +877,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.65
 - name: 🇺🇸 美国 | vless | 372
   type: vless
   server: 45.40.152.191
@@ -1430,7 +891,6 @@ proxies:
     path: /
     headers:
       Host: sni.my111000.tech
-  _latency_ms: 8.66
 - name: 🇺🇸 美国 | vless | 437
   type: vless
   server: 160.153.138.204
@@ -1445,7 +905,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 8.67
 - name: 🇩🇪 德国 | vmess | 03
   type: vmess
   server: 82.198.246.46
@@ -1458,8 +917,6 @@ proxies:
   servername: 82.198.246.46
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 8.7
 - name: 🇺🇸 美国 | vless | 119
   type: vless
   server: 45.40.150.42
@@ -1474,7 +931,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.71
 - name: 🇺🇸 美国 | vless | 248
   type: vless
   server: 198.62.62.91
@@ -1489,7 +945,6 @@ proxies:
     path: /fp=chrome
     headers:
       Host: 198.62.62.91
-  _latency_ms: 8.71
 - name: 🇺🇸 美国 | vless | 345
   type: vless
   server: 135.84.73.96
@@ -1504,7 +959,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 8.72
 - name: 🇺🇸 美国 | vless | 508
   type: vless
   server: 45.40.150.191
@@ -1519,7 +973,6 @@ proxies:
     path: /
     headers:
       Host: sni.my111000.tech
-  _latency_ms: 8.72
 - name: 🏳️ CF节点 | vless | 04
   type: vless
   server: 104.16.158.162
@@ -1534,7 +987,6 @@ proxies:
     path: /?ed
     headers:
       Host: mute-violet-c674.poviy66273.workers.dev
-  _latency_ms: 8.73
 - name: 🏳️ CF节点 | vless | 22
   type: vless
   server: 185.146.173.158
@@ -1545,8 +997,6 @@ proxies:
   servername: 185.146.173.158
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 8.73
 - name: 🇺🇸 美国 | vless | 266
   type: vless
   server: 50.62.172.42
@@ -1561,7 +1011,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.73
 - name: 🇺🇸 美国 | vless | 339
   type: vless
   server: 72.167.25.43
@@ -1576,7 +1025,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.cc.cd
-  _latency_ms: 8.73
 - name: 🇺🇸 美国 | vless | 291
   type: vless
   server: 160.153.1.215
@@ -1591,7 +1039,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 8.74
 - name: 🏳️ CF节点 | vless | 02
   type: vless
   server: 162.159.36.5
@@ -1606,7 +1053,6 @@ proxies:
     path: /
     headers:
       Host: vip.yaml7.ggff.net
-  _latency_ms: 8.75
 - name: 🇺🇸 美国 | vless | 117
   type: vless
   server: 160.153.1.122
@@ -1621,7 +1067,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.v6.navy
-  _latency_ms: 8.75
 - name: 🇺🇸 美国 | vless | 379
   type: vless
   server: 166.62.107.42
@@ -1636,7 +1081,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.75
 - name: 🇺🇸 美国 | vless | 423
   type: vless
   server: 135.84.64.82
@@ -1651,7 +1095,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 8.75
 - name: 🇺🇸 美国 | vless | 381
   type: vless
   server: 72.167.243.42
@@ -1666,7 +1109,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.76
 - name: 🇺🇸 美国 | vless | 399
   type: vless
   server: 160.153.1.238
@@ -1681,7 +1123,6 @@ proxies:
     path: /
     headers:
       Host: sni.jpmj.dev
-  _latency_ms: 8.76
 - name: 🇺🇸 美国 | vless | 549
   type: vless
   server: 135.84.74.203
@@ -1696,7 +1137,6 @@ proxies:
     path: /?Telegram🇨🇳@WangCai2=
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 8.76
 - name: 🇩🇪 德国 | vmess | 147
   type: vmess
   server: 82.198.246.214
@@ -1709,8 +1149,6 @@ proxies:
   servername: 82.198.246.214
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 8.77
 - name: 🇺🇸 美国 | vless | 378
   type: vless
   server: 135.84.64.74
@@ -1725,7 +1163,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 8.78
 - name: 🇺🇸 美国 | vless | 409
   type: vless
   server: 135.84.73.220
@@ -1740,7 +1177,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 8.78
 - name: 🇺🇸 美国 | vless | 403
   type: vless
   server: 135.84.67.72
@@ -1755,7 +1191,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.v6.navy
-  _latency_ms: 8.79
 - name: 🇺🇸 美国 | vless | 303
   type: vless
   server: 166.62.110.42
@@ -1770,7 +1205,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.81
 - name: 🇺🇸 美国 | vmess | 647
   type: vmess
   server: 172.247.148.93
@@ -1787,7 +1221,6 @@ proxies:
     path: /
     headers:
       Host: ''
-  _latency_ms: 8.81
 - name: 🇺🇸 美国 | vless | 322
   type: vless
   server: 160.153.137.233
@@ -1802,7 +1235,6 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳 @WangCai2security=tls
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 8.83
 - name: 🇺🇸 美国 | vless | 404
   type: vless
   server: 135.84.64.79
@@ -1817,7 +1249,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 8.83
 - name: 🇷🇺 俄罗斯 | vmess | 02
   type: vmess
   server: 45.67.215.119
@@ -1834,7 +1265,6 @@ proxies:
     path: /
     headers:
       Host: e130917c-1b58-4136-b2d9-76dc920e0add.add97ee8-0f14-48a3-b2cd-979c56742e64.loseyourip.com
-  _latency_ms: 8.84
 - name: 🇺🇸 美国 | vless | 308
   type: vless
   server: 198.71.232.42
@@ -1849,7 +1279,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.84
 - name: 🇺🇸 美国 | vless | 464
   type: vless
   server: 50.62.175.42
@@ -1864,7 +1293,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.85
 - name: 🇺🇸 美国 | vless | 199
   type: vless
   server: 203.82.26.29
@@ -1875,8 +1303,6 @@ proxies:
   servername: myopen.tencan.ir
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 8.86
 - name: 🇺🇸 美国 | vless | 361
   type: vless
   server: 135.84.74.43
@@ -1891,7 +1317,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.v6.navy
-  _latency_ms: 8.86
 - name: 🇺🇸 美国 | vless | 01
   type: vless
   server: 198.62.62.99
@@ -1902,8 +1327,6 @@ proxies:
   servername: 198.62.62.99
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 8.87
 - name: 🇺🇸 美国 | vless | 146
   type: vless
   server: 72.167.25.42
@@ -1918,7 +1341,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.87
 - name: 🇷🇺 俄罗斯 | vless | 05
   type: vless
   server: 45.67.215.42
@@ -1933,7 +1355,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.88
 - name: 🇧🇷 巴西 | vmess | 01
   type: vmess
   server: 185.133.35.178
@@ -1950,7 +1371,6 @@ proxies:
     path: /
     headers:
       Host: e130917c-1b58-4136-b2d9-76dc920e0add.add97ee8-0f14-48a3-b2cd-979c56742e64.loseyourip.com
-  _latency_ms: 8.89
 - name: 🇺🇸 美国 | vless | 570
   type: vless
   server: 69.63.212.150
@@ -1965,7 +1385,6 @@ proxies:
     path: /proxyip=ProxyIP.CMLiussss.net
     headers:
       Host: sni.skylee4.cloudns.ch
-  _latency_ms: 8.89
 - name: 🇺🇸 美国 | vless | 217
   type: vless
   server: 63.141.128.9
@@ -1980,7 +1399,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 8.9
 - name: 🇺🇸 美国 | vless | 195
   type: vless
   server: 160.153.137.253
@@ -1995,7 +1413,6 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳 @WangCai2security=tls
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 8.91
 - name: 🇺🇸 美国 | vless | 605
   type: vless
   server: 64.81.25.70
@@ -2010,7 +1427,6 @@ proxies:
     path: /danfeng?ed=2560fp=chromesecurity=tls
     headers:
       Host: gavorbhj.chinam.indevs.in
-  _latency_ms: 8.93
 - name: 🇺🇸 美国 | vless | 377
   type: vless
   server: 104.238.68.42
@@ -2025,7 +1441,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 8.95
 - name: 🇩🇪 德国 | vmess | 151
   type: vmess
   server: 82.198.246.37
@@ -2038,8 +1453,6 @@ proxies:
   servername: 82.198.246.37
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 8.96
 - name: 🇺🇸 美国 | vmess | 645
   type: vmess
   server: 23.224.101.102
@@ -2056,7 +1469,6 @@ proxies:
     path: /footers
     headers:
       Host: www.76126449.xyz
-  _latency_ms: 8.96
 - name: 🇺🇸 美国 | vless | 496
   type: vless
   server: 192.200.160.19
@@ -2071,7 +1483,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.v6.navy
-  _latency_ms: 8.97
 - name: 🇺🇸 美国 | vmess | 95
   type: vmess
   server: 38.48.227.231
@@ -2088,7 +1499,6 @@ proxies:
     path: /path/240811062813
     headers:
       Host: www.42266451.xyz
-  _latency_ms: 8.98
 - name: 🇺🇸 美国 | vless | 219
   type: vless
   server: 135.84.73.129
@@ -2103,7 +1513,6 @@ proxies:
     path: /?Telegram🇨🇳@WangCai2=
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 8.99
 - name: 🇺🇸 美国 | vless | 110
   type: vless
   server: 192.200.160.41
@@ -2118,7 +1527,6 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳@WangCai2security=tls
     headers:
       Host: edtunnel-eiz.pages.dev
-  _latency_ms: 9.01
 - name: 🇺🇸 美国 | vless | 455
   type: vless
   server: 199.34.230.66
@@ -2133,7 +1541,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.v6.navy
-  _latency_ms: 9.04
 - name: 🇺🇸 美国 | vless | 589
   type: vless
   server: 104.225.233.21
@@ -2148,7 +1555,6 @@ proxies:
     path: /danfengfp=chrome
     headers:
       Host: s3vz.user-service.chinav.indevs.in
-  _latency_ms: 9.04
 - name: 🇺🇸 美国 | vless | 412
   type: vless
   server: 135.84.74.118
@@ -2163,7 +1569,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 9.05
 - name: 🇺🇸 美国 | vless | 386
   type: vless
   server: 209.94.90.138
@@ -2178,7 +1583,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 9.07
 - name: 🇺🇸 美国 | vless | 443
   type: vless
   server: 63.141.128.188
@@ -2193,7 +1597,6 @@ proxies:
     path: /djjc/jp1security=tls
     headers:
       Host: d2-jp1.djwstlsweb.top
-  _latency_ms: 9.1
 - name: 🏳️ Fastly | ss | 02
   type: ss
   server: 151.101.2.219
@@ -2201,7 +1604,6 @@ proxies:
   cipher: knm{ko
   password: 4utv
   udp: true
-  _latency_ms: 9.14
 - name: 🏳️ Fastly | vless | 17
   type: vless
   server: 199.232.196.193
@@ -2212,8 +1614,6 @@ proxies:
   servername: 199.232.196.193
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 9.16
 - name: 🇺🇸 美国 | vless | 385
   type: vless
   server: 198.71.188.42
@@ -2228,7 +1628,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 9.16
 - name: 🇺🇸 美国 | vless | 418
   type: vless
   server: 72.167.241.43
@@ -2243,7 +1642,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.cc.cd
-  _latency_ms: 9.16
 - name: 🇺🇸 美国 | trojan | 94
   type: trojan
   server: 38.60.89.136
@@ -2252,7 +1650,6 @@ proxies:
   sni: jflsjlaf.pages.dev
   skip-cert-verify: true
   udp: true
-  _latency_ms: 9.17
 - name: 🏳️ Fastly | ss | 21
   type: ss
   server: 151.101.128.223
@@ -2260,7 +1657,6 @@ proxies:
   cipher: knm{ko
   password: 4utv
   udp: true
-  _latency_ms: 9.17
 - name: 🇺🇸 美国 | vless | 309
   type: vless
   server: 166.62.112.42
@@ -2275,7 +1671,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 9.27
 - name: 🏳️ CF节点 | vless | 18
   type: vless
   server: 104.18.12.149
@@ -2290,7 +1685,6 @@ proxies:
     path: / @ProxyVPN11
     headers:
       Host: vip.yaml7.ggff.net
-  _latency_ms: 9.28
 - name: 🇺🇸 美国 | vless | 305
   type: vless
   server: 160.153.1.207
@@ -2305,7 +1699,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 9.29
 - name: 🇺🇸 美国 | trojan | 569
   type: trojan
   server: 77.247.126.137
@@ -2314,7 +1707,6 @@ proxies:
   sni: 77.247.126.137
   skip-cert-verify: true
   udp: true
-  _latency_ms: 9.3
 - name: 🇺🇸 美国 | vless | 260
   type: vless
   server: 69.84.182.162
@@ -2325,8 +1717,6 @@ proxies:
   servername: n1.n1server.org
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 9.31
 - name: 🏳️ Fastly | vless | 15
   type: vless
   server: 199.232.79.229
@@ -2337,8 +1727,6 @@ proxies:
   servername: 199.232.79.229
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 9.32
 - name: 🇺🇸 美国 | vless | 449
   type: vless
   server: 135.84.64.111
@@ -2353,7 +1741,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.v6.navy
-  _latency_ms: 9.34
 - name: 🏳️ CF节点 | vless | 06
   type: vless
   server: 45.131.4.5
@@ -2364,8 +1751,6 @@ proxies:
   servername: 45.131.4.5
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 9.35
 - name: 🇺🇸 美国 | vless | 414
   type: vless
   server: 166.62.109.42
@@ -2380,7 +1765,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 9.36
 - name: 🏳️ Fastly | vless | 18
   type: vless
   server: 151.101.0.10
@@ -2391,8 +1775,6 @@ proxies:
   servername: 151.101.0.10
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 9.38
 - name: 🏳️ Fastly | vless | 12
   type: vless
   server: 140.248.159.164
@@ -2407,7 +1789,6 @@ proxies:
     path: /containers/fi
     headers:
       Host: ahlekarbala.global.ssl.fastly.net
-  _latency_ms: 9.39
 - name: 🏳️ Fastly | vless | 26
   type: vless
   server: 151.101.67.6
@@ -2418,8 +1799,6 @@ proxies:
   servername: 2a02:26f0:5d00:138f::2a1
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 9.39
 - name: 🇺🇸 美国 | trojan | 590
   type: trojan
   server: 38.180.193.194
@@ -2428,7 +1807,6 @@ proxies:
   sni: 38.180.193.194
   skip-cert-verify: true
   udp: true
-  _latency_ms: 9.41
 - name: 🇺🇸 美国 | vless | 222
   type: vless
   server: 166.62.105.42
@@ -2443,7 +1821,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 9.44
 - name: 🇺🇸 美国 | vmess | 39
   type: vmess
   server: 67.21.75.40
@@ -2460,7 +1837,6 @@ proxies:
     path: /
     headers:
       Host: www.38530229.xyz
-  _latency_ms: 9.45
 - name: 🇺🇸 美国 | vless | 343
   type: vless
   server: 192.200.160.253
@@ -2475,7 +1851,6 @@ proxies:
     path: /
     headers:
       Host: qyi.fqjd663.ggff.net
-  _latency_ms: 9.45
 - name: 🏳️ Fastly | vless | 09
   type: vless
   server: 151.101.192.223
@@ -2486,8 +1861,6 @@ proxies:
   servername: 151.101.192.223
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 9.47
 - name: 🏳️ Fastly | vless | 11
   type: vless
   server: 151.101.194.219
@@ -2498,8 +1871,6 @@ proxies:
   servername: 151.101.194.219
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 9.47
 - name: 🏳️ Fastly | vless | 29
   type: vless
   server: 151.101.131.6
@@ -2510,8 +1881,6 @@ proxies:
   servername: 2a02:26f0:5d00:138f::2a1
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 9.47
 - name: 🇺🇸 美国 | vless | 435
   type: vless
   server: 192.200.160.20
@@ -2526,7 +1895,6 @@ proxies:
     path: /njvqoews
     headers:
       Host: 639073677243791121.camry-perma.info
-  _latency_ms: 9.49
 - name: 🏳️ Fastly | vless | 03
   type: vless
   server: 151.101.3.8
@@ -2537,8 +1905,6 @@ proxies:
   servername: 151.101.3.8
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 9.5
 - name: 🇺🇸 美国 | vless | 78
   type: vless
   server: 69.63.197.137
@@ -2553,7 +1919,6 @@ proxies:
     path: /danfengfp=chrome
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 9.51
 - name: 🏳️ Fastly | ss | 16
   type: ss
   server: 151.101.194.219
@@ -2561,7 +1926,6 @@ proxies:
   cipher: knm{ko
   password: 4utv
   udp: true
-  _latency_ms: 9.51
 - name: 🇺🇸 美国 | vmess | 568
   type: vmess
   server: 148.135.33.227
@@ -2578,7 +1942,6 @@ proxies:
     path: /
     headers:
       Host: www.60988297.xyz
-  _latency_ms: 9.53
 - name: 🇺🇸 美国 | vless | 593
   type: vless
   server: 64.186.242.91
@@ -2593,7 +1956,6 @@ proxies:
     path: /proxyip=proxyip.cmliussss.netsecurity=tls
     headers:
       Host: sn1.skylee5.cloudns.ch
-  _latency_ms: 9.53
 - name: 🇺🇸 美国 | vless | 567
   type: vless
   server: 69.63.201.145
@@ -2608,7 +1970,6 @@ proxies:
     path: /proxyip=ProxyIP.CMLiussss.net
     headers:
       Host: sni.skylee4.cloudns.ch
-  _latency_ms: 9.54
 - name: 🇺🇸 美国 | vless | 563
   type: vless
   server: 154.17.12.212
@@ -2623,7 +1984,6 @@ proxies:
     path: /proxyip=ProxyIP.CMLiussss.net
     headers:
       Host: sni.skylee4.cloudns.ch
-  _latency_ms: 9.57
 - name: 🇺🇸 美国 | vless | 585
   type: vless
   server: 154.26.189.70
@@ -2638,7 +1998,6 @@ proxies:
     path: /proxyip=ProxyIP.CMLiussss.net
     headers:
       Host: sni.skylee4.cloudns.ch
-  _latency_ms: 9.58
 - name: 🇮🇪 爱尔兰 | vless | 01
   type: vless
   server: 37.0.6.191
@@ -2653,7 +2012,6 @@ proxies:
     path: /
     headers:
       Host: sni.my111000.tech
-  _latency_ms: 9.59
 - name: 🇺🇸 美国 | vless | 269
   type: vless
   server: 216.24.57.43
@@ -2668,7 +2026,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.cc.cd
-  _latency_ms: 9.59
 - name: 🇺🇸 美国 | vless | 143
   type: vless
   server: 160.153.1.216
@@ -2683,7 +2040,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 9.6
 - name: 🇺🇸 美国 | vless | 495
   type: vless
   server: 135.84.64.222
@@ -2698,7 +2054,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 9.6
 - name: 🇺🇸 美国 | vless | 448
   type: vless
   server: 135.84.74.20
@@ -2713,7 +2068,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 9.62
 - name: 🇺🇸 美国 | vless | 128
   type: vless
   server: 160.153.1.168
@@ -2728,7 +2082,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 9.64
 - name: 🇺🇸 美国 | vless | 135
   type: vless
   server: 135.84.64.90
@@ -2743,7 +2096,6 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳 @WangCai2fp=chromesecurity=tls
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 9.64
 - name: 🇺🇸 美国 | vless | 285
   type: vless
   server: 161.145.150.42
@@ -2758,7 +2110,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 9.64
 - name: 🇺🇸 美国 | vmess | 327
   type: vmess
   server: 216.24.57.68
@@ -2775,7 +2126,6 @@ proxies:
     path: /
     headers:
       Host: e130917c-1b58-4136-b2d9-76dc920e0add.add97ee8-0f14-48a3-b2cd-979c56742e64.loseyourip.com
-  _latency_ms: 9.64
 - name: 🏳️ CF节点 | vmess | 20
   type: vmess
   server: 172.67.216.97
@@ -2792,7 +2142,6 @@ proxies:
     path: /hgcefomn
     headers:
       Host: ''
-  _latency_ms: 9.65
 - name: 🇺🇸 美国 | vless | 102
   type: vless
   server: 160.153.1.96
@@ -2807,7 +2156,6 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳 @WangCai2security=tls
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 9.65
 - name: 🇺🇸 美国 | vless | 225
   type: vless
   server: 166.62.107.138
@@ -2822,7 +2170,6 @@ proxies:
     path: /
     headers:
       Host: sni.111000.indevs.in
-  _latency_ms: 9.66
 - name: 🇺🇸 美国 | vless | 295
   type: vless
   server: 192.169.220.42
@@ -2837,7 +2184,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 9.66
 - name: 🇺🇸 美国 | vless | 252
   type: vless
   server: 166.62.111.42
@@ -2852,7 +2198,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 9.67
 - name: 🇺🇸 美国 | vless | 375
   type: vless
   server: 45.40.148.238
@@ -2867,7 +2212,6 @@ proxies:
     path: /
     headers:
       Host: sni.jpmj.dev
-  _latency_ms: 9.67
 - name: 🏳️ CF节点 | vmess | 08
   type: vmess
   server: 104.21.16.211
@@ -2877,14 +2221,12 @@ proxies:
   cipher: auto
   network: ws
   tls: false
-  servername: null
   skip-cert-verify: true
   udp: true
   ws-opts:
     path: /iSRWSKUJKNuXvVzsYHmsMrnO
     headers:
       Host: nnmkl.2nn.ccwu.cc
-  _latency_ms: 9.69
 - name: 🏳️ CF节点 | vmess | 23
   type: vmess
   server: 172.67.67.237
@@ -2901,7 +2243,6 @@ proxies:
     path: /@hkaa0
     headers:
       Host: ''
-  _latency_ms: 9.69
 - name: 🇺🇸 美国 | vless | 586
   type: vless
   server: 154.26.181.85
@@ -2916,7 +2257,6 @@ proxies:
     path: /danfeng?ed=2560fp=chromesecurity=tls
     headers:
       Host: q40ivxuck.danfeng.qzz.io
-  _latency_ms: 9.69
 - name: 🇺🇸 美国 | vless | 272
   type: vless
   server: 198.71.191.22
@@ -2927,8 +2267,6 @@ proxies:
   servername: myopen.tencan.ir
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 9.7
 - name: 🇺🇸 美国 | vless | 382
   type: vless
   server: 166.62.112.40
@@ -2943,7 +2281,6 @@ proxies:
     path: /
     headers:
       Host: edtunnel-eiz.pages.dev
-  _latency_ms: 9.7
 - name: 🇺🇸 美国 | vless | 394
   type: vless
   server: 199.68.156.42
@@ -2958,7 +2295,6 @@ proxies:
     path: /danfengsecurity=tls
     headers:
       Host: snippet.danfeng.rr.kg
-  _latency_ms: 9.71
 - name: 🇷🇺 俄罗斯 | ss | 01
   type: ss
   server: 45.67.215.233
@@ -2966,7 +2302,6 @@ proxies:
   cipher: G[kM
   password: mz^9z޼
   udp: true
-  _latency_ms: 9.71
 - name: 🏳️ Fastly | vless | 08
   type: vless
   server: 199.232.236.1
@@ -2981,7 +2316,6 @@ proxies:
     path: /?ed=2052
     headers:
       Host: looijji.global.ssl.fastly.net
-  _latency_ms: 9.72
 - name: 🇺🇸 美国 | vless | 69
   type: vless
   server: 69.63.219.19
@@ -2996,7 +2330,6 @@ proxies:
     path: /danfeng?ed=2560fp=chromesecurity=tls
     headers:
       Host: snippet.danfeng.com.cfd
-  _latency_ms: 9.72
 - name: 🇺🇸 美国 | vless | 93
   type: vless
   server: 38.147.160.49
@@ -3011,7 +2344,6 @@ proxies:
     path: /?ed=2560&https://t.me/WangCai2🇨🇳security=tls
     headers:
       Host: sni.111000.dns.army
-  _latency_ms: 9.72
 - name: 🇺🇸 美国 | vmess | 289
   type: vmess
   server: 216.24.57.57
@@ -3028,7 +2360,6 @@ proxies:
     path: /
     headers:
       Host: e130917c-1b58-4136-b2d9-76dc920e0add.add97ee8-0f14-48a3-b2cd-979c56742e64.loseyourip.com
-  _latency_ms: 9.73
 - name: 🇺🇸 美国 | vless | 475
   type: vless
   server: 160.79.104.238
@@ -3043,7 +2374,6 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳@WangCai2security=tls
     headers:
       Host: sni.jpmj.dev
-  _latency_ms: 9.73
 - name: 🏳️ CF节点 | vmess | 14
   type: vmess
   server: 172.67.212.128
@@ -3060,7 +2390,6 @@ proxies:
     path: /hgcefomn
     headers:
       Host: ''
-  _latency_ms: 9.74
 - name: 🏳️ Fastly | vless | 01
   type: vless
   server: 151.101.64.155
@@ -3071,8 +2400,6 @@ proxies:
   servername: 151.101.64.155
   skip-cert-verify: true
   udp: true
-  ws-opts: null
-  _latency_ms: 9.74
 - name: 🇺🇸 美国 | vless | 468
   type: vless
   server: 135.84.74.152
@@ -3087,4 +2414,5 @@ proxies:
     path: /
     headers:
       Host: sni.111000.dynv6.net
-  _latency_ms: 9.74
+generated_at: '20260424_160810'
+count: 180
