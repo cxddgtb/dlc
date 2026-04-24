@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 NoMoreWalls-Pro | Extreme Core Engine (Final Fixed Version)
-修复了 safe_b64_decode 参数丢失导致的 SyntaxError。
-修复了 SS 节点解析错误 (unknown method: ss)。
+修复了 SS 节点解析错误 (unknown method: knm{ko)。
+增加了 SS 加密方法白名单校验，非法节点自动丢弃。
 """
 
 import os
@@ -35,6 +35,17 @@ MAX_LATENCY_MS = int(os.getenv("MAX_LATENCY_MS", "500"))
 CONCURRENCY = int(os.getenv("CONCURRENCY", "60"))
 ARCHIVE_KEEP = int(os.getenv("ARCHIVE_KEEP", "10"))
 
+# SS 加密方法白名单 (只允许标准方法)
+VALID_SS_METHODS = {
+    "aes-128-gcm", "aes-192-gcm", "aes-256-gcm",
+    "aes-128-cfb", "aes-192-cfb", "aes-256-cfb",
+    "aes-128-ctr", "aes-192-ctr", "aes-256-ctr",
+    "chacha20-ietf-poly1305", "xchacha20-ietf-poly1305",
+    "chacha20-ietf", "chacha20", "salsa20", "rc4-md5",
+    "bf-cfb", "camellia-128-cfb", "camellia-192-cfb", "camellia-256-cfb",
+    "cast5-cfb", "des-cfb", "idea-cfb", "rc2-cfb", "seed-cfb", "table"
+}
+
 logging.basicConfig(
     level=logging.INFO,
     format="[%(asctime)s] %(levelname)s: %(message)s",
@@ -43,10 +54,10 @@ logging.basicConfig(
 logger = logging.getLogger("ExtremeEngine")
 
 # ================= 协议解析器 =================
-def safe_b64_decode(data: str) -> str:
-    """修复：确保参数名 data 存在，处理空值"""
+def safe_b64_decode( str) -> str:
+    """安全 Base64 解码"""
     try:
-        if not data:
+        if not 
             return ""
         data = data.strip()
         # 补齐 Base64 填充
@@ -84,7 +95,7 @@ def parse_vmess(link: str) -> Optional[Dict[str, Any]]:
 
 def parse_ss(link: str) -> Optional[Dict[str, Any]]:
     """
-    修复：重写 SS 解析逻辑，兼容多种格式，防止 cipher 被错误识别为 'ss'
+    修复：增加白名单校验，只允许标准加密方法
     """
     try:
         # 移除 ss:// 前缀
@@ -96,7 +107,9 @@ def parse_ss(link: str) -> Optional[Dict[str, Any]]:
             raw_content, remark = raw_content.split("#", 1)
             remark = urllib.parse.unquote(remark)
         
-        # 2. 尝试查找 @ 分隔符
+        cipher, password, server, port = "", "", "", ""
+        
+        # 2. 尝试查找 @ 分隔符 (SIP002 格式: base64(method:pass)@host:port)
         if "@" in raw_content:
             user_info, server_info = raw_content.split("@", 1)
             
@@ -114,22 +127,24 @@ def parse_ss(link: str) -> Optional[Dict[str, Any]]:
                     return None
             
             # 解析用户信息 (cipher:password)
-            cipher, password = "", ""
-            
             # 尝试 Base64 解码 user_info
             decoded_user = safe_b64_decode(user_info)
             
-            if ":" in decoded_user and len(decoded_user) > 2:
+            if ":" in decoded_user:
                 # 解码成功且包含冒号
-                cipher, password = decoded_user.split(":", 1)
+                parts = decoded_user.split(":", 1)
+                if len(parts) == 2:
+                    cipher, password = parts
+                else:
+                    return None
             elif ":" in user_info:
-                # 尝试直接按明文处理
+                # 尝试直接按明文处理 (较少见)
                 cipher, password = user_info.split(":", 1)
             else:
                 return None
                 
         else:
-            # 3. 没有 @，尝试整体 Base64 解码
+            # 3. 没有 @，尝试整体 Base64 解码 (旧版格式: base64(method:pass@host:port))
             decoded_full = safe_b64_decode(raw_content)
             if "@" in decoded_full:
                 u_info, s_info = decoded_full.split("@", 1)
@@ -141,25 +156,35 @@ def parse_ss(link: str) -> Optional[Dict[str, Any]]:
             else:
                 return None
 
-        # 4. 校验解析结果 (防止 cipher 为 'ss' 或空)
-        if not cipher or cipher.strip() == "" or cipher.strip().lower() == "ss":
-            logger.debug(f"Invalid SS cipher detected: '{cipher}'. Skipping node.")
+        # 4. 【关键修复】校验加密方法白名单
+        cipher = cipher.strip().lower()
+        if not cipher or cipher not in VALID_SS_METHODS:
+            logger.debug(f"Invalid SS method detected: '{cipher}'. Skipping node.")
             return None
             
-        # 清理端口号中的非法字符
+        # 清理端口号中的非法字符 (如 ?plugin=...)
         if "?" in port:
             port = port.split("?")[0]
+            
+        # 校验端口
+        try:
+            port_int = int(port)
+            if port_int < 1 or port_int > 65535:
+                return None
+        except ValueError:
+            return None
 
         return {
             "name": remark or f"SS-{server}",
             "type": "ss",
             "server": server,
-            "port": int(port),
+            "port": port_int,
             "cipher": cipher,
             "password": password,
             "udp": True
         }
     except Exception as e:
+        # logger.debug(f"SS parse failed: {e}")
         return None
 
 def parse_trojan(link: str) -> Optional[Dict[str, Any]]:
@@ -289,7 +314,7 @@ def load_archives() -> List[Dict[str, Any]]:
     for f in archive_files:
         try:
             data = yaml.safe_load(f.read_text(encoding="utf-8"))
-            if data and isinstance(data, dict) and "proxies" in data:
+            if data and isinstance(data, dict) and "proxies" in 
                 merged.extend(data["proxies"])
         except Exception as e:
             logger.debug(f"Failed to load archive {f.name}: {e}")
