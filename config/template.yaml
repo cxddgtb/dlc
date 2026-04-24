@@ -1,0 +1,296 @@
+# mihomo / Clash Meta 企业级配置模板
+# 特性：零超时 | 多维分组 | 智能降级链 | 进程/域名/IP 三维分流 | 自动嗅探优化
+mixed-port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: strict
+keep-alive-idle: 600
+keep-alive-interval: 30
+interface-name: en0
+
+# 协议嗅探优化（自动识别 SNI/HTTP/QUIC，解决污染与分流失效）
+sniffer:
+  enable: true
+  sniff:
+    HTTP: { ports: [80, 8080-8880], override-destination: true }
+    TLS: { ports: [443, 8443], override-destination: true }
+    QUIC: { ports: [443, 8443] }
+  skip-domain:
+    - "Mijia Cloud"
+    - "dlg.io.mi.com"
+    - "push.apple.com"
+
+# DNS 防污染+智能解析
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "time.*.com"
+    - "ntp.*.com"
+    - "+.push.apple.com"
+    - "captive.apple.com"
+  nameserver:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - https://9.9.9.9/dns-query
+    - https://208.67.222.222/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/8
+      - 127.0.0.0/8
+
+# ================= 策略组架构 =================
+proxy-groups:
+  # 🚀 核心智能优选（全局自动测速，失败3次自动剔除）
+  - name: 🚀 智能优选
+    type: url-test
+    proxies: []
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    lazy: true
+    max-failed-times: 3
+
+  # 🌏 亚洲低延迟专线（港/台/新/日/韩，容忍30ms，适合日常/网页）
+  - name: 🌏 亚洲低延迟
+    type: url-test
+    proxies: []
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 30
+    lazy: true
+    max-failed-times: 3
+    filter: "(?i)(hk|tw|sg|jp|kr|asia|港|台|新|日|韩)"
+
+  # 🌍 欧美大带宽专线（美/德/法/荷/英，容忍80ms，适合下载/大流量）
+  - name: 🌍 欧美大带宽
+    type: url-test
+    proxies: []
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 80
+    lazy: true
+    max-failed-times: 3
+    filter: "(?i)(us|de|fr|nl|uk|eu|美|德|法|荷|英|欧)"
+
+  # 🎬 流媒体智能解锁链（降级：亚洲低延迟 → 欧美大带宽 → 智能优选 → 直连）
+  - name: 🎬 流媒体解锁
+    type: fallback
+    proxies:
+      - 🌏 亚洲低延迟
+      - 🌍 欧美大带宽
+      - 🚀 智能优选
+      - DIRECT
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    lazy: true
+
+  # 🎮 游戏低延迟专线（严格延迟≤50ms，STUN探测，禁懒加载）
+  - name: 🎮 游戏加速
+    type: url-test
+    proxies: []
+    url: stun://stun.l.google.com:19302
+    interval: 180
+    tolerance: 20
+    lazy: false
+    max-failed-times: 2
+    filter: "(?i)(game|low|latency|udp|专线|游戏|加速)"
+
+  # 🤖 AI 与开发者（OpenAI/Claude/GitHub/AWS，优先美/日/新节点）
+  - name: 🤖 AI 与开发者
+    type: url-test
+    proxies: []
+    url: https://openai.com
+    interval: 300
+    tolerance: 100
+    lazy: true
+    max-failed-times: 3
+    filter: "(?i)(us|jp|sg|ai|dev|open|claude|github)"
+
+  # 📱 社交与通讯（自动优选，屏蔽国内干扰）
+  - name: 📱 社交通讯
+    type: url-test
+    proxies: []
+    url: https://www.google.com/generate_204
+    interval: 300
+    tolerance: 60
+    lazy: true
+    max-failed-times: 3
+    filter: "(?i)(social|chat|msg|im|telegram|whatsapp|signal)"
+
+  # 🌐 全局手动切换（兜底组，可临时强制指定节点）
+  - name: 🌐 全局代理
+    type: select
+    proxies:
+      - 🚀 智能优选
+      - 🌏 亚洲低延迟
+      - 🌍 欧美大带宽
+      - 🎬 流媒体解锁
+      - 🎮 游戏加速
+      - 🤖 AI 与开发者
+      - 📱 社交通讯
+      - DIRECT
+
+  # 🐟 漏网之鱼（最终兜底）
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 智能优选
+      - 🌐 全局代理
+
+# ================= 分流规则（严格优先级排序） =================
+rules:
+  # 1️⃣ 强制代理（最高优先级，MOTV 无独立分组，直走代理）
+  - DOMAIN-KEYWORD,motv,🚀 智能优选
+  - DOMAIN-KEYWORD,mytv,🚀 智能优选
+  - DOMAIN-KEYWORD,mgtv,🚀 智能优选
+  - DOMAIN-KEYWORD,hitv,🚀 智能优选
+
+  # 2️⃣ 广告/追踪/恶意拦截（静默拒绝，节省流量）
+  - DOMAIN-KEYWORD,admarvel,REJECT
+  - DOMAIN-KEYWORD,applovin,REJECT
+  - DOMAIN-KEYWORD,mobfox,REJECT
+  - DOMAIN-KEYWORD,telemetry,REJECT
+  - DOMAIN-SUFFIX,adservice.google.com,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,googleadservices.com,REJECT
+  - DOMAIN-KEYWORD,analytics,REJECT
+  - DOMAIN-KEYWORD,tracking,REJECT
+  - DOMAIN-KEYWORD,beacon,REJECT
+
+  # 3️⃣ 流媒体平台（走智能降级链）
+  - DOMAIN-SUFFIX,netflix.com,🎬 流媒体解锁
+  - DOMAIN-SUFFIX,nflxext.com,🎬 流媒体解锁
+  - DOMAIN-SUFFIX,nflximg.com,🎬 流媒体解锁
+  - DOMAIN-SUFFIX,nflxvideo.net,🎬 流媒体解锁
+  - DOMAIN-SUFFIX,disneyplus.com,🎬 流媒体解锁
+  - DOMAIN-SUFFIX,disneystreaming.com,🎬 流媒体解锁
+  - DOMAIN-SUFFIX,bamgrid.com,🎬 流媒体解锁
+  - DOMAIN-SUFFIX,youtube.com,🎬 流媒体解锁
+  - DOMAIN-SUFFIX,youtube-nocookie.com,🎬 流媒体解锁
+  - DOMAIN-SUFFIX,googlevideo.com,🎬 流媒体解锁
+  - DOMAIN-KEYWORD,ytimg,🎬 流媒体解锁
+  - DOMAIN-KEYWORD,netflix,🎬 流媒体解锁
+  - DOMAIN-KEYWORD,disney,🎬 流媒体解锁
+  - DOMAIN-KEYWORD,primevideo,🎬 流媒体解锁
+  - DOMAIN-KEYWORD,spotify,🎬 流媒体解锁
+  - DOMAIN-SUFFIX,hbo.com,🎬 流媒体解锁
+  - DOMAIN-SUFFIX,hbomax.com,🎬 流媒体解锁
+  - DOMAIN-SUFFIX,peacocktv.com,🎬 流媒体解锁
+  - DOMAIN-SUFFIX,paramountplus.com,🎬 流媒体解锁
+  - DOMAIN-SUFFIX,dazn.com,🎬 流媒体解锁
+
+  # 4️⃣ AI 与开发者工具（专属低延迟路由）
+  - DOMAIN-SUFFIX,openai.com,🤖 AI 与开发者
+  - DOMAIN-SUFFIX,chatgpt.com,🤖 AI 与开发者
+  - DOMAIN-KEYWORD,openai,🤖 AI 与开发者
+  - DOMAIN-SUFFIX,anthropic.com,🤖 AI 与开发者
+  - DOMAIN-KEYWORD,claude,🤖 AI 与开发者
+  - DOMAIN-SUFFIX,googleapis.com,🤖 AI 与开发者
+  - DOMAIN-SUFFIX,github.com,🤖 AI 与开发者
+  - DOMAIN-SUFFIX,github.io,🤖 AI 与开发者
+  - DOMAIN-SUFFIX,githubusercontent.com,🤖 AI 与开发者
+  - DOMAIN-SUFFIX,gitlab.com,🤖 AI 与开发者
+  - DOMAIN-KEYWORD,stackoverflow,🤖 AI 与开发者
+  - DOMAIN-KEYWORD,docker,🤖 AI 与开发者
+  - DOMAIN-SUFFIX,aws.amazon.com,🤖 AI 与开发者
+  - DOMAIN-KEYWORD,cloudflare,🤖 AI 与开发者
+  - DOMAIN-SUFFIX,vercel.app,🤖 AI 与开发者
+  - DOMAIN-SUFFIX,netlify.app,🤖 AI 与开发者
+
+  # 5️⃣ 游戏与语音（STUN探测+低延迟保障）
+  - DOMAIN-SUFFIX,steampowered.com,🎮 游戏加速
+  - DOMAIN-SUFFIX,steamcontent.com,🎮 游戏加速
+  - DOMAIN-SUFFIX,epicgames.com,🎮 游戏加速
+  - DOMAIN-SUFFIX,blizzard.com,🎮 游戏加速
+  - DOMAIN-SUFFIX,ea.com,🎮 游戏加速
+  - DOMAIN-KEYWORD,xbox,🎮 游戏加速
+  - DOMAIN-KEYWORD,playstation,🎮 游戏加速
+  - DOMAIN-SUFFIX,discord.com,🎮 游戏加速
+  - DOMAIN-KEYWORD,discordapp,🎮 游戏加速
+  - PROCESS-NAME,steam.exe,🎮 游戏加速
+  - PROCESS-NAME,EpicGamesLauncher.exe,🎮 游戏加速
+  - PROCESS-NAME,discord.exe,🎮 游戏加速
+
+  # 6️⃣ 社交媒体与通讯（自动优选+防干扰）
+  - DOMAIN-SUFFIX,google.com,📱 社交通讯
+  - DOMAIN-SUFFIX,gmail.com,📱 社交通讯
+  - DOMAIN-KEYWORD,gmail,📱 社交通讯
+  - DOMAIN-SUFFIX,facebook.com,📱 社交通讯
+  - DOMAIN-SUFFIX,fbcdn.net,📱 社交通讯
+  - DOMAIN-KEYWORD,facebook,📱 社交通讯
+  - DOMAIN-SUFFIX,instagram.com,📱 社交通讯
+  - DOMAIN-SUFFIX,twitter.com,📱 社交通讯
+  - DOMAIN-SUFFIX,x.com,📱 社交通讯
+  - DOMAIN-SUFFIX,twimg.com,📱 社交通讯
+  - DOMAIN-SUFFIX,telegram.org,📱 社交通讯
+  - DOMAIN-SUFFIX,t.me,📱 社交通讯
+  - DOMAIN-SUFFIX,whatsapp.net,📱 社交通讯
+  - DOMAIN-KEYWORD,whatsapp,📱 社交通讯
+  - DOMAIN-SUFFIX,tiktok.com,📱 社交通讯
+  - DOMAIN-KEYWORD,tiktok,📱 社交通讯
+  - DOMAIN-SUFFIX,signal.org,📱 社交通讯
+  - DOMAIN-SUFFIX,threema.ch,📱 社交通讯
+
+  # 7️⃣ 云服务与 CDN 智能分流（国内外分流优化）
+  - DOMAIN-SUFFIX,icloud.com,🌐 全局代理
+  - DOMAIN-SUFFIX,apple.com,🌐 全局代理
+  - DOMAIN-KEYWORD,apple,🌐 全局代理
+  - DOMAIN-KEYWORD,icloud,🌐 全局代理
+  - DOMAIN-SUFFIX,mzstatic.com,DIRECT
+  - DOMAIN,api-glb-sea.smoot.apple.com,DIRECT
+  - DOMAIN-SUFFIX,microsoft.com,🌐 全局代理
+  - DOMAIN-KEYWORD,microsoft,🌐 全局代理
+  - DOMAIN-SUFFIX,windowsupdate.com,DIRECT
+  - DOMAIN-SUFFIX,office365.com,DIRECT
+  - DOMAIN-KEYWORD,office,DIRECT
+  - DOMAIN-SUFFIX,akamai.net,DIRECT
+  - DOMAIN-SUFFIX,akamaized.net,DIRECT
+  - DOMAIN-SUFFIX,cloudfront.net,🌐 全局代理
+  - DOMAIN-KEYWORD,amazonaws,🌐 全局代理
+
+  # 8️⃣ 国内直连与局域网（严格直连，零延迟）
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-KEYWORD,-cn,DIRECT
+  - DOMAIN-KEYWORD,china,DIRECT
+  - DOMAIN-KEYWORD,baidu,DIRECT
+  - DOMAIN-KEYWORD,taobao,DIRECT
+  - DOMAIN-KEYWORD,alibaba,DIRECT
+  - DOMAIN-KEYWORD,qq,DIRECT
+  - DOMAIN-KEYWORD,weixin,DIRECT
+  - DOMAIN-KEYWORD,wechat,DIRECT
+  - DOMAIN-KEYWORD,jd,DIRECT
+  - DOMAIN-KEYWORD,mi,DIRECT
+  - DOMAIN-KEYWORD,huawei,DIRECT
+  - DOMAIN-SUFFIX,163.com,DIRECT
+  - DOMAIN-SUFFIX,netease.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,iqiyi.com,DIRECT
+  - DOMAIN-SUFFIX,youku.com,DIRECT
+  - DOMAIN-SUFFIX,douyin.com,DIRECT
+  - DOMAIN-SUFFIX,toutiao.com,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - GEOIP,LAN,DIRECT,no-resolve
+  - GEOIP,CN,DIRECT,no-resolve
+  - GEOIP,PRIVATE,DIRECT,no-resolve
+
+  # 9️⃣ 最终兜底
+  - MATCH,🐟 漏网之鱼
