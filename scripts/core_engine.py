@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-NoMoreWalls-Pro | Extreme Core Engine (Fixed Version)
-修复了 safe_b64_decode 参数错误和 load_archives 语句截断问题。
+NoMoreWalls-Pro | Extreme Core Engine (Final Fixed Version)
+修复了 safe_b64_decode 崩溃问题和 SS 节点解析错误 (unknown method: ss)。
+增加了 SS 解析结果的校验，自动丢弃非法节点。
 """
 
 import os
@@ -42,12 +43,13 @@ logging.basicConfig(
 logger = logging.getLogger("ExtremeEngine")
 
 # ================= 协议解析器 =================
-def safe_b64_decode(data: str) -> str:
-    """修复：参数名改为 data"""
+def safe_b64_decode( str) -> str:
+    """修复：参数名统一为 data，增加异常处理"""
     try:
-        if not data:
+        if not 
             return ""
         data = data.strip()
+        # 补齐 Base64 填充
         padding = 4 - len(data) % 4
         if padding != 4:
             data += "=" * padding
@@ -81,36 +83,77 @@ def parse_vmess(link: str) -> Optional[Dict[str, Any]]:
         return None
 
 def parse_ss(link: str) -> Optional[Dict[str, Any]]:
+    """
+    修复：重写 SS 解析逻辑，兼容多种格式，防止 cipher 被错误识别为 'ss'
+    """
     try:
-        fragment = ""
-        if "#" in link[5:]:
-            link_part, fragment = link[5:].split("#", 1)
-            fragment = urllib.parse.unquote(fragment)
-        else:
-            link_part = link[5:]
+        # 移除 ss:// 前缀
+        raw_content = link[5:]
         
-        if "@" in link_part:
-            userinfo, hostinfo = link_part.split("@", 1)
-            userinfo = safe_b64_decode(userinfo)
-            if ":" in userinfo:
-                cipher, password = userinfo.split(":", 1)
-            else:
-                return None
-        else:
-            decoded = safe_b64_decode(link_part)
-            if ":" in decoded:
-                cipher, rest = decoded.split(":", 1)
-                if "@" in rest:
-                    password, hostinfo = rest.split("@", 1)
+        # 1. 分离备注 (#)
+        remark = ""
+        if "#" in raw_content:
+            raw_content, remark = raw_content.split("#", 1)
+            remark = urllib.parse.unquote(remark)
+        
+        # 2. 尝试查找 @ 分隔符
+        if "@" in raw_content:
+            user_info, server_info = raw_content.split("@", 1)
+            
+            # 解析服务器信息 (host:port)
+            # 处理 IPv6 [::1]:port 情况
+            if server_info.startswith("["):
+                match = re.match(r'\[([^\]]+)\]:(\d+)', server_info)
+                if match:
+                    server, port = match.group(1), match.group(2)
                 else:
-                    password = ""
-                    hostinfo = rest
+                    return None
+            else:
+                if ":" in server_info:
+                    server, port = server_info.rsplit(":", 1)
+                else:
+                    return None
+            
+            # 解析用户信息 (cipher:password)
+            cipher, password = "", ""
+            
+            # 尝试 Base64 解码 user_info
+            decoded_user = safe_b64_decode(user_info)
+            
+            if ":" in decoded_user and len(decoded_user) > 2:
+                # 解码成功且包含冒号，例如: aes-128-gcm:password
+                cipher, password = decoded_user.split(":", 1)
+            elif ":" in user_info:
+                # 解码失败或为空，尝试直接按明文处理 (SIP002 格式)
+                cipher, password = user_info.split(":", 1)
             else:
                 return None
                 
-        server, port = hostinfo.rsplit(":", 1)
+        else:
+            # 3. 没有 @，尝试整体 Base64 解码
+            # 格式通常是: base64(method:password@host:port)
+            decoded_full = safe_b64_decode(raw_content)
+            if "@" in decoded_full:
+                u_info, s_info = decoded_full.split("@", 1)
+                if ":" in u_info and ":" in s_info:
+                    cipher, password = u_info.split(":", 1)
+                    server, port = s_info.rsplit(":", 1)
+                else:
+                    return None
+            else:
+                return None
+
+        # 4. 校验解析结果 (防止 cipher 为 'ss' 或空)
+        if not cipher or cipher.strip() == "" or cipher.strip().lower() == "ss":
+            logger.debug(f"Invalid SS cipher detected: '{cipher}'. Skipping node.")
+            return None
+            
+        # 清理端口号中的非法字符（如 ?plugin=...）
+        if "?" in port:
+            port = port.split("?")[0]
+
         return {
-            "name": fragment or f"SS-{server}",
+            "name": remark or f"SS-{server}",
             "type": "ss",
             "server": server,
             "port": int(port),
@@ -118,7 +161,8 @@ def parse_ss(link: str) -> Optional[Dict[str, Any]]:
             "password": password,
             "udp": True
         }
-    except Exception:
+    except Exception as e:
+        # logger.debug(f"SS parse failed: {e}")
         return None
 
 def parse_trojan(link: str) -> Optional[Dict[str, Any]]:
@@ -208,7 +252,6 @@ def fetch_subscriptions() -> List[Dict[str, Any]]:
     
     if not urls:
         logger.warning("No valid URLs in sources.txt. Please add subscription links.")
-        # 创建一个空列表而不是退出，防止第一次运行没链接就报错
         return []
 
     raw_nodes = []
@@ -249,8 +292,7 @@ def load_archives() -> List[Dict[str, Any]]:
     for f in archive_files:
         try:
             data = yaml.safe_load(f.read_text(encoding="utf-8"))
-            # 修复：补全了 "proxies" in data
-            if data and isinstance(data, dict) and "proxies" in data:
+            if data and isinstance(data, dict) and "proxies" in 
                 merged.extend(data["proxies"])
         except Exception as e:
             logger.debug(f"Failed to load archive {f.name}: {e}")
@@ -350,12 +392,8 @@ def generate_config(tested_nodes: List[Dict[str, Any]]):
         
     template = yaml.safe_load(CONFIG_TEMPLATE.read_text(encoding="utf-8"))
     
-    # 如果没有通过测速的节点，尝试使用原始节点（防止全挂）
     if not tested_nodes:
-        logger.warning("No nodes passed speed test. Using raw nodes (untested).")
-        # 这里可以 fallback 到 merged nodes，但为了安全先报错或跳过
-        # 为了不让 pipeline 挂掉，我们允许空节点生成配置（虽然没法用）
-        pass
+        logger.warning("No nodes passed speed test. Generating empty config.")
         
     node_names = [n["name"] for n in tested_nodes if n.get("name")]
     
@@ -363,7 +401,7 @@ def generate_config(tested_nodes: List[Dict[str, Any]]):
     
     for group in template.get("proxy-groups", []):
         if group["type"] in ("url-test", "fallback", "load-balance"):
-            group["proxies"] = node_names if node_names else ["DIRECT"] # 防止空列表报错
+            group["proxies"] = node_names if node_names else ["DIRECT"]
         elif group["type"] == "select":
             default_select = node_names[:15] if node_names else []
             existing = [p for p in group.get("proxies", []) if p not in node_names and p != "DIRECT"]
@@ -377,7 +415,7 @@ def generate_config(tested_nodes: List[Dict[str, Any]]):
 # ================= 主流程 =================
 def main():
     logger.info("="*50)
-    logger.info("🚀 NoMoreWalls-Pro Extreme Engine Start (Fixed)")
+    logger.info("🚀 NoMoreWalls-Pro Extreme Engine Start (Final Fixed)")
     logger.info("="*50)
     
     new_nodes = fetch_subscriptions()
@@ -387,14 +425,12 @@ def main():
     merged = deduplicate(new_nodes + old_nodes)
     
     if not merged:
-        logger.error("No nodes available after merging. Pipeline halted.")
-        # 创建一个空配置防止后续步骤报错
+        logger.error("No nodes available after merging.")
         generate_config([])
-        sys.exit(0) # 退出但不算错误，方便用户加链接
+        sys.exit(0)
         
     tested = run_speed_test(merged)
     
-    # 即使没有节点通过测速，也尝试保存（虽然可能没用）
     save_archive(tested)
     cleanup_archives()
     generate_config(tested)
