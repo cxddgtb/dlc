@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 NoMoreWalls-Pro | Extreme Core Engine (Final Fixed Version)
-修复了 SS 节点解析错误 (unknown method: knm{ko)。
-增加了 SS 加密方法白名单校验，非法节点自动丢弃。
+修复了 safe_b64_decode 参数丢失导致的 SyntaxError。
+修复了 SS 节点解析错误 (unknown method)。
 """
 
 import os
@@ -35,7 +35,7 @@ MAX_LATENCY_MS = int(os.getenv("MAX_LATENCY_MS", "500"))
 CONCURRENCY = int(os.getenv("CONCURRENCY", "60"))
 ARCHIVE_KEEP = int(os.getenv("ARCHIVE_KEEP", "10"))
 
-# SS 加密方法白名单 (只允许标准方法)
+# SS 加密方法白名单 (只允许标准方法，防止乱码)
 VALID_SS_METHODS = {
     "aes-128-gcm", "aes-192-gcm", "aes-256-gcm",
     "aes-128-cfb", "aes-192-cfb", "aes-256-cfb",
@@ -54,17 +54,17 @@ logging.basicConfig(
 logger = logging.getLogger("ExtremeEngine")
 
 # ================= 协议解析器 =================
-def safe_b64_decode( str) -> str:
-    """安全 Base64 解码"""
+def safe_b64_decode(raw_text: str) -> str:
+    """安全 Base64 解码 - 修复参数丢失问题"""
     try:
-        if not 
+        if not raw_text:
             return ""
-        data = data.strip()
+        raw_text = raw_text.strip()
         # 补齐 Base64 填充
-        padding = 4 - len(data) % 4
+        padding = 4 - len(raw_text) % 4
         if padding != 4:
-            data += "=" * padding
-        return base64.b64decode(data).decode("utf-8", errors="ignore")
+            raw_text += "=" * padding
+        return base64.b64decode(raw_text).decode("utf-8", errors="ignore")
     except Exception:
         return ""
 
@@ -184,7 +184,6 @@ def parse_ss(link: str) -> Optional[Dict[str, Any]]:
             "udp": True
         }
     except Exception as e:
-        # logger.debug(f"SS parse failed: {e}")
         return None
 
 def parse_trojan(link: str) -> Optional[Dict[str, Any]]:
@@ -314,7 +313,7 @@ def load_archives() -> List[Dict[str, Any]]:
     for f in archive_files:
         try:
             data = yaml.safe_load(f.read_text(encoding="utf-8"))
-            if data and isinstance(data, dict) and "proxies" in 
+            if data and isinstance(data, dict) and "proxies" in data:
                 merged.extend(data["proxies"])
         except Exception as e:
             logger.debug(f"Failed to load archive {f.name}: {e}")
