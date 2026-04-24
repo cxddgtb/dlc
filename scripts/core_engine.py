@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 NoMoreWalls-Pro | Extreme Core Engine (Final Fixed Version)
-修复了 safe_b64_decode 崩溃问题和 SS 节点解析错误 (unknown method: ss)。
-增加了 SS 解析结果的校验，自动丢弃非法节点。
+修复了 safe_b64_decode 参数丢失导致的 SyntaxError。
+修复了 SS 节点解析错误 (unknown method: ss)。
 """
 
 import os
@@ -43,10 +43,10 @@ logging.basicConfig(
 logger = logging.getLogger("ExtremeEngine")
 
 # ================= 协议解析器 =================
-def safe_b64_decode( str) -> str:
-    """修复：参数名统一为 data，增加异常处理"""
+def safe_b64_decode(data: str) -> str:
+    """修复：确保参数名 data 存在，处理空值"""
     try:
-        if not 
+        if not data:
             return ""
         data = data.strip()
         # 补齐 Base64 填充
@@ -101,7 +101,6 @@ def parse_ss(link: str) -> Optional[Dict[str, Any]]:
             user_info, server_info = raw_content.split("@", 1)
             
             # 解析服务器信息 (host:port)
-            # 处理 IPv6 [::1]:port 情况
             if server_info.startswith("["):
                 match = re.match(r'\[([^\]]+)\]:(\d+)', server_info)
                 if match:
@@ -121,17 +120,16 @@ def parse_ss(link: str) -> Optional[Dict[str, Any]]:
             decoded_user = safe_b64_decode(user_info)
             
             if ":" in decoded_user and len(decoded_user) > 2:
-                # 解码成功且包含冒号，例如: aes-128-gcm:password
+                # 解码成功且包含冒号
                 cipher, password = decoded_user.split(":", 1)
             elif ":" in user_info:
-                # 解码失败或为空，尝试直接按明文处理 (SIP002 格式)
+                # 尝试直接按明文处理
                 cipher, password = user_info.split(":", 1)
             else:
                 return None
                 
         else:
             # 3. 没有 @，尝试整体 Base64 解码
-            # 格式通常是: base64(method:password@host:port)
             decoded_full = safe_b64_decode(raw_content)
             if "@" in decoded_full:
                 u_info, s_info = decoded_full.split("@", 1)
@@ -148,7 +146,7 @@ def parse_ss(link: str) -> Optional[Dict[str, Any]]:
             logger.debug(f"Invalid SS cipher detected: '{cipher}'. Skipping node.")
             return None
             
-        # 清理端口号中的非法字符（如 ?plugin=...）
+        # 清理端口号中的非法字符
         if "?" in port:
             port = port.split("?")[0]
 
@@ -162,7 +160,6 @@ def parse_ss(link: str) -> Optional[Dict[str, Any]]:
             "udp": True
         }
     except Exception as e:
-        # logger.debug(f"SS parse failed: {e}")
         return None
 
 def parse_trojan(link: str) -> Optional[Dict[str, Any]]:
@@ -292,7 +289,7 @@ def load_archives() -> List[Dict[str, Any]]:
     for f in archive_files:
         try:
             data = yaml.safe_load(f.read_text(encoding="utf-8"))
-            if data and isinstance(data, dict) and "proxies" in 
+            if data and isinstance(data, dict) and "proxies" in data:
                 merged.extend(data["proxies"])
         except Exception as e:
             logger.debug(f"Failed to load archive {f.name}: {e}")
