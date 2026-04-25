@@ -3,6 +3,7 @@ Async fetcher engine for grabbing nodes from multiple sources
 """
 import asyncio
 import aiohttp
+import base64
 from typing import List, Optional, Set
 from src.core.node import Node
 from src.utils.logger import log
@@ -51,7 +52,8 @@ class Fetcher:
             connector=connector,
             timeout=timeout,
             headers={
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                "Accept": "*/*",
             },
         )
 
@@ -69,7 +71,7 @@ class Fetcher:
                     return []
 
                 nodes = self._parse_content(content, url)
-                log.info(f"Fetched {len(nodes)} nodes from {url}")
+                log.info(f"Fetched {len(nodes)} nodes from {url[:50]}...")
                 return nodes
 
             except Exception as e:
@@ -80,7 +82,7 @@ class Fetcher:
         """Fetch URL content with retry logic"""
 
         async def _do_fetch():
-            async with self.session.get(url, ssl=False) as response:
+            async with self.session.get(url, ssl=False, allow_redirects=True) as response:
                 if response.status == 200:
                     return await response.text()
                 else:
@@ -97,22 +99,55 @@ class Fetcher:
             return None
 
     def _parse_content(self, content: str, source_url: str) -> List[Node]:
-        """Parse content to extract nodes"""
+        """Parse content to extract nodes - supports both plain text and base64 encoded subscriptions"""
         nodes = []
 
-        # Try to detect format
+        # Try to detect if content is base64 encoded subscription
+        decoded_content = self._try_decode_base64(content)
+        if decoded_content and decoded_content != content:
+            content = decoded_content
+
+        # Split into lines and parse
         lines = content.strip().split("\n")
 
         for line in lines:
             line = line.strip()
-            if not line:
+            if not line or line.startswith("#"):
                 continue
 
+            # Try to parse as node URL
             node = self._parse_line(line, source_url)
             if node:
                 nodes.append(node)
 
         return nodes
+
+    def _try_decode_base64(self, content: str) -> Optional[str]:
+        """Try to decode base64 encoded subscription content"""
+        try:
+            # Check if content looks like base64 (only contains base64 chars)
+            import re
+            b64_pattern = re.compile(r'^[A-Za-z0-9+/=\s]+$')
+            
+            # Remove whitespace for checking
+            clean_content = ''.join(content.split())
+            
+            if len(clean_content) > 50 and b64_pattern.match(clean_content):
+                # Try base64 decode
+                missing_padding = len(clean_content) % 4
+                if missing_padding:
+                    clean_content += "=" * (4 - missing_padding)
+                
+                decoded = base64.b64decode(clean_content).decode("utf-8", errors="ignore")
+                
+                # Check if decoded content contains protocol URLs
+                if any(proto in decoded for proto in ["vmess://", "ss://", "trojan://", "vless://", "ssr://"]):
+                    log.info("Detected and decoded base64 subscription")
+                    return decoded
+        except Exception as e:
+            log.debug(f"Not a base64 encoded content: {e}")
+        
+        return content
 
     def _parse_line(self, line: str, source_url: str) -> Optional[Node]:
         """Parse a single line to extract node"""

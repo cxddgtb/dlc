@@ -70,7 +70,8 @@ async def main():
     valid_nodes = await validator.batch_validate(unique_nodes)
 
     # Sort by score
-    valid_nodes.sort(key=lambda n: n.score, reverse=True)
+    if valid_nodes:
+        valid_nodes.sort(key=lambda n: n.score, reverse=True)
 
     # Step 5: Generate output files
     log.info("\n[Step 5/5] Generating output files...")
@@ -96,7 +97,12 @@ async def main():
     log.info(f"  Valid nodes: {len(valid_nodes)}")
     log.info(f"  Regions: {len(classified)}")
     log.info("=" * 60)
-    log.info("Done! Output files saved to output/")
+    
+    if valid_nodes:
+        log.info("Done! Output files saved to output/")
+    else:
+        log.warning("No valid nodes found. Output files may be empty.")
+        log.warning("This could mean the source URLs are temporarily unavailable.")
 
 
 if __name__ == "__main__":

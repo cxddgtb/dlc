@@ -16,12 +16,15 @@ def parse_vmess(url: str, source_url: Optional[str] = None) -> Optional[Node]:
 
         encoded = url[8:]  # Remove 'vmess://' prefix
 
+        # Remove any whitespace
+        encoded = encoded.strip()
+
         # Add padding if needed
         missing_padding = len(encoded) % 4
         if missing_padding:
             encoded += "=" * (4 - missing_padding)
 
-        decoded = base64.b64decode(encoded).decode("utf-8")
+        decoded = base64.b64decode(encoded).decode("utf-8", errors="ignore")
         config = json.loads(decoded)
 
         name = config.get("ps", config.get("add", "Unknown"))
@@ -34,6 +37,7 @@ def parse_vmess(url: str, source_url: Optional[str] = None) -> Optional[Node]:
         path = config.get("path", "")
         host = config.get("host", "")
         sni = config.get("sni", config.get("host", ""))
+        cipher = config.get("scy", "auto")
 
         if not server or not port or not uuid:
             log.warning(f"Invalid Vmess config: {config}")
@@ -46,7 +50,7 @@ def parse_vmess(url: str, source_url: Optional[str] = None) -> Optional[Node]:
             port=port,
             uuid=uuid,
             aid=aid,
-            cipher=config.get("scy", "auto"),
+            cipher=cipher,
             network=network,
             tls=tls,
             path=path,

@@ -48,11 +48,11 @@ class YAMLGenerator:
         config = self.base_config.copy()
 
         # Convert nodes to Clash format
-        proxies = [node.to_clash_dict() for node in nodes]
+        proxies = [node.to_clash_dict() for node in nodes] if nodes else []
         config["proxies"] = proxies
 
         # Generate proxy names list
-        proxy_names = [node.name for node in nodes]
+        proxy_names = [node.name for node in nodes] if nodes else []
 
         # Setup proxy groups
         if "proxy-groups" not in config:
@@ -62,16 +62,16 @@ class YAMLGenerator:
         has_default = False
         for group in config["proxy-groups"]:
             if group.get("name") == "🚀 节点选择":
-                group["proxies"] = proxy_names[:50]  # Limit to top 50
+                group["proxies"] = proxy_names[:50] if proxy_names else ["DIRECT"]
                 has_default = True
                 break
 
-        if not has_default and proxy_names:
+        if not has_default:
             config["proxy-groups"].append(
                 {
                     "name": "🚀 节点选择",
                     "type": "select",
-                    "proxies": proxy_names[:50],
+                    "proxies": proxy_names[:50] if proxy_names else ["DIRECT"],
                 }
             )
 

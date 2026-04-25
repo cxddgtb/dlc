@@ -18,8 +18,12 @@ class Base64Encoder:
         Returns path to output file
         """
         if not nodes:
-            log.warning("No nodes to encode")
-            return Path(output_file)
+            log.warning("No nodes to encode, creating empty file")
+            output_path = Path(output_file)
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            with open(output_path, "w", encoding="utf-8") as f:
+                f.write("")
+            return output_path
 
         # Convert each node to URL
         urls = []
