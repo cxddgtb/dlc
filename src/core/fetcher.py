@@ -180,3 +180,53 @@ class Fetcher:
 
         log.info(f"Total fetched nodes: {len(all_nodes)}")
         return all_nodes
+    
+    async def fetch_all_sources_grouped(
+        self, 
+        sources: List[str],
+        max_per_source: int = 100
+    ) -> dict:
+        """
+        Fetch nodes from all sources and group by source
+        Returns dict mapping source_url -> list of nodes (max max_per_source per source)
+        """
+        log.info(f"Fetching from {len(sources)} sources (max {max_per_source} nodes per source)...")
+        
+        # Fetch all sources
+        tasks = [self._fetch_single_source(url, max_per_source) for url in sources]
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+        
+        grouped = {}
+        total_nodes = 0
+        
+        for i, result in enumerate(results):
+            if isinstance(result, dict):
+                for url, nodes in result.items():
+                    grouped[url] = nodes
+                    total_nodes += len(nodes)
+        
+        log.info(f"Total fetched: {total_nodes} nodes from {len(grouped)} sources")
+        return grouped
+    
+    async def _fetch_single_source(
+        self, 
+        url: str, 
+        max_nodes: int = 100
+    ) -> dict:
+        """Fetch nodes from a single source with limit"""
+        try:
+            content = await self._fetch_with_retry(url)
+            if not content:
+                return {url: []}
+            
+            nodes = self._parse_content(content, url)
+            
+            # Limit to max_nodes per source
+            limited_nodes = nodes[:max_nodes]
+            
+            log.info(f"Fetched {len(limited_nodes)}/{len(nodes)} nodes from {url[:50]}...")
+            return {url: limited_nodes}
+            
+        except Exception as e:
+            log.error(f"Failed to fetch {url}: {e}")
+            return {url: []}

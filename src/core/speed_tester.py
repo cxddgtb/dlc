@@ -61,15 +61,18 @@ class SpeedTester:
         
         Args:
             nodes: List of nodes (should be pre-sorted by latency)
-            top_n: Number of top nodes to test for speed
+            top_n: Number of top nodes to test for speed (set to 0 for all)
         """
         if not nodes:
             return []
 
-        # Only test top N nodes to save time
-        test_nodes = nodes[:top_n]
-        
-        log.info(f"Testing download speed for top {len(test_nodes)} nodes...")
+        # If top_n is 0 or greater than len(nodes), test all nodes
+        if top_n == 0 or top_n >= len(nodes):
+            test_nodes = nodes
+            log.info(f"Testing download speed for ALL {len(test_nodes)} nodes that passed latency...")
+        else:
+            test_nodes = nodes[:top_n]
+            log.info(f"Testing download speed for top {len(test_nodes)} nodes...")
         
         # Create tasks
         tasks = [self._test_and_update(node) for node in test_nodes]
@@ -77,17 +80,17 @@ class SpeedTester:
         # Run tests concurrently
         results = await asyncio.gather(*tasks, return_exceptions=True)
         
-        # Filter out failed tests
+        # Filter out failed tests - ONLY KEEP nodes that passed speed test
         tested_nodes = [n for n in test_nodes if n.speed is not None]
         failed_count = len(test_nodes) - len(tested_nodes)
         
         if failed_count > 0:
-            log.warning(f"Speed test failed for {failed_count} nodes")
+            log.warning(f"Speed test failed for {failed_count} nodes (these will be excluded)")
         
         # Sort by speed (fastest first)
         tested_nodes.sort(key=lambda n: n.speed if n.speed else 0, reverse=True)
         
-        log.info(f"Speed test complete: {len(tested_nodes)} nodes tested")
+        log.info(f"Speed test complete: {len(tested_nodes)}/{len(test_nodes)} nodes passed")
         if tested_nodes:
             speeds = [n.speed for n in tested_nodes if n.speed]
             if speeds:

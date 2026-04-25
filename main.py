@@ -27,7 +27,7 @@ async def main():
     start_time = datetime.now()
     log.info("=" * 70)
     log.info("CXDDZY-Pro v2.0 - Advanced Proxy Node Fetcher")
-    log.info("Features: Fetch | Dedup | Latency Test | Speed Test | Archive")
+    log.info("Pipeline: Fetch -> Dedup -> Latency(per source) -> Speed(all) -> Archive")
     log.info("=" * 70)
 
     # Initialize archiver
@@ -48,23 +48,28 @@ async def main():
     log.info(f"Loaded {len(sources)} sources")
 
     # ==========================================
-    # Step 1: Fetch nodes from all sources
+    # Step 1: Fetch nodes grouped by source
     # ==========================================
-    log.info("\n[Step 1/8] Fetching nodes from sources...")
+    log.info("\n[Step 1/7] Fetching nodes from sources (grouped)...")
     async with Fetcher(max_concurrent=20, timeout=30, max_retries=3) as fetcher:
-        all_nodes = await fetcher.fetch_all_sources(sources)
+        grouped_nodes = await fetcher.fetch_all_sources_grouped(sources, max_per_source=100)
+    
+    # Also fetch all nodes combined for deduplication
+    all_nodes = []
+    for nodes in grouped_nodes.values():
+        all_nodes.extend(nodes)
 
-    log.info(f"Total raw nodes fetched: {len(all_nodes)}")
+    log.info(f"Total raw nodes fetched: {len(all_nodes)} from {len(grouped_nodes)} sources")
 
     if not all_nodes:
         log.error("No nodes fetched! Sources may be unavailable.")
-        # Still create empty output files
         all_nodes = []
+        grouped_nodes = {}
 
     # ==========================================
     # Step 2: Deduplicate nodes
     # ==========================================
-    log.info("\n[Step 2/8] Deduplicating nodes...")
+    log.info("\n[Step 2/7] Deduplicating nodes...")
     deduplicator = Deduplicator(strategy="best")
     
     # Remove exact duplicates
@@ -88,7 +93,7 @@ async def main():
     # ==========================================
     # Step 3: Classify regions
     # ==========================================
-    log.info("\n[Step 3/8] Classifying node regions...")
+    log.info("\n[Step 3/7] Classifying node regions...")
     classifier = Classifier()
     classified = classifier.classify_batch(unique_nodes)
 
@@ -98,62 +103,75 @@ async def main():
     # ==========================================
     # Step 4: Basic validation
     # ==========================================
-    log.info("\n[Step 4/8] Validating nodes...")
+    log.info("\n[Step 4/7] Validating nodes...")
     validator = Validator()
     valid_nodes = await validator.batch_validate(unique_nodes)
 
     log.info(f"After validation: {len(valid_nodes)} nodes")
 
     # ==========================================
-    # Step 5: Latency testing
+    # Step 5: Latency testing (per source, 100 nodes each)
     # ==========================================
-    log.info("\n[Step 5/8] Testing node latency...")
-    if valid_nodes:
+    log.info("\n[Step 5/7] Testing latency (first 100 nodes per source)...")
+    
+    # Re-group validated nodes by source for latency testing
+    validated_grouped = {}
+    for node in valid_nodes:
+        source = node.source_url or "unknown"
+        if source not in validated_grouped:
+            validated_grouped[source] = []
+        validated_grouped[source].append(node)
+    
+    if validated_grouped:
         latency_tester = LatencyTester(
             test_url="http://www.gstatic.com/generate_204",
             timeout=5,
             max_concurrent=30,
         )
-        tested_nodes = await latency_tester.batch_test(valid_nodes, max_nodes=200)
+        tested_nodes = await latency_tester.test_by_source(
+            validated_grouped, 
+            max_per_source=100
+        )
         
         if tested_nodes:
             log.info(f"After latency testing: {len(tested_nodes)} nodes responded")
         else:
-            log.warning("Latency testing failed or no nodes responded")
-            tested_nodes = valid_nodes
+            log.warning("Latency testing failed - no nodes responded")
+            tested_nodes = []
     else:
         tested_nodes = []
         log.warning("Skipping latency test - no valid nodes")
 
     # ==========================================
-    # Step 6: Speed testing (top nodes only)
+    # Step 6: Speed testing (ALL nodes that passed latency)
     # ==========================================
-    log.info("\n[Step 6/8] Testing download speed (top 50 nodes)...")
+    log.info("\n[Step 6/7] Testing download speed (ALL latency-passed nodes)...")
     if tested_nodes:
         speed_tester = SpeedTester(
             test_url="http://speedtest.tele2.net/1MB.zip",
             timeout=10,
             max_concurrent=5,
         )
-        final_nodes = await speed_tester.batch_test(tested_nodes, top_n=50)
+        # Set top_n=0 to test ALL nodes that passed latency
+        final_nodes = await speed_tester.batch_test(tested_nodes, top_n=0)
         
         if final_nodes:
-            log.info(f"After speed testing: {len(final_nodes)} nodes completed")
+            log.info(f"After speed testing: {len(final_nodes)} nodes passed (only these will be kept)")
         else:
-            log.warning("Speed testing failed")
-            final_nodes = tested_nodes
+            log.warning("Speed testing failed - NO nodes passed!")
+            final_nodes = []
     else:
         final_nodes = []
-        log.warning("Skipping speed test - no tested nodes")
+        log.warning("Skipping speed test - no latency-tested nodes")
 
-    # Sort final nodes by score
+    # Sort final nodes by score (only nodes that passed BOTH tests)
     if final_nodes:
         final_nodes.sort(key=lambda n: n.score, reverse=True)
 
     # ==========================================
     # Step 7: Generate output files
     # ==========================================
-    log.info("\n[Step 7/8] Generating output files...")
+    log.info("\n[Step 7/7] Generating output files...")
 
     # Generate Base64 format (V2Ray subscription)
     encoder = Base64Encoder()
@@ -168,9 +186,9 @@ async def main():
     log.info(f"Output files generated: {len(final_nodes)} nodes")
 
     # ==========================================
-    # Step 8: Archive results
+    # Archive results
     # ==========================================
-    log.info("\n[Step 8/8] Archiving test results...")
+    log.info("\n[Archive] Saving test results...")
     
     if final_nodes:
         # Save full test results
@@ -188,8 +206,8 @@ async def main():
             "sources_processed": len(sources),
             "raw_nodes": len(all_nodes),
             "unique_nodes": len(unique_nodes),
-            "tested_nodes": len(tested_nodes),
-            "final_nodes": len(final_nodes),
+            "latency_passed": len(tested_nodes),
+            "speed_passed": len(final_nodes),
             "regions": dict(classified),
         }
         archiver.save_statistics(nodes=final_nodes, stats=stats)
@@ -209,8 +227,8 @@ async def main():
     log.info(f"  Raw nodes fetched:       {len(all_nodes)}")
     log.info(f"  After deduplication:     {len(unique_nodes)}")
     log.info(f"  After validation:        {len(valid_nodes)}")
-    log.info(f"  After latency test:      {len(tested_nodes)}")
-    log.info(f"  After speed test:        {len(final_nodes)}")
+    log.info(f"  Latency passed:          {len(tested_nodes)}")
+    log.info(f"  Speed passed (FINAL):    {len(final_nodes)}")
     log.info(f"  Regions detected:        {len(classified)}")
     
     if final_nodes:
@@ -226,8 +244,9 @@ async def main():
     if final_nodes:
         log.info("SUCCESS! All output files saved to output/")
         log.info("Test results archived to archive/")
+        log.info(f"Only nodes that PASSED both latency and speed tests are included!")
     else:
-        log.warning("WARNING: No valid nodes found. Output files may be empty.")
+        log.warning("WARNING: No nodes passed both tests. Output files will be empty.")
         log.warning("This could mean source URLs are temporarily unavailable.")
         log.warning("Check the logs for more details.")
 

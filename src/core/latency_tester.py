@@ -106,3 +106,61 @@ class LatencyTester:
                 node.score = min(100, node.score + 10)
             else:
                 node.score = max(0, node.score - 10)
+    
+    async def test_by_source(
+        self,
+        grouped_nodes: Dict[str, List[Node]],
+        max_per_source: int = 100
+    ) -> List[Node]:
+        """
+        Test latency for nodes grouped by source
+        Tests up to max_per_source nodes from each source
+        
+        Args:
+            grouped_nodes: Dict mapping source_url -> list of nodes
+            max_per_source: Max nodes to test per source
+            
+        Returns:
+            All nodes that passed latency test
+        """
+        if not grouped_nodes:
+            return []
+        
+        log.info(f"Testing latency for nodes from {len(grouped_nodes)} sources...")
+        
+        all_tested = []
+        total_tested = 0
+        total_passed = 0
+        
+        for source_url, nodes in grouped_nodes.items():
+            # Limit nodes per source
+            test_nodes = nodes[:max_per_source]
+            
+            if not test_nodes:
+                continue
+            
+            log.info(f"  Testing {len(test_nodes)} nodes from source: {source_url[:60]}...")
+            
+            # Test this source's nodes
+            tasks = [self._test_and_update(node) for node in test_nodes]
+            results = await asyncio.gather(*tasks, return_exceptions=True)
+            
+            # Filter passed nodes
+            passed = [n for n in test_nodes if n.latency is not None]
+            
+            total_tested += len(test_nodes)
+            total_passed += len(passed)
+            all_tested.extend(passed)
+            
+            log.info(f"    Passed: {len(passed)}/{len(test_nodes)}")
+        
+        log.info(f"\nLatency test summary:")
+        log.info(f"  Total tested: {total_tested}")
+        log.info(f"  Total passed: {total_passed}")
+        if total_tested > 0:
+            log.info(f"  Pass rate: {total_passed/total_tested*100:.1f}%")
+        
+        # Sort all passed nodes by latency
+        all_tested.sort(key=lambda n: n.latency if n.latency else 9999)
+        
+        return all_tested
