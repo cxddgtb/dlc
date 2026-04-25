@@ -1,0 +1,103 @@
+name: Fetch Nodes Pro
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */3 * * *'
+  push:
+    paths:
+      - 'config/sources.list'
+      - 'config/clash.yml'
+      - 'src/**/*.py'
+      - 'main.py'
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 1
+
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: 'pip'
+
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    - name: Execute fetcher
+      run: python main.py
+      env:
+        LOG_LEVEL: INFO
+        MAX_CONCURRENT: "20"
+
+    - name: Validate output
+      run: |
+        test -s output/list.txt || exit 1
+        test -s output/list.yml || exit 1
+        echo "✓ Output files validated"
+
+    - name: Commit changes
+      run: |
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git pull --rebase origin master || true
+
+        git add output/ snippets/
+
+        if ! git diff --staged --quiet; then
+          git commit -m "$(date '+%Y-%m-%d %H:%M:%S') Auto-fetch nodes"
+        else
+          echo "No changes to commit"
+        fi
+
+    - name: Push changes
+      if: success()
+      uses: ad-m/github-push-action@master
+      with:
+        branch: master
+        force: false
+
+    - name: Generate CDN URLs
+      id: generate_urls
+      if: success()
+      run: |
+        baseUrl="https://cdn.jsdelivr.net/gh/${{ github.repository }}@master"
+        urls=""
+
+        for f in output/*; do
+          if [ -f "$f" ]; then
+            urls+="${baseUrl}/${f},"
+          fi
+        done
+
+        urls="${urls%,*}"
+        echo "urls=${urls}" >> $GITHUB_OUTPUT
+
+    - name: Purge JsDelivr CDN cache
+      if: steps.generate_urls.outputs.urls != ''
+      uses: egad13/purge-jsdelivr-cache@v1
+      with:
+        url: ${{ steps.generate_urls.outputs.urls }}
+      continue-on-error: true
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: proxy-nodes
+        path: output/
+        retention-days: 7
