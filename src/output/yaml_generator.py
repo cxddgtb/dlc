@@ -47,33 +47,59 @@ class YAMLGenerator:
         """Generate Clash YAML file"""
         config = self.base_config.copy()
 
-        # Convert nodes to Clash format
-        proxies = [node.to_clash_dict() for node in nodes] if nodes else []
+        # Convert nodes to Clash format with unique names
+        seen_names = {}
+        proxies = []
+        unique_names = []
+        
+        for node in nodes:
+            # Ensure unique name
+            base_name = node.name.strip()
+            if not base_name:
+                base_name = f"{node.server}:{node.port}"
+            
+            name = base_name
+            counter = 1
+            while name in seen_names:
+                # Check if it's the same server (true duplicate)
+                if seen_names[name] == node.get_hash():
+                    break  # Skip this duplicate
+                name = f"{base_name} {counter}"
+                counter += 1
+            
+            if name not in seen_names:
+                seen_names[name] = node.get_hash()
+                node.name = name  # Update node name
+                proxy_dict = node.to_clash_dict()
+                proxy_dict["name"] = name  # Ensure name is set
+                proxies.append(proxy_dict)
+                unique_names.append(name)
+
         config["proxies"] = proxies
 
-        # Generate proxy names list
-        proxy_names = [node.name for node in nodes] if nodes else []
-
-        # Setup proxy groups
+        # Setup proxy groups - ONLY reference existing proxy names
         if "proxy-groups" not in config:
             config["proxy-groups"] = []
 
-        # Update or create default proxy group
-        has_default = False
+        # Update ALL proxy groups to only reference existing proxies
         for group in config["proxy-groups"]:
-            if group.get("name") == "🚀 节点选择":
-                group["proxies"] = proxy_names[:50] if proxy_names else ["DIRECT"]
-                has_default = True
-                break
-
-        if not has_default:
-            config["proxy-groups"].append(
-                {
-                    "name": "🚀 节点选择",
-                    "type": "select",
-                    "proxies": proxy_names[:50] if proxy_names else ["DIRECT"],
-                }
-            )
+            group_name = group.get("name", "")
+            
+            # For selector groups, use actual proxy names
+            if group.get("type") == "select":
+                if group_name == "🚀 节点选择":
+                    # Main selector - include strategy groups and top proxies
+                    strategy_groups = ["♻️ 自动选择", "🔰 延迟最低", "🎯 负载均衡"]
+                    group["proxies"] = strategy_groups + unique_names[:50]
+                elif group_name in ["✅ 手动选择"]:
+                    group["proxies"] = unique_names[:100]
+                elif "选择地区" in group_name:
+                    group["proxies"] = unique_names[:100]
+                # Remove filter-based groups that won't match
+            elif group.get("type") in ["url-test", "load-balance"]:
+                # Auto groups should reference all available proxies
+                if "proxies" not in group or not group["proxies"]:
+                    group["proxies"] = unique_names[:200]
 
         # Write to file
         output_path = Path(output_file)
@@ -88,7 +114,7 @@ class YAMLGenerator:
                 sort_keys=False,
             )
 
-        log.info(f"Generated Clash YAML: {len(nodes)} nodes -> {output_file}")
+        log.info(f"Generated Clash YAML: {len(proxies)} proxies -> {output_file}")
         return output_path
 
     def generate_meta_yaml(

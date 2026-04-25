@@ -80,8 +80,6 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔰 延迟最低
       - 🎯 负载均衡
-      - ✅ 手动选择
-      - 🗺️ 选择地区
       - DIRECT
 
   - name: "♻️ 自动选择"
@@ -106,50 +104,6 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     lazy: true
-    proxies: []
-
-  - name: "✅ 手动选择"
-    type: select
-    proxies: []
-
-  - name: "🗺️ 选择地区"
-    type: select
-    proxies: []
-
-  - name: "🇭🇰 香港节点"
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    lazy: true
-    filter: "港|HK|Hong"
-    proxies: []
-
-  - name: "🇯🇵 日本节点"
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    lazy: true
-    filter: "日|JP|Japan"
-    proxies: []
-
-  - name: "🇺🇸 美国节点"
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    lazy: true
-    filter: "美|US|States"
-    proxies: []
-
-  - name: "🇸🇬 新加坡节点"
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    lazy: true
-    filter: "新|SG|Singapore"
     proxies: []
 
   - name: "🌐 突破锁区"
