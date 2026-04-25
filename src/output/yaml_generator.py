@@ -44,36 +44,41 @@ class YAMLGenerator:
     def generate_clash_yaml(
         self, nodes: List[Node], output_file: str = "output/list.yml"
     ):
-        """Generate Clash YAML file"""
+        """Generate Clash YAML file with STRICTLY unique proxy names"""
         config = self.base_config.copy()
 
-        # Convert nodes to Clash format with unique names
-        seen_names = {}
+        # Convert nodes to Clash format with STRICTLY unique names
+        used_names = set()
         proxies = []
         unique_names = []
         
         for node in nodes:
-            # Ensure unique name
+            # Clean and validate base name
             base_name = node.name.strip()
-            if not base_name:
+            if not base_name or len(base_name) == 0:
                 base_name = f"{node.server}:{node.port}"
             
-            name = base_name
+            # Remove any characters that might cause issues
+            clean_name = base_name.replace('\n', ' ').replace('\r', ' ').strip()
+            if not clean_name:
+                clean_name = f"Node-{node.server}-{node.port}"
+            
+            # Ensure absolutely unique name
+            final_name = clean_name
             counter = 1
-            while name in seen_names:
-                # Check if it's the same server (true duplicate)
-                if seen_names[name] == node.get_hash():
-                    break  # Skip this duplicate
-                name = f"{base_name} {counter}"
+            
+            while final_name in used_names:
+                final_name = f"{clean_name}_{counter}"
                 counter += 1
             
-            if name not in seen_names:
-                seen_names[name] = node.get_hash()
-                node.name = name  # Update node name
-                proxy_dict = node.to_clash_dict()
-                proxy_dict["name"] = name  # Ensure name is set
-                proxies.append(proxy_dict)
-                unique_names.append(name)
+            # Mark name as used
+            used_names.add(final_name)
+            
+            # Create proxy dict with guaranteed unique name
+            proxy_dict = node.to_clash_dict()
+            proxy_dict["name"] = final_name
+            proxies.append(proxy_dict)
+            unique_names.append(final_name)
 
         config["proxies"] = proxies
 
@@ -91,15 +96,9 @@ class YAMLGenerator:
                     # Main selector - include strategy groups and top proxies
                     strategy_groups = ["♻️ 自动选择", "🔰 延迟最低", "🎯 负载均衡"]
                     group["proxies"] = strategy_groups + unique_names[:50]
-                elif group_name in ["✅ 手动选择"]:
-                    group["proxies"] = unique_names[:100]
-                elif "选择地区" in group_name:
-                    group["proxies"] = unique_names[:100]
-                # Remove filter-based groups that won't match
             elif group.get("type") in ["url-test", "load-balance"]:
                 # Auto groups should reference all available proxies
-                if "proxies" not in group or not group["proxies"]:
-                    group["proxies"] = unique_names[:200]
+                group["proxies"] = unique_names[:200]
 
         # Write to file
         output_path = Path(output_file)
