@@ -39,19 +39,28 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements.txt
 
-    - name: Execute fetcher
+    - name: Execute fetcher with full testing pipeline
       run: |
-        echo "Starting node fetcher..."
+        echo "Starting CXDDZY-Pro with full testing pipeline..."
+        echo "Features: Fetch | Dedup | Latency Test | Speed Test | Archive"
+        echo ""
+        
         python main.py 2>&1 || echo "Fetcher completed with warnings"
         
+        echo ""
         echo "=== Checking output files ==="
         ls -la output/ || true
         
+        echo ""
         echo "=== Output file sizes ==="
         wc -l output/*.txt output/*.yml 2>/dev/null || echo "No output files found"
         
+        echo ""
+        echo "=== Archive contents ==="
+        ls -la archive/ 2>/dev/null || echo "No archive directory"
+        
       env:
-        LOG_LEVEL: DEBUG
+        LOG_LEVEL: INFO
         MAX_CONCURRENT: "10"
 
     - name: Validate output
