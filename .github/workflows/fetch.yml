@@ -55,7 +55,7 @@ jobs:
       run: |
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
-        git pull --rebase origin master || true
+        git pull --rebase origin main || true
 
         git add output/ snippets/
 
@@ -69,14 +69,15 @@ jobs:
       if: success()
       uses: ad-m/github-push-action@master
       with:
-        branch: master
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main
         force: false
 
     - name: Generate CDN URLs
       id: generate_urls
       if: success()
       run: |
-        baseUrl="https://cdn.jsdelivr.net/gh/${{ github.repository }}@master"
+        baseUrl="https://cdn.jsdelivr.net/gh/${{ github.repository }}@main"
         urls=""
 
         for f in output/*; do
