@@ -77,56 +77,56 @@ proxy-groups:
   - ♻️ 自动选择
   - 🔰 延迟最低
   - 🎯 负载均衡
-  - DE 🇩🇪 | @Raydikalx | 2582
-  - 🇦🇺
-  - '@Daily_Configs'
-  - TR 🇹🇷 | @Raydikalx | 2660
-  - EPODONIOS
-  - EPODONIOS_1
+  - TR 🇹🇷 | @Raydikalx | 2742
+  - IR 🇮🇷 | @Raydikalx | 2760
   - 🇩🇪DE  ROSE—87
   - 🇮🇪IE  ROSE—68
-  - 🇺🇸_美国_94
-  - 🇺🇸_美国_73
-  - 🇺🇸_美国_91
-  - 🇱🇹_LT_立陶宛
-  - 🇱🇹_LT_立陶宛_1
-  - SS Node
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-  - 🇫🇮_FI_芬兰
-  - SS Node_1
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
-  - 🇷🇺_RU_俄罗斯->🇪🇪_EE_爱沙尼亚
-  - 🇳🇱_NL_荷兰
-  - 🇷🇺_RU_俄罗斯
-  - 🇱🇹_LT_立陶宛_2
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_2
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_3
-  - 🇸🇪_SE_瑞典
-  - 瑞典丨yoyapai.com\r
-  - 美國丨yoyapai.com\r
-  - 美國喬治亞州亞特蘭大丨yoyapai.com\r
-  - 美國丨yoyapai.com\r_1
-  - 美國+CloudFlare节点丨yoyapai.com\r
-  - 🇺🇸_US_美国
+  - DE 🇩🇪 | @Raydikalx | 2667
+  - 🪅
+  - 🇦🇺
+  - Global 🌐 | @Raydikalx | 2699
+  - '@Daily_Configs'
+  - EPODONIOS
+  - EPODONIOS_1
   - 美国+CloudFlare节点
+  - 美国+CloudFlare节点_1
+  - 美国+V2CROSS.COM
+  - 印度+V2CROSS.COM
+  - 新加坡+Choopa数据中心
+  - 🇯🇵JP_2|2.0MB/s
+  - 🇸🇬SG_1|3.5MB/s
+  - 🇯🇵JP_3|2.5MB/s
+  - 法国+V2CROSS.COM
+  - 美国+V2CROSS.COM_1
+  - 美国+CloudFlare节点_2
+  - 🇳🇱NL_2|2.1MB/s
+  - 🇺🇸US_2|1.9MB/s
+  - 🇯🇵JP_1|3.3MB/s
+  - 美国+CloudFlare节点_3
+  - 美国+CloudFlare节点_4
+  - 美国+CloudFlare节点_5
+  - 罗马尼亚+V2CROSS.COM
+  - 13|ID_speednode_0012
+  - 13|ID_speednode_0013
+  - 13|NL_speednode_0016
+  - 13|TW_speednode_0053
+  - 13|US_speednode_0055
+  - 13|US_speednode_0056
+  - 13|US_speednode_0063
+  - 法國節點
   - 亞太地區
   - US美國丨yoyapai.com\r
   - KR韓國丨yoyapai.com\r
   - 意大利丨yoyapai.com\r
-  - 美国2|@ripaojiedian
-  - 香港3|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 🇺🇸US_3|2.5MB/s
-  - 防范境外势力渗透
-  - 🍓46@oneclickvpnkeys
-  - 澳大利亚+V2CROSS.COM
-  - 伊朗+V2CROSS.COM
-  - 🍓1@oneclickvpnkeys
-  - 香港4|@ripaojiedian
-  - 香港5|@ripaojiedian
-  - 日本|@ripaojiedian
+  - 瑞典丨yoyapai.com\r
+  - 美國丨yoyapai.com\r
+  - 美國喬治亞州亞特蘭大丨yoyapai.com\r
+  - 美國+CloudFlare节点丨yoyapai.com\r
+  - 🇺🇸_US_美国
+  - 🇩🇪DE_1|2.2MB/s
+  - 🇸🇪SE_1|1.6MB/s
+  - 🇳🇱NL_1|2.5MB/s
+  - 🇺🇸US_1|2.1MB/s
 - name: ♻️ 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -134,108 +134,115 @@ proxy-groups:
   tolerance: 50
   lazy: true
   proxies:
-  - DE 🇩🇪 | @Raydikalx | 2582
-  - 🇦🇺
-  - '@Daily_Configs'
-  - TR 🇹🇷 | @Raydikalx | 2660
-  - EPODONIOS
-  - EPODONIOS_1
+  - TR 🇹🇷 | @Raydikalx | 2742
+  - IR 🇮🇷 | @Raydikalx | 2760
   - 🇩🇪DE  ROSE—87
   - 🇮🇪IE  ROSE—68
-  - 🇺🇸_美国_94
-  - 🇺🇸_美国_73
-  - 🇺🇸_美国_91
-  - 🇱🇹_LT_立陶宛
-  - 🇱🇹_LT_立陶宛_1
-  - SS Node
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-  - 🇫🇮_FI_芬兰
-  - SS Node_1
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
-  - 🇷🇺_RU_俄罗斯->🇪🇪_EE_爱沙尼亚
-  - 🇳🇱_NL_荷兰
-  - 🇷🇺_RU_俄罗斯
-  - 🇱🇹_LT_立陶宛_2
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_2
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_3
-  - 🇸🇪_SE_瑞典
-  - 瑞典丨yoyapai.com\r
-  - 美國丨yoyapai.com\r
-  - 美國喬治亞州亞特蘭大丨yoyapai.com\r
-  - 美國丨yoyapai.com\r_1
-  - 美國+CloudFlare节点丨yoyapai.com\r
-  - 🇺🇸_US_美国
+  - DE 🇩🇪 | @Raydikalx | 2667
+  - 🪅
+  - 🇦🇺
+  - Global 🌐 | @Raydikalx | 2699
+  - '@Daily_Configs'
+  - EPODONIOS
+  - EPODONIOS_1
   - 美国+CloudFlare节点
+  - 美国+CloudFlare节点_1
+  - 美国+V2CROSS.COM
+  - 印度+V2CROSS.COM
+  - 新加坡+Choopa数据中心
+  - 🇯🇵JP_2|2.0MB/s
+  - 🇸🇬SG_1|3.5MB/s
+  - 🇯🇵JP_3|2.5MB/s
+  - 法国+V2CROSS.COM
+  - 美国+V2CROSS.COM_1
+  - 美国+CloudFlare节点_2
+  - 🇳🇱NL_2|2.1MB/s
+  - 🇺🇸US_2|1.9MB/s
+  - 🇯🇵JP_1|3.3MB/s
+  - 美国+CloudFlare节点_3
+  - 美国+CloudFlare节点_4
+  - 美国+CloudFlare节点_5
+  - 罗马尼亚+V2CROSS.COM
+  - 13|ID_speednode_0012
+  - 13|ID_speednode_0013
+  - 13|NL_speednode_0016
+  - 13|TW_speednode_0053
+  - 13|US_speednode_0055
+  - 13|US_speednode_0056
+  - 13|US_speednode_0063
+  - 法國節點
   - 亞太地區
   - US美國丨yoyapai.com\r
   - KR韓國丨yoyapai.com\r
   - 意大利丨yoyapai.com\r
-  - 美国2|@ripaojiedian
-  - 香港3|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 🇺🇸US_3|2.5MB/s
-  - 防范境外势力渗透
-  - 🍓46@oneclickvpnkeys
-  - 澳大利亚+V2CROSS.COM
-  - 伊朗+V2CROSS.COM
-  - 🍓1@oneclickvpnkeys
-  - 香港4|@ripaojiedian
-  - 香港5|@ripaojiedian
-  - 日本|@ripaojiedian
-  - 新加坡3|@ripaojiedian
-  - 美国|@ripaojiedian
-  - 美国3|@ripaojiedian
-  - 🇬🇧GB_1|1.9MB/s
+  - 瑞典丨yoyapai.com\r
+  - 美國丨yoyapai.com\r
+  - 美國喬治亞州亞特蘭大丨yoyapai.com\r
+  - 美國+CloudFlare节点丨yoyapai.com\r
+  - 🇺🇸_US_美国
   - 🇩🇪DE_1|2.2MB/s
   - 🇸🇪SE_1|1.6MB/s
   - 🇳🇱NL_1|2.5MB/s
   - 🇺🇸US_1|2.1MB/s
-  - 🇳🇱NL_2|2.1MB/s
-  - 🇺🇸US_2|1.9MB/s
-  - 🇯🇵JP_1|3.3MB/s
-  - 🇯🇵JP_2|2.0MB/s
-  - 🇸🇬SG_1|3.5MB/s
-  - 新加坡+Choopa数据中心
-  - 罗马尼亚+V2CROSS.COM
-  - 印度+V2CROSS.COM
-  - 🇯🇵JP_3|2.5MB/s
-  - 美国+CloudFlare节点_1
-  - 美国+CloudFlare节点_2
-  - 未知68
-  - US3 8.7MB/s
-  - 美国+CloudFlare节点_3
-  - 美国+CloudFlare节点_4
-  - 美国+CloudFlare节点_5
-  - 未知61
-  - 未知63
-  - 未知64
-  - 未知65
-  - 未知66
-  - 未知67
-  - 美国+CloudFlare节点_6
-  - 罗马尼亚+V2CROSS.COM_1
-  - 美国+CloudFlare节点_7
-  - 未知56 361.6KB/s
-  - 未知57
-  - 未知58
-  - 未知60
-  - 未知51
-  - 未知52
-  - 未知53
-  - 未知54
-  - 未知55
-  - EPODONIOS_2
-  - EPODONIOS_3
-  - EPODONIOS_4
-  - 🇺🇸US美国12
-  - 未知50
-  - 9|🍓44@oneclickvpnkeys
+  - 11,12|美国2|@ripaojiedian
+  - 11,12|美国3|@ripaojiedian
+  - 13|AE_speednode_0001
+  - 13|CZ_speednode_0002
+  - 13|GB_speednode_0005
+  - 13|ID_speednode_0009
+  - 13|ID_speednode_0010
+  - 13|ID_speednode_0011
+  - 亞太地區丨yoyapai.com\r
+  - 俄羅斯
+  - 香港節點丨yoyapai.com\r
+  - 臺灣節點丨yoyapai.com\r
+  - 日本節點丨yoyapai.com\r
+  - 韓國丨yoyapai.com\r
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+  - 🇺🇸US_3|2.5MB/s
+  - 防范境外势力渗透
+  - 🍓46@oneclickvpnkeys
+  - 🍓1@oneclickvpnkeys
+  - 🇬🇧GB_1|1.9MB/s
+  - 11,12|日本|@ripaojiedian
+  - 11,12|日本2|@ripaojiedian
+  - 11,12|新加坡2|@ripaojiedian
+  - 11,12|新加坡3|@ripaojiedian
+  - 11,12|美国|@ripaojiedian
+  - SS Node
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
+  - 🇫🇮_FI_芬兰
+  - SS Node_1
+  - 🇬🇧_英国_79
+  - 🇳🇱_荷兰_80
+  - 🇳🇱_荷兰_81
+  - 🇨🇿_捷克_82
+  - 🇫🇷_法国_83
   - 9|2🍓@oneclickvpnkeys
   - 9|🍓40@oneclickvpnkeys
   - 9|🍓72@oneclickvpnkeys
   - 9|🍓73@oneclickvpnkeys
+  - '12|tg频道:@ripaojiedian #1'
+  - 11|🇭🇰 香港|@ripaojiedian
+  - 11,12|香港3|@ripaojiedian
+  - 11,12|新加坡|@ripaojiedian
+  - 11,12|香港4|@ripaojiedian
+  - 11,12|香港5|@ripaojiedian
+  - 🇸🇪_SE_瑞典
+  - 🇱🇹_LT_立陶宛
+  - 🇱🇹_LT_立陶宛_1
+  - 🏳️_未知_90
+  - 🏳️_未知_91
+  - 🏳️_未知_93
+  - 🏳️_未知_94
+  - 🏳️_未知_95
+  - 🏳️_未知_97
+  - 🏳️_未知_98
+  - 9|🍓100@oneclickvpnkeys
+  - 9|🍓41@oneclickvpnkeys
+  - 9|🍓44@oneclickvpnkeys
   - 9|🍓75@oneclickvpnkeys
   - 9|🍓66@oneclickvpnkeys
   - 9|🍓87@oneclickvpnkeys
@@ -254,86 +261,79 @@ proxy-groups:
   - 9|telegram @mtmvpn
   - 9|hysteria2-@hollowcon
   - 9|🇩🇪💎hysteria-@hollowcon
-  - '9|تلگرام : MTMVPN'
+  - 9|@filembad
+  - 9|🇩🇪@V2raybazi
+  - 11|tg频道:@ripaojiedian
+  - 🇷🇺_RU_俄罗斯->🇪🇪_EE_爱沙尼亚
+  - 🇳🇱_NL_荷兰
+  - 🇷🇺_RU_俄罗斯
+  - 🇱🇹_LT_立陶宛_2
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_2
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_3
+  - 🇫🇷_法国_84
+  - 🏳️_未知_86
+  - 🇸🇨_塞舌尔_87
+  - 🇺🇸_美国_89
   - 9|IPv4@proxy_kafee
   - 9|hysteria
-  - 11,12|香港5|@ripaojiedian
-  - 11,12|日本|@ripaojiedian
-  - 11,12|日本3|@ripaojiedian
-  - EPODONIOS_5
-  - EPODONIOS_6
-  - EPODONIOS_7
-  - EPODONIOS_8
-  - EPODONIOS_9
-  - EPODONIOS_10
-  - EPODONIOS_11
-  - EPODONIOS_12
-  - EPODONIOS_13
-  - EPODONIOS_14
-  - EPODONIOS_15
-  - EPODONIOS_16
-  - EPODONIOS_17
-  - 9|🍓41@oneclickvpnkeys
   - 9|♾️𝗝𝗼𝗶𝗻➠🆔️@ATLAS_V2VPN🆓️🛜🔷️430🌐...
-  - 11|🇭🇰 香港|@ripaojiedian
-  - 11,12|香港3|@ripaojiedian
-  - 11,12|日本2|@ripaojiedian
-  - 11,12|香港4|@ripaojiedian
-  - 13|US_speednode_0056
-  - 13|US_speednode_0063
-  - EPODONIOS_18
-  - EPODONIOS_19
-  - EPODONIOS_20
-  - EPODONIOS_21
-  - EPODONIOS_22
-  - EPODONIOS_23
-  - EPODONIOS_24
-  - EPODONIOS_25
-  - EPODONIOS_26
-  - EPODONIOS_27
-  - EPODONIOS_28
-  - EPODONIOS_29
-  - EPODONIOS_30
-  - EPODONIOS_31
   - 9|best_internet_iran
-  - 9|🇪@V2raybazi
-  - 11|tg频道:@ripaojiedian
-  - '12|tg频道:@ripaojiedian #1'
-  - 13|ID_speednode_0009
-  - 13|ID_speednode_0010
-  - 13|ID_speednode_0011
-  - 13|ID_speednode_0012
-  - 13|ID_speednode_0013
-  - 13|NL_speednode_0016
-  - 13|TW_speednode_0053
-  - 13|US_speednode_0055
-  - 🇺🇸_美国_52
-  - 🇺🇸_美国_53
-  - 🇺🇸_美国_54
-  - 🇫🇷_法国_55
-  - 🇪🇸_西班牙_57
-  - 🇪🇸_西班牙_58
-  - 🇪🇸_西班牙_59
-  - 🇮🇳_印度_60
-  - 🇺🇸_美国_61
-  - 🇺🇸_美国_62
+  - 未知58
+  - 未知59
+  - 未知60 71.8MB/s
+  - 未知61
+  - 未知63
+  - 未知64 514.5KB/s
+  - 未知69
+  - 🇷🇺RU俄罗斯
+  - US3
+  - 🇮🇳IN印度 3.1MB/s
+  - 未知45
+  - 未知47
   - 未知49
-  - 🇺🇸US-38.121.43.97-0865
-  - 🇺🇸US-38.68.135.18-6268
-  - 🇺🇸US-205.134.180.147-9378
+  - 未知50
+  - 未知54
+  - 未知55
+  - 未知57 10.7KB/s
+  - 联通用美国2
+  - 🏳️_未知_50
+  - 🇸🇨_塞舌尔_51
+  - 未知38
+  - 未知39
+  - 未知40
+  - 未知41
+  - 未知42
+  - 未知44
+  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
+  - 🇰🇷+KR+韩国+46
+  - github.com/freefq - 波兰  5
+  - TG@ZDYZ2 -HK-Hong Kong5
+  - SCP2
   - 美国 CloudFlare节点
-  - 🇬🇧_GB_英国->🇰🇿_KZ_哈萨克斯坦
-  - 11,12|新加坡2|@ripaojiedian
-  - 11,12|美国|@ripaojiedian
-  - 11,12|新加坡3|@ripaojiedian
-  - 11,12|美国2|@ripaojiedian
-  - 11,12|美国3|@ripaojiedian
-  - 13|AE_speednode_0001
-  - 13|CZ_speednode_0002
-  - 13|GB_speednode_0005
-  - 电报群：https://t.me/vvkj11
-  - 日期：07-03
-  - 🇮🇶_伊拉克_5
+  - 美国 CloudFlare节点_1
+  - 🇯🇵JP-13.231.154.132-0744
+  - github.com/freefq - 广东省江门市移动 8
+  - 🏳️_未知_52
+  - 🏳️_未知_53
+  - 🏳️_未知_54
+  - 🏳️_未知_55
+  - 🏳️_未知_56
+  - 🏳️_未知_57
+  - 🏳️_未知_58
+  - 🏳️_未知_59
+  - 🏳️_未知_60
+  - 🏳️_未知_61
+  - 🏳️_未知_62
+  - 🏳️_未知_63
+  - 🏳️_未知_64
+  - 未知32
+  - 未知33
+  - 未知35
+  - 未知36
+  - 未知37
+  - github.com/freefq - 广东省江门市移动 11
+  - 🇺🇸US-38.114.114.143-7037
+  - TG@ZDYZ2 -TW3
 - name: 🔰 延迟最低
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -341,108 +341,115 @@ proxy-groups:
   tolerance: 50
   lazy: true
   proxies:
-  - DE 🇩🇪 | @Raydikalx | 2582
-  - 🇦🇺
-  - '@Daily_Configs'
-  - TR 🇹🇷 | @Raydikalx | 2660
-  - EPODONIOS
-  - EPODONIOS_1
+  - TR 🇹🇷 | @Raydikalx | 2742
+  - IR 🇮🇷 | @Raydikalx | 2760
   - 🇩🇪DE  ROSE—87
   - 🇮🇪IE  ROSE—68
-  - 🇺🇸_美国_94
-  - 🇺🇸_美国_73
-  - 🇺🇸_美国_91
-  - 🇱🇹_LT_立陶宛
-  - 🇱🇹_LT_立陶宛_1
-  - SS Node
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-  - 🇫🇮_FI_芬兰
-  - SS Node_1
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
-  - 🇷🇺_RU_俄罗斯->🇪🇪_EE_爱沙尼亚
-  - 🇳🇱_NL_荷兰
-  - 🇷🇺_RU_俄罗斯
-  - 🇱🇹_LT_立陶宛_2
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_2
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_3
-  - 🇸🇪_SE_瑞典
-  - 瑞典丨yoyapai.com\r
-  - 美國丨yoyapai.com\r
-  - 美國喬治亞州亞特蘭大丨yoyapai.com\r
-  - 美國丨yoyapai.com\r_1
-  - 美國+CloudFlare节点丨yoyapai.com\r
-  - 🇺🇸_US_美国
+  - DE 🇩🇪 | @Raydikalx | 2667
+  - 🪅
+  - 🇦🇺
+  - Global 🌐 | @Raydikalx | 2699
+  - '@Daily_Configs'
+  - EPODONIOS
+  - EPODONIOS_1
   - 美国+CloudFlare节点
+  - 美国+CloudFlare节点_1
+  - 美国+V2CROSS.COM
+  - 印度+V2CROSS.COM
+  - 新加坡+Choopa数据中心
+  - 🇯🇵JP_2|2.0MB/s
+  - 🇸🇬SG_1|3.5MB/s
+  - 🇯🇵JP_3|2.5MB/s
+  - 法国+V2CROSS.COM
+  - 美国+V2CROSS.COM_1
+  - 美国+CloudFlare节点_2
+  - 🇳🇱NL_2|2.1MB/s
+  - 🇺🇸US_2|1.9MB/s
+  - 🇯🇵JP_1|3.3MB/s
+  - 美国+CloudFlare节点_3
+  - 美国+CloudFlare节点_4
+  - 美国+CloudFlare节点_5
+  - 罗马尼亚+V2CROSS.COM
+  - 13|ID_speednode_0012
+  - 13|ID_speednode_0013
+  - 13|NL_speednode_0016
+  - 13|TW_speednode_0053
+  - 13|US_speednode_0055
+  - 13|US_speednode_0056
+  - 13|US_speednode_0063
+  - 法國節點
   - 亞太地區
   - US美國丨yoyapai.com\r
   - KR韓國丨yoyapai.com\r
   - 意大利丨yoyapai.com\r
-  - 美国2|@ripaojiedian
-  - 香港3|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 🇺🇸US_3|2.5MB/s
-  - 防范境外势力渗透
-  - 🍓46@oneclickvpnkeys
-  - 澳大利亚+V2CROSS.COM
-  - 伊朗+V2CROSS.COM
-  - 🍓1@oneclickvpnkeys
-  - 香港4|@ripaojiedian
-  - 香港5|@ripaojiedian
-  - 日本|@ripaojiedian
-  - 新加坡3|@ripaojiedian
-  - 美国|@ripaojiedian
-  - 美国3|@ripaojiedian
-  - 🇬🇧GB_1|1.9MB/s
+  - 瑞典丨yoyapai.com\r
+  - 美國丨yoyapai.com\r
+  - 美國喬治亞州亞特蘭大丨yoyapai.com\r
+  - 美國+CloudFlare节点丨yoyapai.com\r
+  - 🇺🇸_US_美国
   - 🇩🇪DE_1|2.2MB/s
   - 🇸🇪SE_1|1.6MB/s
   - 🇳🇱NL_1|2.5MB/s
   - 🇺🇸US_1|2.1MB/s
-  - 🇳🇱NL_2|2.1MB/s
-  - 🇺🇸US_2|1.9MB/s
-  - 🇯🇵JP_1|3.3MB/s
-  - 🇯🇵JP_2|2.0MB/s
-  - 🇸🇬SG_1|3.5MB/s
-  - 新加坡+Choopa数据中心
-  - 罗马尼亚+V2CROSS.COM
-  - 印度+V2CROSS.COM
-  - 🇯🇵JP_3|2.5MB/s
-  - 美国+CloudFlare节点_1
-  - 美国+CloudFlare节点_2
-  - 未知68
-  - US3 8.7MB/s
-  - 美国+CloudFlare节点_3
-  - 美国+CloudFlare节点_4
-  - 美国+CloudFlare节点_5
-  - 未知61
-  - 未知63
-  - 未知64
-  - 未知65
-  - 未知66
-  - 未知67
-  - 美国+CloudFlare节点_6
-  - 罗马尼亚+V2CROSS.COM_1
-  - 美国+CloudFlare节点_7
-  - 未知56 361.6KB/s
-  - 未知57
-  - 未知58
-  - 未知60
-  - 未知51
-  - 未知52
-  - 未知53
-  - 未知54
-  - 未知55
-  - EPODONIOS_2
-  - EPODONIOS_3
-  - EPODONIOS_4
-  - 🇺🇸US美国12
-  - 未知50
-  - 9|🍓44@oneclickvpnkeys
+  - 11,12|美国2|@ripaojiedian
+  - 11,12|美国3|@ripaojiedian
+  - 13|AE_speednode_0001
+  - 13|CZ_speednode_0002
+  - 13|GB_speednode_0005
+  - 13|ID_speednode_0009
+  - 13|ID_speednode_0010
+  - 13|ID_speednode_0011
+  - 亞太地區丨yoyapai.com\r
+  - 俄羅斯
+  - 香港節點丨yoyapai.com\r
+  - 臺灣節點丨yoyapai.com\r
+  - 日本節點丨yoyapai.com\r
+  - 韓國丨yoyapai.com\r
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+  - 🇺🇸US_3|2.5MB/s
+  - 防范境外势力渗透
+  - 🍓46@oneclickvpnkeys
+  - 🍓1@oneclickvpnkeys
+  - 🇬🇧GB_1|1.9MB/s
+  - 11,12|日本|@ripaojiedian
+  - 11,12|日本2|@ripaojiedian
+  - 11,12|新加坡2|@ripaojiedian
+  - 11,12|新加坡3|@ripaojiedian
+  - 11,12|美国|@ripaojiedian
+  - SS Node
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
+  - 🇫🇮_FI_芬兰
+  - SS Node_1
+  - 🇬🇧_英国_79
+  - 🇳🇱_荷兰_80
+  - 🇳🇱_荷兰_81
+  - 🇨🇿_捷克_82
+  - 🇫🇷_法国_83
   - 9|2🍓@oneclickvpnkeys
   - 9|🍓40@oneclickvpnkeys
   - 9|🍓72@oneclickvpnkeys
   - 9|🍓73@oneclickvpnkeys
+  - '12|tg频道:@ripaojiedian #1'
+  - 11|🇭🇰 香港|@ripaojiedian
+  - 11,12|香港3|@ripaojiedian
+  - 11,12|新加坡|@ripaojiedian
+  - 11,12|香港4|@ripaojiedian
+  - 11,12|香港5|@ripaojiedian
+  - 🇸🇪_SE_瑞典
+  - 🇱🇹_LT_立陶宛
+  - 🇱🇹_LT_立陶宛_1
+  - 🏳️_未知_90
+  - 🏳️_未知_91
+  - 🏳️_未知_93
+  - 🏳️_未知_94
+  - 🏳️_未知_95
+  - 🏳️_未知_97
+  - 🏳️_未知_98
+  - 9|🍓100@oneclickvpnkeys
+  - 9|🍓41@oneclickvpnkeys
+  - 9|🍓44@oneclickvpnkeys
   - 9|🍓75@oneclickvpnkeys
   - 9|🍓66@oneclickvpnkeys
   - 9|🍓87@oneclickvpnkeys
@@ -461,86 +468,79 @@ proxy-groups:
   - 9|telegram @mtmvpn
   - 9|hysteria2-@hollowcon
   - 9|🇩🇪💎hysteria-@hollowcon
-  - '9|تلگرام : MTMVPN'
+  - 9|@filembad
+  - 9|🇩🇪@V2raybazi
+  - 11|tg频道:@ripaojiedian
+  - 🇷🇺_RU_俄罗斯->🇪🇪_EE_爱沙尼亚
+  - 🇳🇱_NL_荷兰
+  - 🇷🇺_RU_俄罗斯
+  - 🇱🇹_LT_立陶宛_2
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_2
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_3
+  - 🇫🇷_法国_84
+  - 🏳️_未知_86
+  - 🇸🇨_塞舌尔_87
+  - 🇺🇸_美国_89
   - 9|IPv4@proxy_kafee
   - 9|hysteria
-  - 11,12|香港5|@ripaojiedian
-  - 11,12|日本|@ripaojiedian
-  - 11,12|日本3|@ripaojiedian
-  - EPODONIOS_5
-  - EPODONIOS_6
-  - EPODONIOS_7
-  - EPODONIOS_8
-  - EPODONIOS_9
-  - EPODONIOS_10
-  - EPODONIOS_11
-  - EPODONIOS_12
-  - EPODONIOS_13
-  - EPODONIOS_14
-  - EPODONIOS_15
-  - EPODONIOS_16
-  - EPODONIOS_17
-  - 9|🍓41@oneclickvpnkeys
   - 9|♾️𝗝𝗼𝗶𝗻➠🆔️@ATLAS_V2VPN🆓️🛜🔷️430🌐...
-  - 11|🇭🇰 香港|@ripaojiedian
-  - 11,12|香港3|@ripaojiedian
-  - 11,12|日本2|@ripaojiedian
-  - 11,12|香港4|@ripaojiedian
-  - 13|US_speednode_0056
-  - 13|US_speednode_0063
-  - EPODONIOS_18
-  - EPODONIOS_19
-  - EPODONIOS_20
-  - EPODONIOS_21
-  - EPODONIOS_22
-  - EPODONIOS_23
-  - EPODONIOS_24
-  - EPODONIOS_25
-  - EPODONIOS_26
-  - EPODONIOS_27
-  - EPODONIOS_28
-  - EPODONIOS_29
-  - EPODONIOS_30
-  - EPODONIOS_31
   - 9|best_internet_iran
-  - 9|🇪@V2raybazi
-  - 11|tg频道:@ripaojiedian
-  - '12|tg频道:@ripaojiedian #1'
-  - 13|ID_speednode_0009
-  - 13|ID_speednode_0010
-  - 13|ID_speednode_0011
-  - 13|ID_speednode_0012
-  - 13|ID_speednode_0013
-  - 13|NL_speednode_0016
-  - 13|TW_speednode_0053
-  - 13|US_speednode_0055
-  - 🇺🇸_美国_52
-  - 🇺🇸_美国_53
-  - 🇺🇸_美国_54
-  - 🇫🇷_法国_55
-  - 🇪🇸_西班牙_57
-  - 🇪🇸_西班牙_58
-  - 🇪🇸_西班牙_59
-  - 🇮🇳_印度_60
-  - 🇺🇸_美国_61
-  - 🇺🇸_美国_62
+  - 未知58
+  - 未知59
+  - 未知60 71.8MB/s
+  - 未知61
+  - 未知63
+  - 未知64 514.5KB/s
+  - 未知69
+  - 🇷🇺RU俄罗斯
+  - US3
+  - 🇮🇳IN印度 3.1MB/s
+  - 未知45
+  - 未知47
   - 未知49
-  - 🇺🇸US-38.121.43.97-0865
-  - 🇺🇸US-38.68.135.18-6268
-  - 🇺🇸US-205.134.180.147-9378
+  - 未知50
+  - 未知54
+  - 未知55
+  - 未知57 10.7KB/s
+  - 联通用美国2
+  - 🏳️_未知_50
+  - 🇸🇨_塞舌尔_51
+  - 未知38
+  - 未知39
+  - 未知40
+  - 未知41
+  - 未知42
+  - 未知44
+  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
+  - 🇰🇷+KR+韩国+46
+  - github.com/freefq - 波兰  5
+  - TG@ZDYZ2 -HK-Hong Kong5
+  - SCP2
   - 美国 CloudFlare节点
-  - 🇬🇧_GB_英国->🇰🇿_KZ_哈萨克斯坦
-  - 11,12|新加坡2|@ripaojiedian
-  - 11,12|美国|@ripaojiedian
-  - 11,12|新加坡3|@ripaojiedian
-  - 11,12|美国2|@ripaojiedian
-  - 11,12|美国3|@ripaojiedian
-  - 13|AE_speednode_0001
-  - 13|CZ_speednode_0002
-  - 13|GB_speednode_0005
-  - 电报群：https://t.me/vvkj11
-  - 日期：07-03
-  - 🇮🇶_伊拉克_5
+  - 美国 CloudFlare节点_1
+  - 🇯🇵JP-13.231.154.132-0744
+  - github.com/freefq - 广东省江门市移动 8
+  - 🏳️_未知_52
+  - 🏳️_未知_53
+  - 🏳️_未知_54
+  - 🏳️_未知_55
+  - 🏳️_未知_56
+  - 🏳️_未知_57
+  - 🏳️_未知_58
+  - 🏳️_未知_59
+  - 🏳️_未知_60
+  - 🏳️_未知_61
+  - 🏳️_未知_62
+  - 🏳️_未知_63
+  - 🏳️_未知_64
+  - 未知32
+  - 未知33
+  - 未知35
+  - 未知36
+  - 未知37
+  - github.com/freefq - 广东省江门市移动 11
+  - 🇺🇸US-38.114.114.143-7037
+  - TG@ZDYZ2 -TW3
 - name: 🎯 负载均衡
   type: load-balance
   strategy: consistent-hashing
@@ -548,108 +548,115 @@ proxy-groups:
   interval: 300
   lazy: true
   proxies:
-  - DE 🇩🇪 | @Raydikalx | 2582
-  - 🇦🇺
-  - '@Daily_Configs'
-  - TR 🇹🇷 | @Raydikalx | 2660
-  - EPODONIOS
-  - EPODONIOS_1
+  - TR 🇹🇷 | @Raydikalx | 2742
+  - IR 🇮🇷 | @Raydikalx | 2760
   - 🇩🇪DE  ROSE—87
   - 🇮🇪IE  ROSE—68
-  - 🇺🇸_美国_94
-  - 🇺🇸_美国_73
-  - 🇺🇸_美国_91
-  - 🇱🇹_LT_立陶宛
-  - 🇱🇹_LT_立陶宛_1
-  - SS Node
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-  - 🇫🇮_FI_芬兰
-  - SS Node_1
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
-  - 🇷🇺_RU_俄罗斯->🇪🇪_EE_爱沙尼亚
-  - 🇳🇱_NL_荷兰
-  - 🇷🇺_RU_俄罗斯
-  - 🇱🇹_LT_立陶宛_2
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_2
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_3
-  - 🇸🇪_SE_瑞典
-  - 瑞典丨yoyapai.com\r
-  - 美國丨yoyapai.com\r
-  - 美國喬治亞州亞特蘭大丨yoyapai.com\r
-  - 美國丨yoyapai.com\r_1
-  - 美國+CloudFlare节点丨yoyapai.com\r
-  - 🇺🇸_US_美国
+  - DE 🇩🇪 | @Raydikalx | 2667
+  - 🪅
+  - 🇦🇺
+  - Global 🌐 | @Raydikalx | 2699
+  - '@Daily_Configs'
+  - EPODONIOS
+  - EPODONIOS_1
   - 美国+CloudFlare节点
+  - 美国+CloudFlare节点_1
+  - 美国+V2CROSS.COM
+  - 印度+V2CROSS.COM
+  - 新加坡+Choopa数据中心
+  - 🇯🇵JP_2|2.0MB/s
+  - 🇸🇬SG_1|3.5MB/s
+  - 🇯🇵JP_3|2.5MB/s
+  - 法国+V2CROSS.COM
+  - 美国+V2CROSS.COM_1
+  - 美国+CloudFlare节点_2
+  - 🇳🇱NL_2|2.1MB/s
+  - 🇺🇸US_2|1.9MB/s
+  - 🇯🇵JP_1|3.3MB/s
+  - 美国+CloudFlare节点_3
+  - 美国+CloudFlare节点_4
+  - 美国+CloudFlare节点_5
+  - 罗马尼亚+V2CROSS.COM
+  - 13|ID_speednode_0012
+  - 13|ID_speednode_0013
+  - 13|NL_speednode_0016
+  - 13|TW_speednode_0053
+  - 13|US_speednode_0055
+  - 13|US_speednode_0056
+  - 13|US_speednode_0063
+  - 法國節點
   - 亞太地區
   - US美國丨yoyapai.com\r
   - KR韓國丨yoyapai.com\r
   - 意大利丨yoyapai.com\r
-  - 美国2|@ripaojiedian
-  - 香港3|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 🇺🇸US_3|2.5MB/s
-  - 防范境外势力渗透
-  - 🍓46@oneclickvpnkeys
-  - 澳大利亚+V2CROSS.COM
-  - 伊朗+V2CROSS.COM
-  - 🍓1@oneclickvpnkeys
-  - 香港4|@ripaojiedian
-  - 香港5|@ripaojiedian
-  - 日本|@ripaojiedian
-  - 新加坡3|@ripaojiedian
-  - 美国|@ripaojiedian
-  - 美国3|@ripaojiedian
-  - 🇬🇧GB_1|1.9MB/s
+  - 瑞典丨yoyapai.com\r
+  - 美國丨yoyapai.com\r
+  - 美國喬治亞州亞特蘭大丨yoyapai.com\r
+  - 美國+CloudFlare节点丨yoyapai.com\r
+  - 🇺🇸_US_美国
   - 🇩🇪DE_1|2.2MB/s
   - 🇸🇪SE_1|1.6MB/s
   - 🇳🇱NL_1|2.5MB/s
   - 🇺🇸US_1|2.1MB/s
-  - 🇳🇱NL_2|2.1MB/s
-  - 🇺🇸US_2|1.9MB/s
-  - 🇯🇵JP_1|3.3MB/s
-  - 🇯🇵JP_2|2.0MB/s
-  - 🇸🇬SG_1|3.5MB/s
-  - 新加坡+Choopa数据中心
-  - 罗马尼亚+V2CROSS.COM
-  - 印度+V2CROSS.COM
-  - 🇯🇵JP_3|2.5MB/s
-  - 美国+CloudFlare节点_1
-  - 美国+CloudFlare节点_2
-  - 未知68
-  - US3 8.7MB/s
-  - 美国+CloudFlare节点_3
-  - 美国+CloudFlare节点_4
-  - 美国+CloudFlare节点_5
-  - 未知61
-  - 未知63
-  - 未知64
-  - 未知65
-  - 未知66
-  - 未知67
-  - 美国+CloudFlare节点_6
-  - 罗马尼亚+V2CROSS.COM_1
-  - 美国+CloudFlare节点_7
-  - 未知56 361.6KB/s
-  - 未知57
-  - 未知58
-  - 未知60
-  - 未知51
-  - 未知52
-  - 未知53
-  - 未知54
-  - 未知55
-  - EPODONIOS_2
-  - EPODONIOS_3
-  - EPODONIOS_4
-  - 🇺🇸US美国12
-  - 未知50
-  - 9|🍓44@oneclickvpnkeys
+  - 11,12|美国2|@ripaojiedian
+  - 11,12|美国3|@ripaojiedian
+  - 13|AE_speednode_0001
+  - 13|CZ_speednode_0002
+  - 13|GB_speednode_0005
+  - 13|ID_speednode_0009
+  - 13|ID_speednode_0010
+  - 13|ID_speednode_0011
+  - 亞太地區丨yoyapai.com\r
+  - 俄羅斯
+  - 香港節點丨yoyapai.com\r
+  - 臺灣節點丨yoyapai.com\r
+  - 日本節點丨yoyapai.com\r
+  - 韓國丨yoyapai.com\r
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+  - 🇺🇸US_3|2.5MB/s
+  - 防范境外势力渗透
+  - 🍓46@oneclickvpnkeys
+  - 🍓1@oneclickvpnkeys
+  - 🇬🇧GB_1|1.9MB/s
+  - 11,12|日本|@ripaojiedian
+  - 11,12|日本2|@ripaojiedian
+  - 11,12|新加坡2|@ripaojiedian
+  - 11,12|新加坡3|@ripaojiedian
+  - 11,12|美国|@ripaojiedian
+  - SS Node
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
+  - 🇫🇮_FI_芬兰
+  - SS Node_1
+  - 🇬🇧_英国_79
+  - 🇳🇱_荷兰_80
+  - 🇳🇱_荷兰_81
+  - 🇨🇿_捷克_82
+  - 🇫🇷_法国_83
   - 9|2🍓@oneclickvpnkeys
   - 9|🍓40@oneclickvpnkeys
   - 9|🍓72@oneclickvpnkeys
   - 9|🍓73@oneclickvpnkeys
+  - '12|tg频道:@ripaojiedian #1'
+  - 11|🇭🇰 香港|@ripaojiedian
+  - 11,12|香港3|@ripaojiedian
+  - 11,12|新加坡|@ripaojiedian
+  - 11,12|香港4|@ripaojiedian
+  - 11,12|香港5|@ripaojiedian
+  - 🇸🇪_SE_瑞典
+  - 🇱🇹_LT_立陶宛
+  - 🇱🇹_LT_立陶宛_1
+  - 🏳️_未知_90
+  - 🏳️_未知_91
+  - 🏳️_未知_93
+  - 🏳️_未知_94
+  - 🏳️_未知_95
+  - 🏳️_未知_97
+  - 🏳️_未知_98
+  - 9|🍓100@oneclickvpnkeys
+  - 9|🍓41@oneclickvpnkeys
+  - 9|🍓44@oneclickvpnkeys
   - 9|🍓75@oneclickvpnkeys
   - 9|🍓66@oneclickvpnkeys
   - 9|🍓87@oneclickvpnkeys
@@ -668,86 +675,79 @@ proxy-groups:
   - 9|telegram @mtmvpn
   - 9|hysteria2-@hollowcon
   - 9|🇩🇪💎hysteria-@hollowcon
-  - '9|تلگرام : MTMVPN'
+  - 9|@filembad
+  - 9|🇩🇪@V2raybazi
+  - 11|tg频道:@ripaojiedian
+  - 🇷🇺_RU_俄罗斯->🇪🇪_EE_爱沙尼亚
+  - 🇳🇱_NL_荷兰
+  - 🇷🇺_RU_俄罗斯
+  - 🇱🇹_LT_立陶宛_2
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_2
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_3
+  - 🇫🇷_法国_84
+  - 🏳️_未知_86
+  - 🇸🇨_塞舌尔_87
+  - 🇺🇸_美国_89
   - 9|IPv4@proxy_kafee
   - 9|hysteria
-  - 11,12|香港5|@ripaojiedian
-  - 11,12|日本|@ripaojiedian
-  - 11,12|日本3|@ripaojiedian
-  - EPODONIOS_5
-  - EPODONIOS_6
-  - EPODONIOS_7
-  - EPODONIOS_8
-  - EPODONIOS_9
-  - EPODONIOS_10
-  - EPODONIOS_11
-  - EPODONIOS_12
-  - EPODONIOS_13
-  - EPODONIOS_14
-  - EPODONIOS_15
-  - EPODONIOS_16
-  - EPODONIOS_17
-  - 9|🍓41@oneclickvpnkeys
   - 9|♾️𝗝𝗼𝗶𝗻➠🆔️@ATLAS_V2VPN🆓️🛜🔷️430🌐...
-  - 11|🇭🇰 香港|@ripaojiedian
-  - 11,12|香港3|@ripaojiedian
-  - 11,12|日本2|@ripaojiedian
-  - 11,12|香港4|@ripaojiedian
-  - 13|US_speednode_0056
-  - 13|US_speednode_0063
-  - EPODONIOS_18
-  - EPODONIOS_19
-  - EPODONIOS_20
-  - EPODONIOS_21
-  - EPODONIOS_22
-  - EPODONIOS_23
-  - EPODONIOS_24
-  - EPODONIOS_25
-  - EPODONIOS_26
-  - EPODONIOS_27
-  - EPODONIOS_28
-  - EPODONIOS_29
-  - EPODONIOS_30
-  - EPODONIOS_31
   - 9|best_internet_iran
-  - 9|🇪@V2raybazi
-  - 11|tg频道:@ripaojiedian
-  - '12|tg频道:@ripaojiedian #1'
-  - 13|ID_speednode_0009
-  - 13|ID_speednode_0010
-  - 13|ID_speednode_0011
-  - 13|ID_speednode_0012
-  - 13|ID_speednode_0013
-  - 13|NL_speednode_0016
-  - 13|TW_speednode_0053
-  - 13|US_speednode_0055
-  - 🇺🇸_美国_52
-  - 🇺🇸_美国_53
-  - 🇺🇸_美国_54
-  - 🇫🇷_法国_55
-  - 🇪🇸_西班牙_57
-  - 🇪🇸_西班牙_58
-  - 🇪🇸_西班牙_59
-  - 🇮🇳_印度_60
-  - 🇺🇸_美国_61
-  - 🇺🇸_美国_62
+  - 未知58
+  - 未知59
+  - 未知60 71.8MB/s
+  - 未知61
+  - 未知63
+  - 未知64 514.5KB/s
+  - 未知69
+  - 🇷🇺RU俄罗斯
+  - US3
+  - 🇮🇳IN印度 3.1MB/s
+  - 未知45
+  - 未知47
   - 未知49
-  - 🇺🇸US-38.121.43.97-0865
-  - 🇺🇸US-38.68.135.18-6268
-  - 🇺🇸US-205.134.180.147-9378
+  - 未知50
+  - 未知54
+  - 未知55
+  - 未知57 10.7KB/s
+  - 联通用美国2
+  - 🏳️_未知_50
+  - 🇸🇨_塞舌尔_51
+  - 未知38
+  - 未知39
+  - 未知40
+  - 未知41
+  - 未知42
+  - 未知44
+  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
+  - 🇰🇷+KR+韩国+46
+  - github.com/freefq - 波兰  5
+  - TG@ZDYZ2 -HK-Hong Kong5
+  - SCP2
   - 美国 CloudFlare节点
-  - 🇬🇧_GB_英国->🇰🇿_KZ_哈萨克斯坦
-  - 11,12|新加坡2|@ripaojiedian
-  - 11,12|美国|@ripaojiedian
-  - 11,12|新加坡3|@ripaojiedian
-  - 11,12|美国2|@ripaojiedian
-  - 11,12|美国3|@ripaojiedian
-  - 13|AE_speednode_0001
-  - 13|CZ_speednode_0002
-  - 13|GB_speednode_0005
-  - 电报群：https://t.me/vvkj11
-  - 日期：07-03
-  - 🇮🇶_伊拉克_5
+  - 美国 CloudFlare节点_1
+  - 🇯🇵JP-13.231.154.132-0744
+  - github.com/freefq - 广东省江门市移动 8
+  - 🏳️_未知_52
+  - 🏳️_未知_53
+  - 🏳️_未知_54
+  - 🏳️_未知_55
+  - 🏳️_未知_56
+  - 🏳️_未知_57
+  - 🏳️_未知_58
+  - 🏳️_未知_59
+  - 🏳️_未知_60
+  - 🏳️_未知_61
+  - 🏳️_未知_62
+  - 🏳️_未知_63
+  - 🏳️_未知_64
+  - 未知32
+  - 未知33
+  - 未知35
+  - 未知36
+  - 未知37
+  - github.com/freefq - 广东省江门市移动 11
+  - 🇺🇸US-38.114.114.143-7037
+  - TG@ZDYZ2 -TW3
 - name: 🌐 突破锁区
   type: select
   proxies:
@@ -853,37 +853,7 @@ rules:
 - GEOIP,CN,DIRECT,no-resolve
 - MATCH,🐟 漏网之鱼
 proxies:
-- name: DE 🇩🇪 | @Raydikalx | 2582
-  type: vmess
-  server: panel.riziro.ir
-  port: 40444
-  uuid: 3228b0ea-5421-4199-a099-f06b49602052
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-path: /vlesswebs1546877
-  ws-headers:
-    Host: ger1.riziro.ir
-  servername: ger1.riziro.ir
-- name: 🇦🇺
-  type: trojan
-  server: 104.16.72.41
-  port: 443
-  password: 86957ec0-b213-433b-a43b-51f2175e0ec3
-  tls: true
-  sni: space.byu.id.yxls.eu.cc
-- name: '@Daily_Configs'
-  type: vmess
-  server: 138.252.100.85
-  port: 18746
-  uuid: 5cae7714-9c61-4c5c-876e-c45a1cb13be4
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /
-- name: TR 🇹🇷 | @Raydikalx | 2660
+- name: TR 🇹🇷 | @Raydikalx | 2742
   type: vmess
   server: tr1-smart.adelping.com
   port: 80
@@ -896,18 +866,18 @@ proxies:
   ws-headers:
     Host: TM_AZARBAYJAB1.new.99.workers.dev
   servername: TM_AZARBAYJAB1.new.99.workers.dev
-- name: EPODONIOS
-  type: ss
-  server: 46.224.2.35
-  port: 47199
-  cipher: chacha20-ietf-poly1305
-  password: Jx2HKJK7kiti86e8AnQIbX
-- name: EPODONIOS_1
-  type: ss
-  server: 62.133.63.169
-  port: 37096
-  cipher: chacha20-ietf-poly1305
-  password: KP6FQVmJhlXPgvPhrw2gnI
+- name: IR 🇮🇷 | @Raydikalx | 2760
+  type: vmess
+  server: spt.reata.ir
+  port: 1020
+  uuid: a8022edb-0bd7-4f86-b70d-20f7f8a59814
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: tcp
+  ws-path: /
+  ws-headers:
+    Host: spt.reata.ir
 - name: 🇩🇪DE  ROSE—87
   type: ss
   server: de5.taskflowhub.org
@@ -920,229 +890,167 @@ proxies:
   port: 443
   cipher: chacha20-ietf-poly1305
   password: juTczuCI9LbM8MUw
-- name: 🇺🇸_美国_94
-  type: vless
-  server: 151.101.24.151
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇺🇸_美国_73
-  type: vless
-  server: 151.101.2.219
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇺🇸_美国_91
-  type: vless
-  server: 151.101.0.60
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇱🇹_LT_立陶宛
-  type: vless
-  server: 45.194.10.139
-  port: 8443
-  uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  tls: true
-  network: tcp
-  servername: storage.yandex.net
-  ws-opts:
-    path: /
-- name: 🇱🇹_LT_立陶宛_1
-  type: vless
-  server: 45.194.10.5
-  port: 8443
-  uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  tls: true
-  network: tcp
-  servername: storage.yandex.net
-  ws-opts:
-    path: /
-- name: SS Node
-  type: ss
-  server: 3.148.210.179
-  port: 443
-  cipher: aes-256-gcm
-  password: aes-256-cfb:amazonskr05=
-- name: 🇭🇰_HK_中国香港->🇺🇸_US_美国
+- name: DE 🇩🇪 | @Raydikalx | 2667
   type: vmess
-  server: v24.hdacd.com
-  port: 30824
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
+  server: panel.riziro.ir
+  port: 40444
+  uuid: 3228b0ea-5421-4199-a099-f06b49602052
+  alterId: 0
   cipher: auto
-  tls: false
-  network: tcp
-- name: 🇫🇮_FI_芬兰
-  type: vless
-  server: bot.sobhanpor.ir
-  port: 443
-  uuid: c6021439-a298-42a2-8db5-9407f48c60b3
-  tls: true
-  network: tcp
-  ws-opts:
-    path: /
-- name: SS Node_1
-  type: ss
-  server: 3.17.162.229
-  port: 443
-  cipher: aes-256-gcm
-  password: aes-256-cfb:amazonskr05=
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国
-  type: vless
-  server: 39.107.252.182
-  port: 443
-  uuid: 659a9075-d5ab-4fd2-bf34-b37043fae832
   tls: true
   network: ws
-  servername: nbhhh.mrcool.kdns.fr
-  ws-opts:
-    path: /proxyip=Telegram-WangCai2🇨🇳
-    headers:
-      Host: nbhhh.mrcool.kdns.fr
-- name: 🇭🇰_HK_中国香港->🇫🇷_FR_法国
-  type: vmess
-  server: v35.hdacd.com
-  port: 30835
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  tls: false
-  network: tcp
-- name: 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
-  type: vmess
-  server: v4.hdacd.com
-  port: 30804
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  tls: false
-  network: tcp
-- name: 🇷🇺_RU_俄罗斯->🇪🇪_EE_爱沙尼亚
-  type: vless
-  server: 37.9.4.168
-  port: 443
-  uuid: c918927a-a4cf-45ad-a5c8-e135129ee1d4
-  tls: true
-  network: grpc
-  servername: centos.ubuntuhosting.host
-  ws-opts:
-    path: /
-- name: 🇳🇱_NL_荷兰
-  type: vless
-  server: assets.hihidress.com
-  port: 443
-  uuid: 27f914c5-bdcc-441a-9459-368daf552606
-  tls: true
-  network: tcp
-  servername: m.media-amazon.com
-  ws-opts:
-    path: /
-- name: 🇷🇺_RU_俄罗斯
-  type: vless
-  server: 45.132.18.70
-  port: 443
-  uuid: dcde0c41-e089-4228-baef-d85eaec01710
-  tls: true
-  network: tcp
-  servername: ya.ru
-  ws-opts:
-    path: /
-- name: 🇱🇹_LT_立陶宛_2
-  type: vless
-  server: 45.194.10.191
-  port: 8443
-  uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
-  tls: true
-  network: tcp
-  servername: storage.yandex.net
-  ws-opts:
-    path: /
-- name: 🇭🇰_HK_中国香港->🇺🇸_US_美国_2
-  type: vmess
-  server: v8.hdacd.com
-  port: 30808
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  tls: false
-  network: tcp
-- name: 🇭🇰_HK_中国香港->🇺🇸_US_美国_3
-  type: vmess
-  server: v9.hdacd.com
-  port: 30809
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  tls: false
-  network: tcp
-- name: 🇸🇪_SE_瑞典
-  type: vless
-  server: swed-yott.red-panda.top
-  port: 1443
-  uuid: f097453b-5fa6-48a7-a164-7fe7ef89a140
-  tls: true
-  network: tcp
-  servername: www.github.com
-  ws-opts:
-    path: /
-- name: 瑞典丨yoyapai.com\r
+  ws-path: /vlesswebs1546877
+  ws-headers:
+    Host: ger1.riziro.ir
+  servername: ger1.riziro.ir
+- name: 🪅
   type: trojan
-  server: 146.75.116.190
-  port: 80
-  password: Mitivpn
-  tls: true
-- name: 美國丨yoyapai.com\r
-  type: trojan
-  server: 167.82.101.251
-  port: 443
-  password: Mitivpn
-  tls: true
-  sni: ssl.fastly.com
-- name: 美國喬治亞州亞特蘭大丨yoyapai.com\r
-  type: trojan
-  server: 151.101.56.6
-  port: 443
-  password: Mitivpn
-  tls: true
-  sni: ssl.fastly.com
-- name: 美國丨yoyapai.com\r_1
-  type: trojan
-  server: www.ignitelimit.com
+  server: 188.114.97.6
   port: 443
   password: humanity
   tls: true
-- name: 美國+CloudFlare节点丨yoyapai.com\r
+  sni: www.calmloud.com
+  alpn:
+  - http/1.1
+- name: 🇦🇺
   type: trojan
-  server: 104.25.108.147
-  port: 8080
-  password: 9c521e24-7326-acd3-acec-d0afac2b465d
-  tls: true
-  sni: red-cell-47f9.milaniomilan9.workers.dev
-- name: 🇺🇸_US_美国
-  type: trojan
-  server: pro-tortoise.rooster465.autos
+  server: 104.16.72.41
   port: 443
-  password: PI36027154
+  password: 86957ec0-b213-433b-a43b-51f2175e0ec3
   tls: true
+  sni: space.byu.id.yxls.eu.cc
+- name: Global 🌐 | @Raydikalx | 2699
+  type: vmess
+  server: 45.38.249.190
+  port: 55972
+  uuid: b2f08b5e-ccfb-47f5-b285-828d5a8be6c1
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: tcp
+  ws-path: /netprotects
+  ws-headers:
+    Host: play.google.com
+  servername: play.google.com
+- name: '@Daily_Configs'
+  type: vmess
+  server: 138.252.100.85
+  port: 18746
+  uuid: 5cae7714-9c61-4c5c-876e-c45a1cb13be4
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /
+- name: EPODONIOS
+  type: ss
+  server: 98.71.82.228
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: GEpb25xjy9syNpEq
+- name: EPODONIOS_1
+  type: ss
+  server: 20.164.116.218
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: GTSymW4ysHcaqH70
 - name: 美国+CloudFlare节点
   type: vless
-  server: 198.41.223.238
+  server: 104.17.131.138
+  port: 443
+  uuid: 6680846a-8a57-4dfd-9a0e-63209cfc8535
+  tls: true
+  network: ws
+  servername: support.zoom.us.yxls.eu.cc
+  ws-opts:
+    path: /sg-amz
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+- name: 美国+CloudFlare节点_1
+  type: vless
+  server: 172.64.52.134
+  port: 8443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  tls: true
+  network: ws
+  servername: t1s1.rittbo.kdns.fr
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 美国+V2CROSS.COM
+  type: vless
+  server: gt-ch-01.live
+  port: 8443
+  uuid: 05a01432-0302-439f-a88d-8442cd27b7d5
+  tls: false
+  network: tcp
+  servername: storage.yandex.net
+  ws-opts:
+    path: /
+- name: 印度+V2CROSS.COM
+  type: ss
+  server: 103.241.66.76
+  port: 14605
+  cipher: chacha20-ietf-poly1305
+  password: Uk8lfmvhYnx5rJvXxKrRqGRynd9gIpJ.iY
+- name: 新加坡+Choopa数据中心
+  type: ss
+  server: 45.32.122.179
+  port: 23027
+  cipher: chacha20-ietf-poly1305
+  password: I-bP3lFh.dTG3XitF7XtVK83CZ7rI2Ut=n
+- name: 🇯🇵JP_2|2.0MB/s
+  type: vless
+  server: 161.33.3.222
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  tls: true
+  network: ws
+  servername: t1s1.rittbo.kdns.fr
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 🇸🇬SG_1|3.5MB/s
+  type: hysteria2
+  server: 13.212.61.62
+  port: 443
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  sni: vpn-sg-001.fastervpn.world
+- name: 🇯🇵JP_3|2.5MB/s
+  type: vless
+  server: 172.64.53.27
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  tls: true
+  network: ws
+  servername: t1s1.rittbo.kdns.fr
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 法国+V2CROSS.COM
+  type: vless
+  server: sca13.directdnsai.shop
+  port: 8880
+  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
+  tls: false
+  network: grpc
+  ws-opts:
+    path: /
+- name: 美国+V2CROSS.COM_1
+  type: trojan
+  server: 167.82.101.252
+  port: 443
+  password: MiTiVPN
+  tls: true
+  sni: ssl.fastly.com
+  alpn:
+  - http/1.1
+- name: 美国+CloudFlare节点_2
+  type: vless
+  server: yx.cloudflare.182682.xyz
   port: 443
   uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   tls: true
@@ -1152,6 +1060,150 @@ proxies:
     path: /
     headers:
       Host: t1s1.rittbo.kdns.fr
+- name: 🇳🇱NL_2|2.1MB/s
+  type: vless
+  server: www.speedtest.net
+  port: 8443
+  uuid: b3b033d8-1d56-4519-9761-a81be15ff1e1
+  tls: true
+  network: tcp
+  servername: vip6.spdnet.online
+  ws-opts:
+    path: /
+- name: 🇺🇸US_2|1.9MB/s
+  type: vless
+  server: fikrep.tgflow.me
+  port: 443
+  uuid: 9f19123a-1450-49f9-8ca4-3cc5f92f600b
+  tls: true
+  network: tcp
+  ws-opts:
+    path: /
+- name: 🇯🇵JP_1|3.3MB/s
+  type: vless
+  server: 202.182.118.182
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  tls: true
+  network: ws
+  servername: t1s1.rittbo.kdns.fr
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 美国+CloudFlare节点_3
+  type: vless
+  server: www.speedtest.net
+  port: 443
+  uuid: c3722a1b-6699-4904-b4f2-24a554df2f26
+  tls: true
+  network: ws
+  servername: line.sugerdood.qzz.io
+  ws-opts:
+    path: /take
+    headers:
+      Host: line.sugerdood.qzz.io
+- name: 美国+CloudFlare节点_4
+  type: vless
+  server: 104.21.227.134
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  tls: true
+  network: ws
+  servername: t1s1.rittbo.kdns.fr
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 美国+CloudFlare节点_5
+  type: trojan
+  server: 104.16.174.44
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.ignitelimit.com
+- name: 罗马尼亚+V2CROSS.COM
+  type: trojan
+  server: 185.137.157.135
+  port: 443
+  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
+  tls: true
+- name: 13|ID_speednode_0012
+  type: vless
+  server: 45.198.87.102
+  port: 8443
+  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  tls: true
+  network: tcp
+  servername: storage.yandex.net
+  ws-opts:
+    path: /
+- name: 13|ID_speednode_0013
+  type: vless
+  server: 45.198.87.33
+  port: 8443
+  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  tls: true
+  network: tcp
+  servername: storage.yandex.net
+  ws-opts:
+    path: /
+- name: 13|NL_speednode_0016
+  type: trojan
+  server: 45.131.4.118
+  port: 443
+  password: MiTiVPN
+  tls: true
+  sni: 95r.ir
+- name: 13|TW_speednode_0053
+  type: vless
+  server: 45.206.0.29
+  port: 8443
+  uuid: 52faee73-e0fe-4661-992d-67259257170f
+  tls: true
+  network: tcp
+  servername: storage.yandex.net
+  ws-opts:
+    path: /
+- name: 13|US_speednode_0055
+  type: vless
+  server: vip.bcjdvip.com
+  port: 14005
+  uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
+  tls: true
+  network: tcp
+  servername: apple.com
+  ws-opts:
+    path: /
+- name: 13|US_speednode_0056
+  type: vless
+  server: 38.244.20.69
+  port: 443
+  uuid: 057f3c26-0fe7-4315-aabc-90c79d413d70
+  tls: true
+  network: tcp
+  servername: www.apple.com
+  ws-opts:
+    path: /
+- name: 13|US_speednode_0063
+  type: trojan
+  server: iranpoems.ir
+  port: 443
+  password: Mitivpn
+  tls: true
+  sni: www.gamingdll.ir
+- name: 法國節點
+  type: vmess
+  server: 69.84.182.49
+  port: 80
+  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
 - name: 亞太地區
   type: vmess
   server: 160.250.247.70
@@ -1184,123 +1236,39 @@ proxies:
   port: 80
   password: Mitivpn
   tls: true
-- name: 美国2|@ripaojiedian
+- name: 瑞典丨yoyapai.com\r
   type: trojan
-  server: 16.163.138.198
-  port: 49277
-  password: d6788cf74e6844c45538204efd24b00f
+  server: 146.75.116.190
+  port: 80
+  password: Mitivpn
   tls: true
-  sni: www.nintendogames.net
-- name: 香港3|@ripaojiedian
+- name: 美國丨yoyapai.com\r
   type: trojan
-  server: 16.163.50.86
-  port: 53012
-  password: d6788cf74e6844c45538204efd24b00f
-  tls: true
-  sni: www.nintendogames.net
-- name: 新加坡|@ripaojiedian
-  type: trojan
-  server: 16.163.50.86
-  port: 48738
-  password: d6788cf74e6844c45538204efd24b00f
-  tls: true
-  sni: www.nintendogames.net
-- name: 🇺🇸US_3|2.5MB/s
-  type: ss
-  server: 3.148.210.179
+  server: 167.82.101.251
   port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 防范境外势力渗透
-  type: vmess
-  server: 160.79.104.10
+  password: Mitivpn
+  tls: true
+  sni: ssl.fastly.com
+- name: 美國喬治亞州亞特蘭大丨yoyapai.com\r
+  type: trojan
+  server: 151.101.56.6
   port: 443
-  uuid: 88888888-8888-8888-8888-888888888880
-  alterId: 0
-  cipher: auto
+  password: Mitivpn
   tls: true
-  network: tcp
-  servername: www.anthropic.com
-- name: 🍓46@oneclickvpnkeys
-  type: hysteria2
-  server: 2a0b:4142:a86::2
-  port: 4142
-  password: cc8b3b88-4ce7-4420-9793-c230f1191246
-  sni: c9a0c4942b7edk1v6.587458.xyz
-- name: 澳大利亚+V2CROSS.COM
-  type: ss
-  server: 104.156.233.234
-  port: 27116
-  cipher: chacha20-ietf-poly1305
-  password: bIOoi5TuImG2KccxV7-jcA7Cez+vun-c_E
-- name: 伊朗+V2CROSS.COM
-  type: vless
-  server: it.fifapes.monster
-  port: 29148
-  uuid: eab915bc-d2df-73d1-47d0-6eb240497055
-  tls: false
-  network: tcp
-  ws-opts:
-    path: /
-    headers:
-      Host: it.fifapes.monster
-- name: 🍓1@oneclickvpnkeys
-  type: hysteria2
-  server: 2a0b:4142:a86::2
-  port: 4142
-  password: f80fadf1-4f90-40e2-891f-e9a10146d960
-  sni: c9a0c4942b7edk1v6.587458.xyz
-- name: 香港4|@ripaojiedian
+  sni: ssl.fastly.com
+- name: 美國+CloudFlare节点丨yoyapai.com\r
   type: trojan
-  server: 43.199.66.183
-  port: 11035
-  password: BxceQaOe
+  server: 104.25.108.147
+  port: 8080
+  password: 9c521e24-7326-acd3-acec-d0afac2b465d
   tls: true
-  sni: t.me/ripaojiedian
-- name: 香港5|@ripaojiedian
+  sni: red-cell-47f9.milaniomilan9.workers.dev
+- name: 🇺🇸_US_美国
   type: trojan
-  server: 16.162.34.241
-  port: 4374
-  password: BxceQaOe
-  tls: true
-  sni: t.me/ripaojiedian
-- name: 日本|@ripaojiedian
-  type: trojan
-  server: 13.230.228.151
-  port: 27826
-  password: BxceQaOe
-  tls: true
-  sni: t.me%2Fripaojiedian
-- name: 新加坡3|@ripaojiedian
-  type: trojan
-  server: 43.199.77.197
-  port: 45744
-  password: BxceQaOe
-  tls: true
-  sni: t.me%2Fripaojiedian
-- name: 美国|@ripaojiedian
-  type: trojan
-  server: 16.162.58.236
-  port: 49277
-  password: d6788cf74e6844c45538204efd24b00f
-  tls: true
-  sni: www.nintendogames.net
-- name: 美国3|@ripaojiedian
-  type: trojan
-  server: 18.162.53.72
-  port: 34638
-  password: BxceQaOe
-  tls: true
-  sni: t.me/ripaojiedian
-- name: 🇬🇧GB_1|1.9MB/s
-  type: vless
-  server: eekrep.tgflow.me
+  server: pro-tortoise.rooster465.autos
   port: 443
-  uuid: 9f19123a-1450-49f9-8ca4-3cc5f92f600b
+  password: PI36027154
   tls: true
-  network: tcp
-  ws-opts:
-    path: /
 - name: 🇩🇪DE_1|2.2MB/s
   type: vless
   server: hub.oneoknews.com
@@ -1341,399 +1309,313 @@ proxies:
   servername: www.intel.com
   ws-opts:
     path: /
-- name: 🇳🇱NL_2|2.1MB/s
+- name: 11,12|美国2|@ripaojiedian
+  type: trojan
+  server: 16.163.138.198
+  port: 49277
+  password: d6788cf74e6844c45538204efd24b00f
+  tls: true
+  sni: www.nintendogames.net
+- name: 11,12|美国3|@ripaojiedian
+  type: trojan
+  server: 18.162.53.72
+  port: 34638
+  password: BxceQaOe
+  tls: true
+  sni: t.me/ripaojiedian
+- name: 13|AE_speednode_0001
+  type: trojan
+  server: 94.140.0.100
+  port: 443
+  password: MITIVPN
+  tls: true
+  sni: 95r.ir
+- name: 13|CZ_speednode_0002
   type: vless
-  server: www.speedtest.net
-  port: 8443
-  uuid: b3b033d8-1d56-4519-9761-a81be15ff1e1
+  server: 95.85.227.25
+  port: 443
+  uuid: e3e90161-fe65-443a-a3a4-e0e3a73704ca
   tls: true
   network: tcp
-  servername: vip6.spdnet.online
+  servername: pol1.hatvpn.org
   ws-opts:
     path: /
-- name: 🇺🇸US_2|1.9MB/s
+- name: 13|GB_speednode_0005
+  type: trojan
+  server: 164.38.155.135
+  port: 443
+  password: MITIVPN
+  tls: true
+  sni: 95r.ir
+- name: 13|ID_speednode_0009
   type: vless
-  server: fikrep.tgflow.me
+  server: 45.198.87.168
+  port: 8443
+  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  tls: true
+  network: tcp
+  servername: storage.yandex.net
+  ws-opts:
+    path: /
+- name: 13|ID_speednode_0010
+  type: vless
+  server: 45.198.87.13
+  port: 8443
+  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  tls: true
+  network: tcp
+  servername: storage.yandex.net
+  ws-opts:
+    path: /
+- name: 13|ID_speednode_0011
+  type: vless
+  server: 45.198.87.203
+  port: 8443
+  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
+  tls: true
+  network: tcp
+  servername: storage.yandex.net
+  ws-opts:
+    path: /
+- name: 亞太地區丨yoyapai.com\r
+  type: trojan
+  server: 103.45.245.208
+  port: 2053
+  password: rYuChHcwQZskq9E0zdoR
+  tls: true
+  sni: vpn5.rnmcnm.com
+- name: 俄羅斯
+  type: vmess
+  server: renderer-stream-1-411.mirra.now
+  port: 443
+  uuid: df9c9355-b02c-4c12-909d-0dbeb725d52b
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /api/v1/gpu-stream/socket
+  ws-headers:
+    Host: renderer-stream-1-411.mirra.now
+- name: 香港節點丨yoyapai.com\r
+  type: trojan
+  server: adak.sonofthewinds.com
+  port: 34436
+  password: 825929f4-c702-35ce-9124-00d3f95b8c32
+  tls: true
+  sni: hh4.sonofthewinds.com
+- name: 臺灣節點丨yoyapai.com\r
+  type: trojan
+  server: adak.sonofthewinds.com
+  port: 34450
+  password: 825929f4-c702-35ce-9124-00d3f95b8c32
+  tls: true
+  sni: tt1.sonofthewinds.com
+- name: 日本節點丨yoyapai.com\r
+  type: trojan
+  server: adak.sonofthewinds.com
+  port: 34470
+  password: 825929f4-c702-35ce-9124-00d3f95b8c32
+  tls: true
+  sni: gj1.sonofthewinds.com
+- name: 韓國丨yoyapai.com\r
+  type: trojan
+  server: 211.49.57.175
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  tls: true
+  sni: hhcm.hhxaf.cc.cd
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国
+  type: vless
+  server: 39.107.252.182
+  port: 443
+  uuid: 659a9075-d5ab-4fd2-bf34-b37043fae832
+  tls: true
+  network: ws
+  servername: nbhhh.mrcool.kdns.fr
+  ws-opts:
+    path: /proxyip=Telegram-WangCai2🇨🇳
+    headers:
+      Host: nbhhh.mrcool.kdns.fr
+- name: 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+  type: vmess
+  server: v35.hdacd.com
+  port: 30835
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  network: tcp
+- name: 🇭🇰_HK_中国香港->🇺🇸_US_美国
+  type: vmess
+  server: v4.hdacd.com
+  port: 30804
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  network: tcp
+- name: 🇺🇸US_3|2.5MB/s
+  type: ss
+  server: 3.148.210.179
+  port: 443
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 防范境外势力渗透
+  type: vmess
+  server: 160.79.104.10
+  port: 443
+  uuid: 88888888-8888-8888-8888-888888888880
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: tcp
+  servername: www.anthropic.com
+- name: 🍓46@oneclickvpnkeys
+  type: hysteria2
+  server: 2a0b:4142:a86::2
+  port: 4142
+  password: cc8b3b88-4ce7-4420-9793-c230f1191246
+  sni: c9a0c4942b7edk1v6.587458.xyz
+- name: 🍓1@oneclickvpnkeys
+  type: hysteria2
+  server: 2a0b:4142:a86::2
+  port: 4142
+  password: f80fadf1-4f90-40e2-891f-e9a10146d960
+  sni: c9a0c4942b7edk1v6.587458.xyz
+- name: 🇬🇧GB_1|1.9MB/s
+  type: vless
+  server: eekrep.tgflow.me
   port: 443
   uuid: 9f19123a-1450-49f9-8ca4-3cc5f92f600b
   tls: true
   network: tcp
   ws-opts:
     path: /
-- name: 🇯🇵JP_1|3.3MB/s
-  type: vless
-  server: 202.182.118.182
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+- name: 11,12|日本|@ripaojiedian
+  type: trojan
+  server: 13.230.228.151
+  port: 27826
+  password: BxceQaOe
   tls: true
-  network: ws
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-- name: 🇯🇵JP_2|2.0MB/s
-  type: vless
-  server: 161.33.3.222
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: t.me%2Fripaojiedian
+- name: 11,12|日本2|@ripaojiedian
+  type: trojan
+  server: 18.162.58.236
+  port: 5701
+  password: d6788cf74e6844c45538204efd24b00f
   tls: true
-  network: ws
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-- name: 🇸🇬SG_1|3.5MB/s
-  type: hysteria2
-  server: 13.212.61.62
-  port: 443
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  sni: vpn-sg-001.fastervpn.world
-- name: 新加坡+Choopa数据中心
+  sni: www.nintendogames.net
+- name: 11,12|新加坡2|@ripaojiedian
+  type: trojan
+  server: 16.163.43.143
+  port: 29642
+  password: d6788cf74e6844c45538204efd24b00f
+  tls: true
+  sni: www.nintendogames.net
+- name: 11,12|新加坡3|@ripaojiedian
+  type: trojan
+  server: 43.199.77.197
+  port: 45744
+  password: BxceQaOe
+  tls: true
+  sni: t.me%2Fripaojiedian
+- name: 11,12|美国|@ripaojiedian
+  type: trojan
+  server: 16.162.58.236
+  port: 49277
+  password: d6788cf74e6844c45538204efd24b00f
+  tls: true
+  sni: www.nintendogames.net
+- name: SS Node
   type: ss
-  server: 45.32.122.179
-  port: 23027
-  cipher: chacha20-ietf-poly1305
-  password: I-bP3lFh.dTG3XitF7XtVK83CZ7rI2Ut=n
-- name: 罗马尼亚+V2CROSS.COM
-  type: trojan
-  server: 185.137.157.138
+  server: 3.148.210.179
   port: 443
-  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
-  tls: true
-  sni: 185.137.157.138
-- name: 印度+V2CROSS.COM
-  type: ss
-  server: 103.111.114.82
-  port: 28061
-  cipher: chacha20-ietf-poly1305
-  password: WOir3lXBhMHDcLFPQdEZXPu37_pTQDCXfm
-- name: 🇯🇵JP_3|2.5MB/s
-  type: vless
-  server: 172.64.53.27
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-- name: 美国+CloudFlare节点_1
-  type: vless
-  server: www.baipiao.eu.org
-  port: 8880
-  uuid: d829cf8d-0a32-4e60-bcc3-a03fb4658ea4
-  tls: false
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
-    headers:
-      Host: shy-wind-a26f.182-104.workers.dev
-- name: 美国+CloudFlare节点_2
-  type: vless
-  server: nexusmods.com
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-- name: 未知68
+  cipher: aes-256-gcm
+  password: aes-256-cfb:amazonskr05=
+- name: 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
   type: vmess
-  server: 159.89.29.136
-  port: 80
-  uuid: d20d6ede-433c-11ed-b81f-cfd905df9958
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /vmess
-  ws-headers:
-    Host: cx.com
-- name: US3 8.7MB/s
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
+  server: v24.hdacd.com
+  port: 30824
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
   cipher: auto
   tls: false
   network: tcp
-- name: 美国+CloudFlare节点_3
+- name: 🇫🇮_FI_芬兰
   type: vless
-  server: 104.21.18.48
-  port: 80
-  uuid: dc5b7653-70dd-4d5e-966f-3b595049a204
-  tls: false
-  network: ws
-  servername: ez-a2fb15.sina-noraianfard-2015.workers.dev
-  ws-opts:
-    path: /
-    headers:
-      Host: ez-a2fb15.sina-noraianfard-2015.workers.dev
-- name: 美国+CloudFlare节点_4
-  type: vless
-  server: cf9.466688.xyz
-  port: 443
-  uuid: fe273991-0514-4a16-8ec4-b15ae861c000
-  tls: true
-  network: ws
-  servername: zyzzzoao.xn--fiqv8j.eu.org
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: zyzzzoao.xn--fiqv8j.eu.org
-- name: 美国+CloudFlare节点_5
-  type: vless
-  server: 104.16.148.8
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-- name: 未知61
-  type: trojan
-  server: 199.181.197.228
-  port: 443
-  password: humanity
-  tls: true
-  sni: www.calmloud.com
-- name: 未知63
-  type: trojan
-  server: celestara.biz
-  port: 443
-  password: MiTiVPN
-  tls: true
-  sni: Nl.App-Cloud.ir
-- name: 未知64
-  type: vmess
-  server: arvancloud.com
-  port: 80
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /graphql
-  ws-headers:
-    Host: sanandaj.ir
-- name: 未知65
-  type: vmess
-  server: 8.217.13.74
-  port: 31769
-  uuid: cf1ad6c7-5987-4314-82bb-b4399040d047
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-- name: 未知66
-  type: vmess
-  server: 51.195.235.71
-  port: 2052
-  uuid: 59e28f78-c31b-4613-9d9f-1e6732a31f46
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-  ws-path: /
-- name: 未知67
-  type: vmess
-  server: https://github.com/ALIILAPRO/v2rayNG-Config
-  port: 443
-  uuid: aliilapro-v2rayng-config
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: github.com
-  servername: github.com
-- name: 美国+CloudFlare节点_6
-  type: vless
-  server: 172.64.153.159
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-- name: 罗马尼亚+V2CROSS.COM_1
-  type: trojan
-  server: 185.137.157.140
-  port: 443
-  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
-  tls: true
-  sni: 185.137.157.140
-- name: 美国+CloudFlare节点_7
-  type: vless
-  server: cf8.466688.xyz
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  tls: false
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vms.lifetime54.workers.dev
-- name: 未知56 361.6KB/s
-  type: vmess
-  server: hl112.cowjump.site
-  port: 443
-  uuid: 0bf1cead-bdd4-4692-b3d4-6866ccb9f37a
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: hl112.cowjump.site
-  servername: hl112.cowjump.site
-- name: 未知57
-  type: vmess
-  server: 45.15.170.237
-  port: 80
-  uuid: 820d4b4f-3357-4dc7-9381-6e5fd52b5f39
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /vmess/
-  ws-headers:
-    Host: pelang.org
-- name: 未知58
-  type: vmess
-  server: 65.109.218.60
-  port: 8088
-  uuid: 65488bcf-8573-44ee-9b4f-9abf4390acca
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-- name: 未知60
-  type: vmess
-  server: ipa.xn--220ba84am6g99wihgilau3ar1g.info
-  port: 2053
-  uuid: b04868f0-b54d-4f48-aad4-e5543d03c909
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: cdn.xn--220ba84am6g99wihgilau3ar1g.info
-  servername: cdn.xn--220ba84am6g99wihgilau3ar1g.info
-- name: 未知51
-  type: vmess
-  server: serkat.org
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-path: linkvws
-  ws-headers:
-    Host: serkat.org
-  servername: serkat.org
-- name: 未知52
-  type: vmess
-  server: TM_AZARBAYJAB1.SERV.9.pagES.DEV
-  port: 80
-  uuid: 43dcdce1-3cea-4193-bc8d-90b92071d779
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/?de=2560
-  ws-headers:
-    Host: tr1-smart.adelping.com
-- name: 未知53
-  type: vmess
-  server: 8103.shomaparvazroyadetonnist-bypassishere.lat
-  port: 8103
-  uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-path: /ad80f8ec-4861-11f0-a948-6a75f667b472?ed=2048
-  ws-headers:
-    Host: ad80f8ec-4861-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
-  servername: ad80f8ec-4861-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
-- name: 未知54
-  type: vmess
-  server: s2.abtinphone.com
-  port: 57392
-  uuid: 47e09a9f-4909-4e2b-8c5c-a37e5b3d26e3
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-  ws-path: /
-  ws-headers:
-    Host: bmw.com
-- name: 未知55
-  type: trojan
-  server: velocore.co
-  port: 443
-  password: MiTiVPN
-  tls: true
-  sni: sw.App-Cloud.ir
-- name: EPODONIOS_2
-  type: hysteria2
-  server: vids.jibiji.store
-  port: 27039
-  password: r7386498464aq
-  sni: bts.com
-- name: EPODONIOS_3
-  type: ss
   server: bot.sobhanpor.ir
-  port: 1080
-  cipher: chacha20-ietf-poly1305
-  password: 0sabUV5_H0RH2iJFEtjI2nJ02U3SiQR8
-- name: EPODONIOS_4
-  type: ss
-  server: daroo.iran-shop.co
-  port: 1080
-  cipher: chacha20-ietf-poly1305
-  password: KOCclvK-K8PKwYh4Tu5rpg
-- name: 🇺🇸US美国12
-  type: trojan
-  server: 38.60.136.156
   port: 443
-  password: hCunaKqdEJDBO+3jCrJUSMevXOw9Q_r4Ey
+  uuid: c6021439-a298-42a2-8db5-9407f48c60b3
   tls: true
-  sni: 38.60.136.156
-- name: 未知50
-  type: vmess
-  server: 8.210.140.23
-  port: 54809
-  uuid: fde73daf-cc67-42f3-9935-35b132b01abd
-  alterId: 0
-  cipher: auto
-  tls: false
+  network: tcp
+  ws-opts:
+    path: /
+- name: SS Node_1
+  type: ss
+  server: 3.17.162.229
+  port: 443
+  cipher: aes-256-gcm
+  password: aes-256-cfb:amazonskr05=
+- name: 🇬🇧_英国_79
+  type: vless
+  server: 213.165.88.177
+  port: 443
+  uuid: ea057aa8-6c6f-44f4-d347-7a87e835c0dc
+  tls: true
   network: ws
-  ws-path: /arki?ed=2048
-- name: 9|🍓44@oneclickvpnkeys
-  type: hysteria2
-  server: 45.196.182.227
-  port: 8449
-  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
-  sni: https://t.me/WangCai2🇨🇳
+  servername: us2.wxgqlfx.icu
+  ws-opts:
+    path: /TG@wxgqlfx
+    headers:
+      Host: us2.wxgqlfx.icu
+- name: 🇳🇱_荷兰_80
+  type: vless
+  server: 185.45.113.201
+  port: 443
+  uuid: ea057aa8-6c6f-44f4-d347-7a87e835c0dc
+  tls: true
+  network: ws
+  servername: us2.wxgqlfx.icu
+  ws-opts:
+    path: /TG@wxgqlfx
+    headers:
+      Host: us2.wxgqlfx.icu
+- name: 🇳🇱_荷兰_81
+  type: vless
+  server: 91.223.123.210
+  port: 443
+  uuid: ea057aa8-6c6f-44f4-d347-7a87e835c0dc
+  tls: true
+  network: ws
+  servername: us2.wxgqlfx.icu
+  ws-opts:
+    path: /TG@wxgqlfx
+    headers:
+      Host: us2.wxgqlfx.icu
+- name: 🇨🇿_捷克_82
+  type: vless
+  server: 193.124.15.11
+  port: 443
+  uuid: ea057aa8-6c6f-44f4-d347-7a87e835c0dc
+  tls: true
+  network: ws
+  servername: us2.wxgqlfx.icu
+  ws-opts:
+    path: /TG@wxgqlfx
+    headers:
+      Host: us2.wxgqlfx.icu
+- name: 🇫🇷_法国_83
+  type: vless
+  server: 57.128.179.189
+  port: 443
+  uuid: ea057aa8-6c6f-44f4-d347-7a87e835c0dc
+  tls: true
+  network: ws
+  servername: us2.wxgqlfx.icu
+  ws-opts:
+    path: /TG@wxgqlfx
+    headers:
+      Host: us2.wxgqlfx.icu
 - name: 9|2🍓@oneclickvpnkeys
   type: hysteria2
   server: 45.196.182.231
@@ -1755,6 +1637,145 @@ proxies:
 - name: 9|🍓73@oneclickvpnkeys
   type: hysteria2
   server: 45.196.182.244
+  port: 8449
+  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
+  sni: https://t.me/WangCai2🇨🇳
+- name: '12|tg频道:@ripaojiedian #1'
+  type: ss
+  server: 63.180.254.10
+  port: 443
+  cipher: ss
+  password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU
+- name: 11|🇭🇰 香港|@ripaojiedian
+  type: vmess
+  server: v10.hdacd.com
+  port: 30807
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  network: tcp
+- name: 11,12|香港3|@ripaojiedian
+  type: trojan
+  server: 16.163.50.86
+  port: 53012
+  password: d6788cf74e6844c45538204efd24b00f
+  tls: true
+  sni: www.nintendogames.net
+- name: 11,12|新加坡|@ripaojiedian
+  type: trojan
+  server: 16.163.50.86
+  port: 48738
+  password: d6788cf74e6844c45538204efd24b00f
+  tls: true
+  sni: www.nintendogames.net
+- name: 11,12|香港4|@ripaojiedian
+  type: trojan
+  server: 43.199.66.183
+  port: 11035
+  password: BxceQaOe
+  tls: true
+  sni: t.me/ripaojiedian
+- name: 11,12|香港5|@ripaojiedian
+  type: trojan
+  server: 16.162.34.241
+  port: 4374
+  password: BxceQaOe
+  tls: true
+  sni: t.me/ripaojiedian
+- name: 🇸🇪_SE_瑞典
+  type: vless
+  server: swed-yott.red-panda.top
+  port: 1443
+  uuid: f097453b-5fa6-48a7-a164-7fe7ef89a140
+  tls: true
+  network: tcp
+  servername: www.github.com
+  ws-opts:
+    path: /
+- name: 🇱🇹_LT_立陶宛
+  type: vless
+  server: 45.194.10.139
+  port: 8443
+  uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  tls: true
+  network: tcp
+  servername: storage.yandex.net
+  ws-opts:
+    path: /
+- name: 🇱🇹_LT_立陶宛_1
+  type: vless
+  server: 45.194.10.5
+  port: 8443
+  uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  tls: true
+  network: tcp
+  servername: storage.yandex.net
+  ws-opts:
+    path: /
+- name: 🏳️_未知_90
+  type: trojan
+  server: space.byu.id.yxls.eu.cc
+  port: 443
+  password: f922fa0f-3311-4368-85ff-cf65e727c854
+  tls: true
+- name: 🏳️_未知_91
+  type: trojan
+  server: 104.16.72.2
+  port: 443
+  password: 86957ec0-b213-433b-a43b-51f2175e0ec3
+  tls: true
+  sni: space.byu.id.yxls.eu.cc
+- name: 🏳️_未知_93
+  type: trojan
+  server: 104.16.72.101
+  port: 443
+  password: 86957ec0-b213-433b-a43b-51f2175e0ec3
+  tls: true
+  sni: space.byu.id.yxls.eu.cc
+- name: 🏳️_未知_94
+  type: trojan
+  server: 104.17.131.88
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.gossipglove.com
+- name: 🏳️_未知_95
+  type: trojan
+  server: 104.18.152.233
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.calmloud.com
+- name: 🏳️_未知_97
+  type: trojan
+  server: 104.18.152.143
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.ignitelimit.com
+- name: 🏳️_未知_98
+  type: trojan
+  server: 104.16.174.117
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.ignitelimit.com
+- name: 9|🍓100@oneclickvpnkeys
+  type: hysteria2
+  server: 45.196.182.222
+  port: 8449
+  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
+  sni: https://t.me/WangCai2🇨🇳
+- name: 9|🍓41@oneclickvpnkeys
+  type: hysteria2
+  server: 45.196.182.223
+  port: 8449
+  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
+  sni: https://t.me/WangCai2🇨🇳
+- name: 9|🍓44@oneclickvpnkeys
+  type: hysteria2
+  server: 45.196.182.227
   port: 8449
   password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
   sni: https://t.me/WangCai2🇨🇳
@@ -1866,12 +1887,115 @@ proxies:
   port: 4526
   password: hk6ah4vgb0qp2koh
   sni: ger1.riziro.ir
-- name: '9|تلگرام : MTMVPN'
+- name: 9|@filembad
   type: hysteria2
   server: 130.49.161.70
   port: 443
   password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
   sni: hy2.aspidnet.xyz
+- name: 9|🇩🇪@V2raybazi
+  type: hysteria2
+  server: 130.61.50.75
+  port: 6443
+  password: zhangyang
+  sni: https://www.calmloud.com
+- name: 11|tg频道:@ripaojiedian
+  type: ss
+  server: 63.180.254.10
+  port: 443
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇷🇺_RU_俄罗斯->🇪🇪_EE_爱沙尼亚
+  type: vless
+  server: 37.9.4.168
+  port: 443
+  uuid: c918927a-a4cf-45ad-a5c8-e135129ee1d4
+  tls: true
+  network: grpc
+  servername: centos.ubuntuhosting.host
+  ws-opts:
+    path: /
+- name: 🇳🇱_NL_荷兰
+  type: vless
+  server: assets.hihidress.com
+  port: 443
+  uuid: 27f914c5-bdcc-441a-9459-368daf552606
+  tls: true
+  network: tcp
+  servername: m.media-amazon.com
+  ws-opts:
+    path: /
+- name: 🇷🇺_RU_俄罗斯
+  type: vless
+  server: 45.132.18.70
+  port: 443
+  uuid: dcde0c41-e089-4228-baef-d85eaec01710
+  tls: true
+  network: tcp
+  servername: ya.ru
+  ws-opts:
+    path: /
+- name: 🇱🇹_LT_立陶宛_2
+  type: vless
+  server: 45.194.10.191
+  port: 8443
+  uuid: 3e7cede4-721a-4807-b0a2-5fe6586af907
+  tls: true
+  network: tcp
+  servername: storage.yandex.net
+  ws-opts:
+    path: /
+- name: 🇭🇰_HK_中国香港->🇺🇸_US_美国_2
+  type: vmess
+  server: v8.hdacd.com
+  port: 30808
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  network: tcp
+- name: 🇭🇰_HK_中国香港->🇺🇸_US_美国_3
+  type: vmess
+  server: v9.hdacd.com
+  port: 30809
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  network: tcp
+- name: 🇫🇷_法国_84
+  type: vless
+  server: 51.91.254.153
+  port: 8443
+  uuid: ea057aa8-6c6f-44f4-d347-7a87e835c0dc
+  tls: true
+  network: ws
+  servername: us2.wxgqlfx.icu
+  ws-opts:
+    path: /TG@wxgqlfx
+    headers:
+      Host: us2.wxgqlfx.icu
+- name: 🏳️_未知_86
+  type: trojan
+  server: 104.18.153.10
+  port: 443
+  password: f922fa0f-3311-4368-85ff-cf65e727c854
+  tls: true
+  sni: space.byu.id.yxls.eu.cc
+- name: 🇸🇨_塞舌尔_87
+  type: trojan
+  server: 45.130.125.126
+  port: 443
+  password: 86957ec0-b213-433b-a43b-51f2175e0ec3
+  tls: true
+  sni: space.byu.id.yxls.eu.cc
+- name: 🇺🇸_美国_89
+  type: trojan
+  server: 141.193.213.30
+  port: 443
+  password: f922fa0f-3311-4368-85ff-cf65e727c854
+  tls: true
+  sni: space.byu.id.yxls.eu.cc
 - name: 9|IPv4@proxy_kafee
   type: hysteria2
   server: vids.jibiji.store
@@ -1884,868 +2008,51 @@ proxies:
   port: 44100
   password: rjj39jg8iphgd06h
   sni: pro2.riziro.ir
-- name: 11,12|香港5|@ripaojiedian
-  type: trojan
-  server: 18.163.124.19
-  port: 11035
-  password: BxceQaOe
-  tls: true
-  sni: t.me/ripaojiedian
-- name: 11,12|日本|@ripaojiedian
-  type: trojan
-  server: 52.194.214.115
-  port: 10624
-  password: BxceQaOe
-  tls: true
-  sni: t.me%2Fripaojiedian
-- name: 11,12|日本3|@ripaojiedian
-  type: trojan
-  server: 16.163.138.198
-  port: 3743
-  password: b8494776252056a1b62e77c4ff6a6d61
-  tls: true
-  sni: www.nintendogames.net
-- name: EPODONIOS_5
-  type: ss
-  server: 57.129.121.230
-  port: 10443
-  cipher: chacha20-ietf-poly1305
-  password: uROuEqsL8IUMMVb4wDwnGU
-- name: EPODONIOS_6
-  type: vless
-  server: 159.195.45.129
-  port: 443
-  uuid: 859a537b-09cf-4bce-8da4-ecbb72950e3a
-  tls: false
-  network: tcp
-  servername: 3.oncloudnineservicestreang.com
-  ws-opts:
-    path: /
-- name: EPODONIOS_7
-  type: ss
-  server: 82.38.31.204
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: EPODONIOS_8
-  type: vless
-  server: uk-gthost-01.com
-  port: 8443
-  uuid: 52faee73-e0fe-4661-992d-67259257170f
-  tls: false
-  network: tcp
-  servername: storage.yandex.net
-  ws-opts:
-    path: /
-- name: EPODONIOS_9
-  type: ss
-  server: 82.38.31.176
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: EPODONIOS_10
-  type: ss
-  server: 193.151.128.97
-  port: 443
-  cipher: 2022-blake3-chacha20-poly1305
-  password: iFxltqscJVLJdHunZXPCmb4ToHN7LhkoeYwpQcU/Pbo=
-- name: EPODONIOS_11
-  type: ss
-  server: 49.13.3.249
-  port: 23997
-  cipher: 2022-blake3-aes-256-gcm
-  password: dyL+KqX8hIMn+UyADwSJOPm72A0A83TsDOFXBn6I2mA=
-- name: EPODONIOS_12
-  type: ss
-  server: 20.107.201.69
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: 4VNX9LDu6fpElXLi
-- name: EPODONIOS_13
-  type: ss
-  server: 85.234.73.234
-  port: 1080
-  cipher: chacha20-ietf-poly1305
-  password: 5KilolFUjzlMabQ0ORwBUwr6sSvqRCzh
-- name: EPODONIOS_14
-  type: ss
-  server: 45.129.96.62
-  port: 41348
-  cipher: chacha20-ietf-poly1305
-  password: 6U3psR0sQuQxWXoBHB4KTD3YacwQwS21XvSEy9
-- name: EPODONIOS_15
-  type: ss
-  server: 61.231.25.172
-  port: 50099
-  cipher: chacha20-ietf-poly1305
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-- name: EPODONIOS_16
-  type: ss
-  server: 98.71.81.64
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: 7kxYV8faLKFy8q1S
-- name: EPODONIOS_17
-  type: ss
-  server: 143.198.86.126
-  port: 16161
-  cipher: chacha20-ietf-poly1305
-  password: 8Q8WSWTEJfzYVjXH1setj3
-- name: 9|🍓41@oneclickvpnkeys
-  type: hysteria2
-  server: 45.196.182.223
-  port: 8449
-  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
-  sni: https://t.me/WangCai2🇨🇳
 - name: 9|♾️𝗝𝗼𝗶𝗻➠🆔️@ATLAS_V2VPN🆓️🛜🔷️430🌐...
   type: hysteria2
   server: 80.66.81.78
   port: 9443
   password: rs2mR3g9bZiMloftx6lZQ59Um1Ld
   sni: tunel1.washing.help
-- name: 11|🇭🇰 香港|@ripaojiedian
-  type: vmess
-  server: v10.hdacd.com
-  port: 30807
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  tls: false
-  network: tcp
-- name: 11,12|香港3|@ripaojiedian
-  type: trojan
-  server: 18.162.58.236
-  port: 2008
-  password: b8494776252056a1b62e77c4ff6a6d61
-  tls: true
-  sni: www.nintendogames.net
-- name: 11,12|日本2|@ripaojiedian
-  type: trojan
-  server: 18.162.58.236
-  port: 5701
-  password: b8494776252056a1b62e77c4ff6a6d61
-  tls: true
-  sni: www.nintendogames.net
-- name: 11,12|香港4|@ripaojiedian
-  type: trojan
-  server: 95.40.26.121
-  port: 29449
-  password: BxceQaOe
-  tls: true
-  sni: t.me/ripaojiedian
-- name: 13|US_speednode_0056
-  type: vless
-  server: 38.244.20.69
-  port: 443
-  uuid: 057f3c26-0fe7-4315-aabc-90c79d413d70
-  tls: true
-  network: tcp
-  servername: www.apple.com
-  ws-opts:
-    path: /
-- name: 13|US_speednode_0063
-  type: trojan
-  server: iranpoems.ir
-  port: 443
-  password: Mitivpn
-  tls: true
-  sni: www.gamingdll.ir
-- name: EPODONIOS_18
-  type: ss
-  server: 4.168.196.7
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: 8iW2GElOLWl9Ztjj
-- name: EPODONIOS_19
-  type: ss
-  server: 51.89.119.213
-  port: 11201
-  cipher: chacha20-ietf-poly1305
-  password: 15b0573830081d01
-- name: EPODONIOS_20
-  type: ss
-  server: 45.87.175.178
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: 1RWwXhwfAB5gAEozU4G2Pg
-- name: EPODONIOS_21
-  type: ss
-  server: 45.87.175.199
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: 1RWwXhwfAB5gAEozU4G2Pg
-- name: EPODONIOS_22
-  type: ss
-  server: 20.166.91.10
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: 1hVGiu6pyngcQQdU
-- name: EPODONIOS_23
-  type: ss
-  server: 20.107.208.165
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: 3C1GAcIUs3gmr85y
-- name: EPODONIOS_24
-  type: ss
-  server: 67.219.106.119
-  port: 26286
-  cipher: chacha20-ietf-poly1305
-  password: xfscSDcb-SeEqqRb.omzVGgVgNpXh3bA1u
-- name: EPODONIOS_25
-  type: ss
-  server: 185.213.23.63
-  port: 990
-  cipher: chacha20-ietf-poly1305
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-- name: EPODONIOS_26
-  type: ss
-  server: 45.95.233.55
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: BwCNXZaSi4ab7lQu2cvM20
-- name: EPODONIOS_27
-  type: ss
-  server: 108.181.58.239
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: CJmTCCx7Ltud
-- name: EPODONIOS_28
-  type: ss
-  server: 98.71.82.228
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: GEpb25xjy9syNpEq
-- name: EPODONIOS_29
-  type: ss
-  server: 20.164.116.218
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: GTSymW4ysHcaqH70
-- name: EPODONIOS_30
-  type: ss
-  server: 20.223.136.202
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: HeC2HzINHb4SUY8S
-- name: EPODONIOS_31
-  type: ss
-  server: 5.253.59.156
-  port: 32140
-  cipher: chacha20-ietf-poly1305
-  password: It2NiBbsHvvhqU5aGEZ2pI
 - name: 9|best_internet_iran
   type: hysteria2
   server: nf.easyiran.org
   port: 33027
   password: sm6wj2kn4v412om3
   sni: nf.easyiran.org
-- name: 9|🇪@V2raybazi
-  type: hysteria2
-  server: 130.61.50.75
-  port: 6443
-  password: zhangyang
-  sni: https://www.calmloud.com
-- name: 11|tg频道:@ripaojiedian
-  type: ss
-  server: 63.180.254.10
-  port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: '12|tg频道:@ripaojiedian #1'
-  type: ss
-  server: 63.180.254.10
-  port: 443
-  cipher: ss
-  password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU
-- name: 13|ID_speednode_0009
-  type: vless
-  server: 45.198.87.168
-  port: 8443
-  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  tls: true
-  network: tcp
-  servername: storage.yandex.net
-  ws-opts:
-    path: /
-- name: 13|ID_speednode_0010
-  type: vless
-  server: 45.198.87.13
-  port: 8443
-  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  tls: true
-  network: tcp
-  servername: storage.yandex.net
-  ws-opts:
-    path: /
-- name: 13|ID_speednode_0011
-  type: vless
-  server: 45.198.87.203
-  port: 8443
-  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  tls: true
-  network: tcp
-  servername: storage.yandex.net
-  ws-opts:
-    path: /
-- name: 13|ID_speednode_0012
-  type: vless
-  server: 45.198.87.102
-  port: 8443
-  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  tls: true
-  network: tcp
-  servername: storage.yandex.net
-  ws-opts:
-    path: /
-- name: 13|ID_speednode_0013
-  type: vless
-  server: 45.198.87.33
-  port: 8443
-  uuid: 7896c501-248f-4068-bc2f-363c91ba5122
-  tls: true
-  network: tcp
-  servername: storage.yandex.net
-  ws-opts:
-    path: /
-- name: 13|NL_speednode_0016
-  type: trojan
-  server: 45.131.4.118
-  port: 443
-  password: MiTiVPN
-  tls: true
-  sni: 95r.ir
-- name: 13|TW_speednode_0053
-  type: vless
-  server: 45.206.0.29
-  port: 8443
-  uuid: 52faee73-e0fe-4661-992d-67259257170f
-  tls: true
-  network: tcp
-  servername: storage.yandex.net
-  ws-opts:
-    path: /
-- name: 13|US_speednode_0055
-  type: vless
-  server: vip.bcjdvip.com
-  port: 14005
-  uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
-  tls: true
-  network: tcp
-  servername: apple.com
-  ws-opts:
-    path: /
-- name: 🇺🇸_美国_52
-  type: vless
-  server: 151.101.103.151
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇺🇸_美国_53
-  type: vless
-  server: 151.101.118.151
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇺🇸_美国_54
-  type: vless
-  server: 151.101.119.151
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇫🇷_法国_55
-  type: vless
-  server: 151.101.120.151
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇪🇸_西班牙_57
-  type: vless
-  server: 151.101.132.151
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  ws-opts:
-    path: /?https://t.me/WangCai2🇨🇳
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇪🇸_西班牙_58
-  type: vless
-  server: 151.101.133.151
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  ws-opts:
-    path: /?https://t.me/WangCai2🇨🇳
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇪🇸_西班牙_59
-  type: vless
-  server: 151.101.134.151
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  ws-opts:
-    path: /?https://t.me/WangCai2🇨🇳
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇮🇳_印度_60
-  type: vless
-  server: 151.101.158.151
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  ws-opts:
-    path: /?https://t.me/WangCai2🇨🇳
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇺🇸_美国_61
-  type: vless
-  server: 151.101.170.151
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇺🇸_美国_62
-  type: vless
-  server: 151.101.171.151
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 未知49
+- name: 未知58
   type: vmess
-  server: 51.83.52.172
-  port: 2085
-  uuid: 2c72c667-093c-47a5-a108-493c93282b57
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-  ws-path: /
-  ws-headers:
-    Host: fast.com
-- name: 🇺🇸US-38.121.43.97-0865
-  type: ss
-  server: 38.121.43.97
-  port: 8881
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-- name: 🇺🇸US-38.68.135.18-6268
-  type: ss
-  server: 38.68.135.18
-  port: 5003
-  cipher: aes-256-gcm
-  password: g5MeD6Ft3CWlJId
-- name: 🇺🇸US-205.134.180.147-9378
-  type: ss
-  server: 205.134.180.147
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: 9Bvkw5aupNy8
-- name: 美国 CloudFlare节点
-  type: vmess
-  server: 104.21.224.24
+  server: 5.249.160.226
   port: 80
-  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  uuid: 86afaa7e-e00c-4c05-a7d1-44e7ba91d77a
   alterId: 0
   cipher: auto
   tls: false
   network: ws
-  ws-path: /?ed=2048&Telegram🇨🇳
+  ws-path: /vmess
   ws-headers:
-    Host: a.prapt1.ir
-  servername: a.prapt1.ir
-- name: 🇬🇧_GB_英国->🇰🇿_KZ_哈萨克斯坦
-  type: trojan
-  server: kz.mjt000.com
-  port: 443
-  password: c2c76420-257f-492a-b20f-6560f3bfa78d
-  tls: true
-- name: 11,12|新加坡2|@ripaojiedian
-  type: trojan
-  server: 16.163.43.143
-  port: 29642
-  password: b8494776252056a1b62e77c4ff6a6d61
-  tls: true
-  sni: www.nintendogames.net
-- name: 11,12|美国|@ripaojiedian
-  type: trojan
-  server: 16.163.43.143
-  port: 17005
-  password: b8494776252056a1b62e77c4ff6a6d61
-  tls: true
-  sni: www.nintendogames.net
-- name: 11,12|新加坡3|@ripaojiedian
-  type: trojan
-  server: 43.198.12.202
-  port: 22459
-  password: BxceQaOe
-  tls: true
-  sni: t.me%2Fripaojiedian
-- name: 11,12|美国2|@ripaojiedian
-  type: trojan
-  server: 16.163.50.86
-  port: 49277
-  password: b8494776252056a1b62e77c4ff6a6d61
-  tls: true
-  sni: www.nintendogames.net
-- name: 11,12|美国3|@ripaojiedian
-  type: trojan
-  server: 16.163.155.249
-  port: 2366
-  password: BxceQaOe
-  tls: true
-  sni: t.me/ripaojiedian
-- name: 13|AE_speednode_0001
-  type: trojan
-  server: 94.140.0.100
-  port: 443
-  password: MITIVPN
-  tls: true
-  sni: 95r.ir
-- name: 13|CZ_speednode_0002
-  type: vless
-  server: 95.85.227.25
-  port: 443
-  uuid: e3e90161-fe65-443a-a3a4-e0e3a73704ca
-  tls: true
-  network: tcp
-  servername: pol1.hatvpn.org
-  ws-opts:
-    path: /
-- name: 13|GB_speednode_0005
-  type: trojan
-  server: 164.38.155.135
-  port: 443
-  password: MITIVPN
-  tls: true
-  sni: 95r.ir
-- name: 电报群：https://t.me/vvkj11
-  type: vless
-  server: fh1.freechatup2.com
-  port: 443
-  uuid: 27f914c5-bdcc-441a-9459-368daf552606
-  tls: false
-  network: tcp
-  servername: m.media-amazon.com
-  ws-opts:
-    path: /
-- name: 日期：07-03
-  type: vless
-  server: 93.114.194.84
-  port: 448
-  uuid: bc5b801f-49a7-4db7-ac92-a2c57d42d132
-  tls: false
-  network: tcp
-  servername: www.samsung.com
-  ws-opts:
-    path: /
-- name: 🇮🇶_伊拉克_5
-  type: vless
-  server: 81.90.29.53
-  port: 8443
-  uuid: cf038a28-8f85-41fc-9e86-ba99a3fdd0d9
-  tls: false
-  network: tcp
-  servername: mishaduck.duckdns.org
-  ws-opts:
-    path: /
-- name: 🇹🇼_台湾_11
-  type: vless
-  server: tw3.miyazono-kaori.com
-  port: 443
-  uuid: 580d81f8-4f30-49d6-ad90-59fb4a850313
-  tls: false
-  network: tcp
-  servername: dlcdnets.asus.com
-  ws-opts:
-    path: /
-- name: 🇭🇰_香港_16
-  type: trojan
-  server: 103.177.136.45
-  port: 41943
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  tls: true
-  sni: az.01.naiun.bilibili.com
-- name: 🇭🇰_香港_21
-  type: trojan
-  server: 103.177.136.45
-  port: 45619
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  tls: true
-  sni: fr.01.naiun.bilibili.com
-- name: 🇭🇰_香港_18
-  type: trojan
-  server: 103.177.136.42
-  port: 41943
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  tls: true
-  sni: az.01.naiun.bilibili.com
-- name: 🇭🇰_香港_19
-  type: trojan
-  server: 103.177.136.42
-  port: 45553
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  tls: true
-  sni: ch.01.naiun.bilibili.com
-- name: 🇭🇰_香港_20
-  type: trojan
-  server: 103.177.136.42
-  port: 45619
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  tls: true
-  sni: fr.01.naiun.bilibili.com
-- name: 🇷🇺_俄罗斯_38
-  type: vless
-  server: 144.31.190.191
-  port: 8443
-  uuid: 91d0fa43-e557-43e7-a731-f0c3d1fb306a
-  tls: true
-  network: tcp
-  servername: ozon.ru
-  ws-opts:
-    path: /
-- name: 🇺🇸_美国_39
-  type: vless
-  server: 151.101.130.219
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  servername: max-gb1.global.ssl.fastly.net
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇳🇱_荷兰_40
-  type: vless
-  server: 151.101.38.151
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  servername: max-gb1.global.ssl.fastly.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇺🇸_美国_41
-  type: vless
-  server: 199.232.197.131
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  servername: max-gb1.global.ssl.fastly.net
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇺🇸_美国_42
-  type: vless
-  server: 151.101.194.219
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  servername: max-gb1.global.ssl.fastly.net
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇺🇸_美国_43
-  type: vless
-  server: 151.101.109.223
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  servername: max-gb1.global.ssl.fastly.net
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇺🇸_美国_44
-  type: vless
-  server: speedtest.net
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  servername: max-gb1.global.ssl.fastly.net
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇺🇸_美国_45
-  type: vless
-  server: 151.101.0.1
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇺🇸_美国_50
-  type: vless
-  server: 151.101.0.35
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇺🇸_美国_51
-  type: vless
-  server: 151.101.0.51
-  port: 80
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-- name: 🇫🇷FR-52.47.174.48-1299
-  type: trojan
-  server: 52.47.174.48
-  port: 22222
-  password: telegram-id-directvpn
-  tls: true
-  sni: trojan.burgerip.co.uk
-- name: 🏁RELAY-104.16.67.38-1094
+    Host: 5.249.160.226
+- name: 未知59
   type: vmess
-  server: 104.16.67.38
-  port: 80
-  uuid: f8c92b3b-5447-44a5-9e54-23cdc269cb93
+  server: fr.connfull.org
+  port: 2053
+  uuid: 500e29aa-c40b-43e1-905c-e6e7ac4a5b83
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: tcp
+- name: 未知60 71.8MB/s
+  type: vmess
+  server: 57.151.100.27
+  port: 10086
+  uuid: 550e8400-e29b-41d4-a716-446655440000
   alterId: 0
   cipher: auto
   tls: false
-  network: ws
-  ws-path: f8c92b3b
-  ws-headers:
-    Host: aq.daozhang.link
-- name: TG@ZDYZ2 -JP-Tokyo4
-  type: vless
-  server: 18.183.137.85
-  port: 2083
-  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-  tls: true
-  network: ws
-  servername: cfed.tgzdyz2.top
-  ws-opts:
-    path: TG@ZDYZ2
-    headers:
-      Host: cfed.tgzdyz2.top
-- name: 🇯🇵JP-185.172.113.182-0790
-  type: ss
-  server: 185.172.113.182
-  port: 812
-  cipher: chacha20-ietf-poly1305
-  password: G!yBwPWH3Vao
-- name: 🇺🇸+US+美国+29
-  type: vless
-  server: 149.104.35.222
-  port: 5010
-  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-  tls: true
-  network: ws
-  servername: juzibaipiao.5112233.xyz
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: juzibaipiao.5112233.xyz
-- name: 🇺🇸_US_美国_1
+  network: tcp
+- name: 未知61
   type: vmess
-  server: russia.com
-  port: 2095
-  uuid: 6658a3a6-225a-4d33-a5d2-82cfde565b4e
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /api/v3/download.getFile
-  ws-headers:
-    Host: ssrsub.v03.ssrsub.com
-  servername: ssrsub.v03.ssrsub.com
-- name: 9|🍓94@oneclickvpnkeys
-  type: hysteria2
-  server: 45.196.182.211
-  port: 8449
-  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
-  sni: https://t.me/WangCai2🇨🇳
-- name: 9|🍓100@oneclickvpnkeys
-  type: hysteria2
-  server: 45.196.182.222
-  port: 8449
-  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
-  sni: https://t.me/WangCai2🇨🇳
-- name: 🇺🇸 美国 CloudFlare节点
-  type: trojan
-  server: 104.20.6.134
-  port: 443
-  password: humanity
-  tls: true
-  sni: www.calmloud.com
-- name: 🇺🇸 美国 V2CROSS.COM
-  type: trojan
-  server: 149.104.104.58
-  port: 443
-  password: S.ibYdZshHTF-ne.M+.Fznp_-hyFFnCSix
-  tls: true
-  sni: 149.104.104.58
-- name: 🇨🇳+CN+中国+57
-  type: vless
-  server: 103.232.214.11
-  port: 8443
-  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-  tls: true
-  network: ws
-  servername: cfed.tgzdyz2.top
-  ws-opts:
-    path: tg@zdyz2
-    headers:
-      Host: cfed.tgzdyz2.top
-- name: 🇬🇧 United Kingdom 01 @nodpai
-  type: vmess
-  server: 172.99.190.109
+  server: serkat.org
   port: 443
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   alterId: 0
@@ -2753,96 +2060,128 @@ proxies:
   tls: true
   network: ws
   ws-path: linkvws
-- name: 🏁RELAY-104.21.7.162-0128
+  ws-headers:
+    Host: serkat.org
+  servername: serkat.org
+- name: 未知63
+  type: trojan
+  server: assets.fiverr.com
+  port: 443
+  password: MITIVPN
+  tls: true
+  sni: De.App-Cloud.ir
+- name: 未知64 514.5KB/s
   type: vmess
-  server: 104.21.7.162
-  port: 2087
-  uuid: 520a5f45-d354-42f4-a658-18dbc3754645
+  server: 3h-kazakhstan1.09vpn.com
+  port: 80
+  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   network: ws
-  ws-path: /fws
-  ws-headers:
-    Host: backend.app-browser.org
-- name: 🇺🇸+US+美国+35
-  type: vless
-  server: 206.237.5.206
-  port: 443
-  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-  tls: true
+  ws-path: /vmess/
+- name: 未知69
+  type: vmess
+  server: 47.250.149.51
+  port: 50018
+  uuid: 9665280c-a3d1-4aab-ef9f-a3a497337d91
+  alterId: 0
+  cipher: auto
+  tls: false
   network: ws
-  servername: cfed.tgzdyz2.top
-  ws-opts:
-    path: tg@zdyz2
-    headers:
-      Host: cfed.tgzdyz2.top
-- name: 🇺🇸+US+美国+61
-  type: vless
-  server: 199.181.197.39
-  port: 443
-  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-  tls: true
-  network: ws
-  servername: juzibaipiao.5112233.xyz
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: juzibaipiao.5112233.xyz
+  ws-path: /9665280c
 - name: 🇷🇺RU俄罗斯
   type: ss
   server: 185.242.86.156
   port: 54170
   cipher: chacha20-ietf-poly1305
   password: 36ZCHeabUSfKjfQEvJ4HDV
-- name: 未知24
+- name: US3
   type: vmess
-  server: 185.104.189.38
-  port: 80
-  uuid: 43dcdce1-3cea-4193-bc8d-90b92071d779
+  server: 172.64.146.102
+  port: 8443
+  uuid: c1a8dee0-bdad-4b6d-9926-5e15c3c8ed7d
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   network: ws
-  ws-path: /?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/?de=2560
+  ws-path: /c1a8dee0-bdad-4b6d-9926-5e15c3c8ed7d-vm
   ws-headers:
-    Host: 185.104.189.38
-- name: 未知25
-  type: vmess
-  server: 47.83.18.10
-  port: 36968
-  uuid: 176bf1dd-647f-4c09-892e-5f9223dc8617
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /arki?ed=2048
-- name: 🇺🇸US美国9
+    Host: marco-visibility-tops-estimate.trycloudflare.com
+  servername: marco-visibility-tops-estimate.trycloudflare.com
+- name: 🇮🇳IN印度 3.1MB/s
   type: ss
-  server: 38.180.221.145
-  port: 17283
+  server: 103.240.147.113
+  port: 14605
   cipher: chacha20-ietf-poly1305
-  password: bwjNPcwgz5+1gCyi+rB+nfqugw38B7tqVa
-- name: 🇺🇸US美国10
-  type: trojan
-  server: space.byu.id.yxls.eu.cc
-  port: 443
-  password: f922fa0f-3311-4368-85ff-cf65e727c854
-  tls: true
-- name: 未知26
+  password: Uk8lfmvhYnx5rJvXxKrRqGRynd9gIpJ.iY
+- name: 未知45
   type: vmess
-  server: vip1314.vip
-  port: 443
-  uuid: 5f72f180-b21b-4b7a-8484-240759012606
+  server: 45.15.170.237
+  port: 80
+  uuid: 820d4b4f-3357-4dc7-9381-6e5fd52b5f39
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /vmess/
+  ws-headers:
+    Host: pelang.org
+- name: 未知47
+  type: vmess
+  server: spt.reata.ir
+  port: 1050
+  uuid: b5b183b6-a4f0-41ad-a015-ba9f000ad7ed
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: tcp
+  ws-path: /
+  ws-headers:
+    Host: spt.reata.ir
+- name: 未知49
+  type: vmess
+  server: 57.129.121.230
+  port: 2053
+  uuid: 3d358ea5-465b-46ac-a2df-98ca1555194f
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: tcp
+- name: 未知50
+  type: vmess
+  server: 20.193.153.19
+  port: 15834
+  uuid: 39a8c374-76b1-4e90-ab85-85cd9a42ded2
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: tcp
+  ws-headers:
+    Host: TABRIZ.NET
+- name: 未知54
+  type: vmess
+  server: 12812.shomaparvazroyadetonnist-bypassishere.lat
+  port: 12812
+  uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   alterId: 0
   cipher: auto
   tls: true
   network: ws
-  ws-path: /5f72f180-b21b-4b7a-8484-240759096785
+  ws-path: /ad80f8ec-4861-11f0-a948-6a75f667b472?ed=2048
   ws-headers:
-    Host: vip1314.vip
-  servername: vip1314.vip
-- name: 未知27 24.0KB/s
+    Host: ad80f8ec-4861-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
+  servername: ad80f8ec-4861-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
+- name: 未知55
+  type: vmess
+  server: digi39.ez0535.com
+  port: 443
+  uuid: c1f1060c-6168-4931-a63f-817a7ade25e2
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: tcp
+- name: 未知57 10.7KB/s
   type: vmess
   server: 47.250.45.234
   port: 43063
@@ -2854,210 +2193,85 @@ proxies:
   ws-path: /arki
   ws-headers:
     Host: 47.250.45.234
-- name: 未知28 3.3MB/s
-  type: vmess
-  server: bestcf.030101.xyz
-  port: 80
-  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: 未知29 421.2KB/s
-  type: vmess
-  server: 138.252.100.85
-  port: 18746
-  uuid: e314349a-7e56-4a3e-9318-eda62b5d6bd3
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /
-- name: 未知30
-  type: vmess
-  server: 20.193.153.19
-  port: 15834
-  uuid: 39a8c374-76b1-4e90-ab85-85cd9a42ded2
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-  ws-headers:
-    Host: TABRIZ.NET
-- name: 未知31
-  type: vmess
-  server: digi39.ez0535.com
-  port: 443
-  uuid: c1f1060c-6168-4931-a63f-817a7ade25e2
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-- name: 未知32
-  type: vmess
-  server: 15.235.83.228
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-path: linkvws
-  ws-headers:
-    Host: lammaland.org
-  servername: lammaland.org
-- name: 未知33
-  type: vmess
-  server: fr.connfull.org
-  port: 2053
-  uuid: 500e29aa-c40b-43e1-905c-e6e7ac4a5b83
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: tcp
-- name: 未知34
-  type: trojan
-  server: 51.91.254.99
-  port: 443
-  password: MiTiVPN
-  tls: true
-  sni: F--l.App-Cloud.ir
-- name: 未知35
-  type: trojan
-  server: 91.193.58.201
-  port: 443
-  password: MiTiVPN
-  tls: true
-  sni: fl.App-Cloud.ir
-- name: 未知36
-  type: vmess
-  server: 57.151.100.27
-  port: 10086
-  uuid: 550e8400-e29b-41d4-a716-446655440000
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-- name: 未知37
-  type: vmess
-  server: de.connfull.org
-  port: 2053
-  uuid: f2ff4ae6-cf2d-4d15-9f0d-b6d9980df9aa
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: tcp
-- name: 未知38 281.9KB/s
-  type: vmess
-  server: 47.250.149.51
-  port: 50018
-  uuid: 9665280c-a3d1-4aab-ef9f-a3a497337d91
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /9665280c
-- name: 未知39
-  type: vmess
-  server: tr1-smart.adelping.com
-  port: 80
-  uuid: 68c8f462-8468-4931-90a8-680c3d6cb3c1
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1
-  ws-headers:
-    Host: tr1-smart.adelping.com
-- name: 未知48
-  type: vmess
-  server: yichueng.org
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-path: linkvws
-  ws-headers:
-    Host: yichueng.org
-  servername: yichueng.org
-- name: 🇷🇴 罗马尼亚 V2CROSS.COM
-  type: trojan
-  server: 185.137.157.135
-  port: 443
-  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
-  tls: true
-- name: 🇺🇸 美国 华盛顿Cogent通信公司
-  type: ss
-  server: 38.180.221.143
-  port: 17283
-  cipher: chacha20-ietf-poly1305
-  password: bwjNPcwgz5+1gCyi+rB+nfqugw38B7tqVa
-- name: 亞太地區_1
-  type: vmess
-  server: 103.181.164.145
-  port: 54022
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-  ws-path: /
-  ws-headers:
-    Host: 103.181.164.145
-- name: 美國
-  type: vmess
-  server: 82.198.246.37
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: aes-128-gcm
-  tls: false
-  network: tcp
-  ws-path: /
-  ws-headers:
-    Host: 82.198.246.37
-- name: 英國節點
-  type: vmess
-  server: 82.198.246.214
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-  ws-path: /
-  ws-headers:
-    Host: fra34.chasem2026sud.com
-- name: 美國節點
-  type: vmess
-  server: 82.198.246.250
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-  ws-path: /
-  ws-headers:
-    Host: 82.198.246.250
-- name: 韩国+KT电信\r
-  type: trojan
-  server: 121.180.171.43
-  port: 11310
-  password: GKHWMe2R4qwNcNxu6l3KMkdd
-  tls: true
-  sni: vpn1.rnmcnm.com
 - name: 联通用美国2
   type: hysteria2
   server: us.555199.xyz
   port: 5000
   password: af9e1b9f-3ee6-4184-a330-bb110419687a
   sni: sg.555199.xyz
+- name: 🏳️_未知_50
+  type: trojan
+  server: 104.18.12.149
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.multiplydose.com
+- name: 🇸🇨_塞舌尔_51
+  type: trojan
+  server: 45.130.125.0
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.calmloud.com
+- name: 未知38
+  type: vmess
+  server: daroo.iran-shop.co
+  port: 2087
+  uuid: f192a2a2-b1f8-4acb-b51d-8f9aa276ef42
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /vmess
+- name: 未知39
+  type: vmess
+  server: 8.210.140.23
+  port: 54809
+  uuid: fde73daf-cc67-42f3-9935-35b132b01abd
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /arki?ed=2048
+- name: 未知40
+  type: trojan
+  server: 45.130.125.2
+  port: 443
+  password: kZSruDyvxP
+  tls: true
+  sni: sk.farxmode.ir
+- name: 未知41
+  type: vmess
+  server: https://github.com/ALIILAPRO/v2rayNG-Config
+  port: 443
+  uuid: aliilapro-v2rayng-config
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: github.com
+  servername: github.com
+- name: 未知42
+  type: vmess
+  server: nlt.reata.ir
+  port: 1020
+  uuid: 6244c41a-f4c1-4733-a654-c38f7729b13c
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: tcp
+- name: 未知44
+  type: vmess
+  server: 103.179.142.212
+  port: 22047
+  uuid: 948763b5-a064-453c-a015-185cb183bbfe
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /
 - name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
   type: trojan
   server: 172.67.132.6
@@ -3100,7 +2314,7 @@ proxies:
   server: 210.231.184.93
   port: 4433
   password: sharecentrepro
-- name: 美国 CloudFlare节点_1
+- name: 美国 CloudFlare节点
   type: vmess
   server: yh1.freeh1.xyz
   port: 8080
@@ -3112,7 +2326,7 @@ proxies:
   ws-path: ef8c954e-014f-4b36-8273-9b5086afab34-vm
   ws-headers:
     Host: bibliographic-sword-sequence-advertisers.trycloudflare.com
-- name: 美国 CloudFlare节点_2
+- name: 美国 CloudFlare节点_1
   type: vmess
   server: 104.21.224.129
   port: 80
@@ -3137,6 +2351,142 @@ proxies:
   port: 20003
   cipher: chacha20-ietf-poly1305
   password: d6105bbd-be0d-45b2-82ad-31fd1071c1d2
+- name: 🏳️_未知_52
+  type: trojan
+  server: 104.20.6.134
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.calmloud.com
+- name: 🏳️_未知_53
+  type: trojan
+  server: 104.16.90.120
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.creationlong.org
+- name: 🏳️_未知_54
+  type: trojan
+  server: 104.18.7.147
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.gossipglove.com
+- name: 🏳️_未知_55
+  type: trojan
+  server: 172.64.152.23
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.calmlunch.com
+- name: 🏳️_未知_56
+  type: trojan
+  server: 104.19.64.105
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.calmlunch.com
+- name: 🏳️_未知_57
+  type: trojan
+  server: 104.18.152.225
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.ignitelimit.com
+- name: 🏳️_未知_58
+  type: trojan
+  server: 172.66.47.69
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.multiplydose.com
+- name: 🏳️_未知_59
+  type: trojan
+  server: www.multiplydose.com
+  port: 443
+  password: humanity
+  tls: true
+- name: 🏳️_未知_60
+  type: trojan
+  server: www.calmlunch.com
+  port: 443
+  password: humanity
+  tls: true
+- name: 🏳️_未知_61
+  type: trojan
+  server: 188.114.96.3
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.gossipglove.com
+- name: 🏳️_未知_62
+  type: trojan
+  server: 104.18.152.219
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.ignitelimit.com
+- name: 🏳️_未知_63
+  type: trojan
+  server: www.gossipglove.com
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.gossipglove.com
+- name: 🏳️_未知_64
+  type: trojan
+  server: 104.18.152.246
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.calmloud.com
+- name: 未知32
+  type: trojan
+  server: celestara.biz
+  port: 443
+  password: MiTiVPN
+  tls: true
+  sni: Nl.App-Cloud.ir
+- name: 未知33
+  type: vmess
+  server: ipa.xn--220ba84am6g99wihgilau3ar1g.info
+  port: 2053
+  uuid: b04868f0-b54d-4f48-aad4-e5543d03c909
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: cdn.xn--220ba84am6g99wihgilau3ar1g.info
+  servername: cdn.xn--220ba84am6g99wihgilau3ar1g.info
+- name: 未知35
+  type: vmess
+  server: imkind.ddns.net
+  port: 443
+  uuid: BA11EB49-0DEC-49B6-959C-7235FAB71EB8
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: ws
+  ws-path: /speedtest
+  ws-headers:
+    Host: lille.kotick.site
+  servername: lille.kotick.site
+- name: 未知36
+  type: trojan
+  server: 51.91.254.99
+  port: 443
+  password: MiTiVPN
+  tls: true
+  sni: F--l.App-Cloud.ir
+- name: 未知37
+  type: trojan
+  server: velocore.co
+  port: 443
+  password: MiTiVPN
+  tls: true
+  sni: sw.App-Cloud.ir
 - name: github.com/freefq - 广东省江门市移动 11
   type: ss
   server: service.ouluyun9803.com
@@ -3161,7 +2511,7 @@ proxies:
     path: TG@ZDYZ2
     headers:
       Host: cfed.tgzdyz2.top
-- name: 美国 CloudFlare节点_3
+- name: 美国 CloudFlare节点_2
   type: vmess
   server: 104.21.230.53
   port: 80
@@ -3228,7 +2578,7 @@ proxies:
     path: TG@ZDYZ2
     headers:
       Host: cfed.tgzdyz2.top
-- name: 美国 CloudFlare节点_4
+- name: 美国 CloudFlare节点_3
   type: vmess
   server: 104.21.224.56
   port: 80
@@ -3264,6 +2614,165 @@ proxies:
   port: 443
   cipher: chacha20-ietf-poly1305
   password: hgLCgfLRgB6d
+- name: 🇺🇸US-205.134.180.147-9378
+  type: ss
+  server: 205.134.180.147
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: 9Bvkw5aupNy8
+- name: 美国 CloudFlare节点_4
+  type: vmess
+  server: 104.21.224.24
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /?ed=2048&Telegram🇨🇳
+  ws-headers:
+    Host: a.prapt1.ir
+  servername: a.prapt1.ir
+- name: 🇬🇧_GB_英国->🇰🇿_KZ_哈萨克斯坦
+  type: trojan
+  server: kz.mjt000.com
+  port: 443
+  password: c2c76420-257f-492a-b20f-6560f3bfa78d
+  tls: true
+- name: 🏳️_未知_65
+  type: trojan
+  server: www.ignitelimit.com
+  port: 443
+  password: humanity
+  tls: true
+- name: 🏳️_未知_66
+  type: trojan
+  server: 104.18.152.229
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.calmloud.com
+- name: 🏳️_未知_67
+  type: trojan
+  server: 172.64.146.198
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.gossipglove.com
+- name: 🏳️_未知_68
+  type: trojan
+  server: 104.16.174.34
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.ignitelimit.com
+- name: 🏳️_未知_69
+  type: trojan
+  server: ip4.vpean2.qzz.io
+  port: 443
+  password: rYuChHcwQZskq9E0zdoR
+  tls: true
+  sni: vpn5.rnmcnm.com
+- name: 🏳️_未知_70
+  type: trojan
+  server: 104.16.72.41
+  port: 443
+  password: MITIVPN
+  tls: true
+  sni: De.App-Cloud.ir
+- name: 🏳️_未知_92
+  type: trojan
+  server: 104.16.72.41
+  port: 443
+  password: f922fa0f-3311-4368-85ff-cf65e727c854
+  tls: true
+  sni: space.byu.id.yxls.eu.cc
+- name: 🏳️_未知_71
+  type: trojan
+  server: 104.19.230.21
+  port: 443
+  password: MiTiVPN
+  tls: true
+  sni: Nl.App-Cloud.ir
+- name: 🇺🇸_美国_72
+  type: trojan
+  server: blog.webex.com
+  port: 443
+  password: afbcd89a-5a90-4a44-a42a-be08f444aa3f
+  tls: true
+  sni: unnes.ac.id.yxls.eu.cc
+- name: 🏳️_未知_73
+  type: vless
+  server: 108.162.192.134
+  port: 2083
+  uuid: 199436d3-2fa2-4e34-a1de-844419de5a4f
+  tls: true
+  network: ws
+  servername: xn-de.shakhle.ir.
+  ws-opts:
+    path: /
+    headers:
+      Host: xn-de.shakhle.ir.
+- name: 🇱🇺_卢森堡_74
+  type: vless
+  server: 45.80.209.25
+  port: 81
+  uuid: ea057aa8-6c6f-44f4-d347-7a87e835c0dc
+  tls: true
+  network: ws
+  servername: us2.wxgqlfx.icu
+  ws-opts:
+    path: /TG@wxgqlfx
+    headers:
+      Host: us2.wxgqlfx.icu
+- name: 🇳🇱_荷兰_75
+  type: vless
+  server: 188.253.26.128
+  port: 443
+  uuid: ea057aa8-6c6f-44f4-d347-7a87e835c0dc
+  tls: true
+  network: ws
+  servername: us2.wxgqlfx.icu
+  ws-opts:
+    path: /TG@wxgqlfx
+    headers:
+      Host: us2.wxgqlfx.icu
+- name: 🇩🇪_德国_76
+  type: vless
+  server: 57.129.47.42
+  port: 2053
+  uuid: ea057aa8-6c6f-44f4-d347-7a87e835c0dc
+  tls: true
+  network: ws
+  servername: us2.wxgqlfx.icu
+  ws-opts:
+    path: /TG@wxgqlfx
+    headers:
+      Host: us2.wxgqlfx.icu
+- name: 🇳🇱_荷兰_77
+  type: vless
+  server: 109.172.93.20
+  port: 443
+  uuid: ea057aa8-6c6f-44f4-d347-7a87e835c0dc
+  tls: true
+  network: ws
+  servername: us2.wxgqlfx.icu
+  ws-opts:
+    path: /TG@wxgqlfx
+    headers:
+      Host: us2.wxgqlfx.icu
+- name: 🇫🇷_法国_78
+  type: vless
+  server: 51.91.255.121
+  port: 443
+  uuid: ea057aa8-6c6f-44f4-d347-7a87e835c0dc
+  tls: true
+  network: ws
+  servername: us2.wxgqlfx.icu
+  ws-opts:
+    path: /TG@wxgqlfx
+    headers:
+      Host: us2.wxgqlfx.icu
 - name: 🇺🇸US-144.126.145.219-0135
   type: vmess
   server: 144.126.145.219
@@ -3319,6 +2828,213 @@ proxies:
   ws-headers:
     Host: a.prapt1.ir
   servername: a.prapt1.ir
+- name: 🇺🇸+US+美国+2
+  type: vless
+  server: 216.116.134.43
+  port: 2053
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+  tls: true
+  network: ws
+  servername: juzibaipiao.5112233.xyz
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: juzibaipiao.5112233.xyz
+- name: 🇺🇸US-38.107.226.132-8672
+  type: ss
+  server: 38.107.226.132
+  port: 5003
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: 🇨🇳+CN+中国+57
+  type: vless
+  server: 103.232.214.11
+  port: 8443
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  tls: true
+  network: ws
+  servername: cfed.tgzdyz2.top
+  ws-opts:
+    path: tg@zdyz2
+    headers:
+      Host: cfed.tgzdyz2.top
+- name: 🇬🇧 United Kingdom 01 @nodpai
+  type: vmess
+  server: 172.99.190.109
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: ws
+  ws-path: linkvws
+- name: 🏁RELAY-104.21.7.162-0128
+  type: vmess
+  server: 104.21.7.162
+  port: 2087
+  uuid: 520a5f45-d354-42f4-a658-18dbc3754645
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: ws
+  ws-path: /fws
+  ws-headers:
+    Host: backend.app-browser.org
+- name: 🇺🇸+US+美国+35
+  type: vless
+  server: 206.237.5.206
+  port: 443
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  tls: true
+  network: ws
+  servername: cfed.tgzdyz2.top
+  ws-opts:
+    path: tg@zdyz2
+    headers:
+      Host: cfed.tgzdyz2.top
+- name: 🇺🇸+US+美国+61
+  type: vless
+  server: 199.181.197.39
+  port: 443
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+  tls: true
+  network: ws
+  servername: juzibaipiao.5112233.xyz
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: juzibaipiao.5112233.xyz
+- name: 🇫🇷FR-52.47.174.48-1299
+  type: trojan
+  server: 52.47.174.48
+  port: 22222
+  password: telegram-id-directvpn
+  tls: true
+  sni: trojan.burgerip.co.uk
+- name: 🏁RELAY-104.16.67.38-1094
+  type: vmess
+  server: 104.16.67.38
+  port: 80
+  uuid: f8c92b3b-5447-44a5-9e54-23cdc269cb93
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: f8c92b3b
+  ws-headers:
+    Host: aq.daozhang.link
+- name: TG@ZDYZ2 -JP-Tokyo4
+  type: vless
+  server: 18.183.137.85
+  port: 2083
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  tls: true
+  network: ws
+  servername: cfed.tgzdyz2.top
+  ws-opts:
+    path: TG@ZDYZ2
+    headers:
+      Host: cfed.tgzdyz2.top
+- name: 🇯🇵JP-185.172.113.182-0790
+  type: ss
+  server: 185.172.113.182
+  port: 812
+  cipher: chacha20-ietf-poly1305
+  password: G!yBwPWH3Vao
+- name: 🇺🇸+US+美国+29
+  type: vless
+  server: 149.104.35.222
+  port: 5010
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+  tls: true
+  network: ws
+  servername: juzibaipiao.5112233.xyz
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: juzibaipiao.5112233.xyz
+- name: 🇺🇸_US_美国_1
+  type: vmess
+  server: russia.com
+  port: 2095
+  uuid: 6658a3a6-225a-4d33-a5d2-82cfde565b4e
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /api/v3/download.getFile
+  ws-headers:
+    Host: ssrsub.v03.ssrsub.com
+  servername: ssrsub.v03.ssrsub.com
+- name: 🇺🇸US-38.121.43.97-0865
+  type: ss
+  server: 38.121.43.97
+  port: 8881
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+- name: 🇺🇸US-38.68.135.18-6268
+  type: ss
+  server: 38.68.135.18
+  port: 5003
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: EPODONIOS_2
+  type: ss
+  server: 185.213.23.63
+  port: 990
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+- name: EPODONIOS_3
+  type: ss
+  server: 45.95.233.55
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: BwCNXZaSi4ab7lQu2cvM20
+- name: EPODONIOS_4
+  type: ss
+  server: 108.181.58.239
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: CJmTCCx7Ltud
+- name: TG频道:@hkaa0▓美国_5
+  type: vmess
+  server: de-01.cloudlion.me
+  port: 8080
+  uuid: 70666776-4e9f-4350-b3f0-afaff6a70db0
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: de-01.cloudlion.me
+  servername: de-01.cloudlion.me
+- name: 🇰🇷+KR+韩国+22
+  type: vless
+  server: 20.249.83.244
+  port: 8443
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  tls: true
+  network: ws
+  servername: cfed.tgzdyz2.top
+  ws-opts:
+    path: tg@zdyz2
+    headers:
+      Host: cfed.tgzdyz2.top
+- name: TG频道:@hkaa0▓中国 _6
+  type: trojan
+  server: xibaozi.19890604.day
+  port: 10841
+  password: 1fce7b14-5ce9-4dfd-aea6-db881d50ec87
+  tls: true
+  sni: cloudflare.node-ssl.cdn-alibaba.com
+- name: TG频道:@hkaa0▓中国 _1
+  type: trojan
+  server: xibaozi.19890604.day
+  port: 10845
+  password: 1fce7b14-5ce9-4dfd-aea6-db881d50ec87
+  tls: true
+  sni: cloudflare.node-ssl.cdn-alibaba.com
 - name: 美国 CloudFlare节点_6
   type: vmess
   server: s1c.v2.v001sss.xyz
@@ -3360,124 +3076,238 @@ proxies:
   ws-headers:
     Host: s1c.v2.v001sss.xyz
   servername: s1c.v2.v001sss.xyz
-- name: 🇺🇸US-38.107.226.132-8672
+- name: EPODONIOS_5
   type: ss
-  server: 38.107.226.132
-  port: 5003
-  cipher: aes-256-gcm
-  password: g5MeD6Ft3CWlJId
-- name: 每天更新，请加电报群防止失联
-  type: vless
-  server: 206.82.3.131
+  server: 45.87.175.199
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: 1RWwXhwfAB5gAEozU4G2Pg
+- name: EPODONIOS_6
+  type: ss
+  server: 20.166.91.10
   port: 443
-  uuid: d26598cf-2cdf-4219-80d0-94646dff160d
+  cipher: chacha20-ietf-poly1305
+  password: 1hVGiu6pyngcQQdU
+- name: EPODONIOS_7
+  type: ss
+  server: 20.107.208.165
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: 3C1GAcIUs3gmr85y
+- name: EPODONIOS_8
+  type: ss
+  server: 67.219.106.119
+  port: 26286
+  cipher: chacha20-ietf-poly1305
+  password: xfscSDcb-SeEqqRb.omzVGgVgNpXh3bA1u
+- name: 日本 03
+  type: ss
+  server: zhuanfayyds.xn--pssq69d.xyz
+  port: 64154
+  cipher: chacha20-ietf-poly1305
+  password: a7810702-8fd1-4df6-a060-79e840a7b652
+- name: 🇳🇱NL-109.201.152.181-0711
+  type: ss
+  server: 109.201.152.181
+  port: 443
+  cipher: aes-128-cfb
+  password: shadowsocks
+- name: TG频道:@hkaa0▓韩国 _2
+  type: ss
+  server: 211.201.169.70
+  port: 54345
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+- name: 🇨🇳+CN+中国+36
+  type: vless
+  server: 103.184.44.62
+  port: 2053
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+  tls: true
+  network: ws
+  servername: juzibaipiao.5112233.xyz
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: juzibaipiao.5112233.xyz
+- name: EPODONIOS_9
+  type: ss
+  server: 4.168.196.7
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: 8iW2GElOLWl9Ztjj
+- name: EPODONIOS_10
+  type: ss
+  server: 51.89.119.213
+  port: 11201
+  cipher: chacha20-ietf-poly1305
+  password: 15b0573830081d01
+- name: EPODONIOS_11
+  type: ss
+  server: 45.87.175.178
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: 1RWwXhwfAB5gAEozU4G2Pg
+- name: EPODONIOS_12
+  type: ss
+  server: 45.129.96.62
+  port: 41348
+  cipher: chacha20-ietf-poly1305
+  password: 6U3psR0sQuQxWXoBHB4KTD3YacwQwS21XvSEy9
+- name: EPODONIOS_13
+  type: ss
+  server: 61.231.25.172
+  port: 50099
+  cipher: chacha20-ietf-poly1305
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+- name: EPODONIOS_14
+  type: ss
+  server: 98.71.81.64
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: 7kxYV8faLKFy8q1S
+- name: EPODONIOS_15
+  type: ss
+  server: 143.198.86.126
+  port: 16161
+  cipher: chacha20-ietf-poly1305
+  password: 8Q8WSWTEJfzYVjXH1setj3
+- name: EPODONIOS_16
+  type: ss
+  server: 193.151.128.97
+  port: 443
+  cipher: 2022-blake3-chacha20-poly1305
+  password: iFxltqscJVLJdHunZXPCmb4ToHN7LhkoeYwpQcU/Pbo=
+- name: EPODONIOS_17
+  type: ss
+  server: 49.13.3.249
+  port: 23997
+  cipher: 2022-blake3-aes-256-gcm
+  password: dyL+KqX8hIMn+UyADwSJOPm72A0A83TsDOFXBn6I2mA=
+- name: EPODONIOS_18
+  type: ss
+  server: 20.107.201.69
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: 4VNX9LDu6fpElXLi
+- name: EPODONIOS_19
+  type: ss
+  server: 85.234.73.234
+  port: 1080
+  cipher: chacha20-ietf-poly1305
+  password: 5KilolFUjzlMabQ0ORwBUwr6sSvqRCzh
+- name: EPODONIOS_20
+  type: vless
+  server: uk-gthost-01.com
+  port: 8443
+  uuid: 52faee73-e0fe-4661-992d-67259257170f
+  tls: false
+  network: tcp
+  servername: storage.yandex.net
+  ws-opts:
+    path: /
+- name: EPODONIOS_21
+  type: ss
+  server: 82.38.31.16
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: EPODONIOS_22
+  type: ss
+  server: 82.38.31.189
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: EPODONIOS_23
+  type: ss
+  server: 82.38.31.176
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: EPODONIOS_24
+  type: ss
+  server: 82.38.31.203
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: EPODONIOS_25
+  type: ss
+  server: 82.38.31.204
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: EPODONIOS_26
+  type: vless
+  server: 145.239.137.250
+  port: 58748
+  uuid: 21e22226-0b96-4b4e-9a91-5c7f9e3f1760
   tls: false
   network: tcp
   ws-opts:
     path: /
-- name: 未知40
-  type: trojan
-  server: 104.16.72.101
-  port: 443
-  password: 86957ec0-b213-433b-a43b-51f2175e0ec3
-  tls: true
-  sni: space.byu.id.yxls.eu.cc
-- name: 未知41
-  type: vmess
-  server: spt.reata.ir
-  port: 1020
-  uuid: a8022edb-0bd7-4f86-b70d-20f7f8a59814
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-  ws-path: /
-  ws-headers:
-    Host: spt.reata.ir
-- name: 未知62
-  type: vmess
-  server: spt.reata.ir
-  port: 1050
-  uuid: b5b183b6-a4f0-41ad-a015-ba9f000ad7ed
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-  ws-path: /
-  ws-headers:
-    Host: spt.reata.ir
-- name: 未知42 36.9MB/s
-  type: vmess
-  server: 82.198.246.9
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-  ws-path: /@ProxyVPN11
-- name: 未知43
-  type: trojan
-  server: 45.130.125.2
-  port: 443
-  password: kZSruDyvxP
-  tls: true
-  sni: sk.farxmode.ir
-- name: 未知44
-  type: vmess
-  server: fapeng.org
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-path: linkvws
-  ws-headers:
-    Host: fapeng.org
-  servername: fapeng.org
-- name: 🇳🇱NL荷兰
+    headers:
+      Host: splus.ir
+- name: EPODONIOS_27
+  type: hysteria2
+  server: vids.jibiji.store
+  port: 27039
+  password: r7386498464aq
+  sni: bts.com
+- name: EPODONIOS_28
   type: ss
-  server: 193.168.175.56
-  port: 14605
+  server: bot.sobhanpor.ir
+  port: 1080
   cipher: chacha20-ietf-poly1305
-  password: Uk8lfmvhYnx5rJvXxKrRqGRynd9gIpJ.iY
-- name: 未知46
-  type: vmess
-  server: 5.249.160.226
-  port: 80
-  uuid: 86afaa7e-e00c-4c05-a7d1-44e7ba91d77a
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /vmess
-  ws-headers:
-    Host: 5.249.160.226
-- name: 未知47
-  type: vmess
-  server: 57.129.28.64
+  password: 0sabUV5_H0RH2iJFEtjI2nJ02U3SiQR8
+- name: EPODONIOS_29
+  type: ss
+  server: daroo.iran-shop.co
+  port: 1080
+  cipher: chacha20-ietf-poly1305
+  password: KOCclvK-K8PKwYh4Tu5rpg
+- name: EPODONIOS_30
+  type: ss
+  server: 57.129.121.230
+  port: 10443
+  cipher: chacha20-ietf-poly1305
+  password: uROuEqsL8IUMMVb4wDwnGU
+- name: EPODONIOS_31
+  type: vless
+  server: 159.195.45.129
   port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
+  uuid: 859a537b-09cf-4bce-8da4-ecbb72950e3a
+  tls: false
+  network: tcp
+  servername: 3.oncloudnineservicestreang.com
+  ws-opts:
+    path: /
+- name: 韓國丨yoyapai.com\r_1
+  type: trojan
+  server: 14.53.107.138
+  port: 29999
+  password: 433e785b-2077-47f7-a43d-985f63dd18d1
   tls: true
-  network: ws
-  ws-path: linkvws
-  servername: serkat.org
-- name: US2
-  type: vmess
-  server: 172.64.146.102
-  port: 8443
-  uuid: c1a8dee0-bdad-4b6d-9926-5e15c3c8ed7d
-  alterId: 0
-  cipher: auto
+  sni: vpn.rnmcnm.com
+- name: 香港丨yoyapai.com\r
+  type: trojan
+  server: au-4.tr202605.com
+  port: 443
+  password: 65fQmPHHbPcBCfvSHt
   tls: true
-  network: ws
-  ws-path: /c1a8dee0-bdad-4b6d-9926-5e15c3c8ed7d-vm
-  ws-headers:
-    Host: marco-visibility-tops-estimate.trycloudflare.com
-  servername: marco-visibility-tops-estimate.trycloudflare.com
+- name: 臺灣省丨yoyapai.com\r
+  type: trojan
+  server: 211.76.176.98
+  port: 19128
+  password: gcuCpQfaiVeDBdWG
+  tls: true
+  sni: yazhou10.dynu.net
+- name: 韩国+KT电信\r
+  type: trojan
+  server: 121.180.171.43
+  port: 11310
+  password: GKHWMe2R4qwNcNxu6l3KMkdd
+  tls: true
+  sni: vpn1.rnmcnm.com
 - name: 韩国+KT电信\r_1
   type: trojan
   server: 121.178.83.161
@@ -3485,14 +3315,7 @@ proxies:
   password: GKHWMe2R4qwNcNxu6l3KMkdd
   tls: true
   sni: vpn1.rnmcnm.com
-- name: 美國丨yoyapai.com\r_2
-  type: trojan
-  server: jpbgp.netvigor.cc
-  port: 19128
-  password: gcuCpQfaiVeDBdWG
-  tls: true
-  sni: yazhou10.dynu.net
-- name: 美國節點_1
+- name: 美國節點
   type: vmess
   server: 2a02:6ea0:d32f::f8fe:349b
   port: 24202
@@ -3504,18 +3327,84 @@ proxies:
   ws-path: /github.com/Alvin9999-newpac/fanqiang
   ws-headers:
     Host: 2a02:6ea0:d32f::f8fe:349b
-- name: 美國節點_2
+- name: 荷蘭節點丨yoyapai.com\r
+  type: trojan
+  server: 152.53.200.89
+  port: 8443
+  password: 8r%3C%5B9%27l6hAO%238ZQi
+  tls: true
+  sni: Koma-YT.PAGeS.Dev
+- name: 美国 加利福尼亚州圣何塞
   type: vmess
-  server: 82.198.246.97
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  server: 103.127.243.59
+  port: 56738
+  uuid: 5f49c80e-7770-4bd1-9c86-43c2068a3a26
   alterId: 0
   cipher: auto
   tls: false
   network: tcp
-  ws-path: /kT5VHYcMrphesqROzSPoHrBo
+  ws-path: /ABCDE
   ws-headers:
-    Host: 4120-be04-13EF56096989.457.Pp.Ua
+    Host: 103.127.243.59
+- name: 韓國丨yoyapai.com\r_2
+  type: trojan
+  server: 59.30.42.194
+  port: 12345
+  password: 433e785b-2077-47f7-a43d-985f63dd18d1
+  tls: true
+  sni: vpn.rnmcnm.com
+- name: 🇭🇰 香港5|@ripaojiedian
+  type: trojan
+  server: 18.163.124.19
+  port: 11035
+  password: BxceQaOe
+  tls: true
+  sni: t.me/ripaojiedian
+- name: 🇯🇵 日本|@ripaojiedian
+  type: trojan
+  server: 52.194.214.115
+  port: 10624
+  password: BxceQaOe
+  tls: true
+  sni: t.me%2Fripaojiedian
+- name: 🇸🇬 新加坡3|@ripaojiedian
+  type: trojan
+  server: 43.198.12.202
+  port: 22459
+  password: BxceQaOe
+  tls: true
+  sni: t.me%2Fripaojiedian
+- name: 🇺🇸 美国3|@ripaojiedian
+  type: trojan
+  server: 16.163.155.249
+  port: 2366
+  password: BxceQaOe
+  tls: true
+  sni: t.me/ripaojiedian
+- name: 亞太地區_1
+  type: vmess
+  server: 103.181.164.145
+  port: 54022
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: tcp
+  ws-path: /
+  ws-headers:
+    Host: 103.181.164.145
+- name: 美國
+  type: vmess
+  server: 82.198.246.37
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: aes-128-gcm
+  tls: false
+  network: tcp
+  ws-path: /
+  ws-headers:
+    Host: 82.198.246.37
 - name: 🇳🇱NL荷蘭丨yoyapai.com\r
   type: trojan
   server: 91.221.190.80
@@ -3537,155 +3426,20 @@ proxies:
   password: 8r%3C%5B9%27l6hAO%238ZQi
   tls: true
   sni: Koma-YT.PAGeS.Dev
-- name: 荷蘭節點丨yoyapai.com\r
+- name: 🇺🇸 美国2|@ripaojiedian
   type: trojan
-  server: 152.53.200.89
-  port: 8443
-  password: 8r%3C%5B9%27l6hAO%238ZQi
+  server: 16.163.50.86
+  port: 49277
+  password: b8494776252056a1b62e77c4ff6a6d61
   tls: true
-  sni: Koma-YT.PAGeS.Dev
-- name: 美国 加利福尼亚州圣何塞
-  type: vmess
-  server: 103.127.243.59
-  port: 56738
-  uuid: 5f49c80e-7770-4bd1-9c86-43c2068a3a26
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-  ws-path: /ABCDE
-  ws-headers:
-    Host: 103.127.243.59
-- name: 韓國丨yoyapai.com\r
+  sni: www.nintendogames.net
+- name: 美國丨yoyapai.com\r_1
   type: trojan
-  server: 59.30.42.194
-  port: 12345
-  password: 433e785b-2077-47f7-a43d-985f63dd18d1
-  tls: true
-  sni: vpn.rnmcnm.com
-- name: 韓國丨yoyapai.com\r_1
-  type: trojan
-  server: 14.53.107.138
-  port: 29999
-  password: 433e785b-2077-47f7-a43d-985f63dd18d1
-  tls: true
-  sni: vpn.rnmcnm.com
-- name: 香港丨yoyapai.com\r
-  type: trojan
-  server: au-4.tr202605.com
-  port: 443
-  password: 65fQmPHHbPcBCfvSHt
-  tls: true
-- name: 🇺🇸+US+美国+2
-  type: vless
-  server: 216.116.134.43
-  port: 2053
-  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-  tls: true
-  network: ws
-  servername: juzibaipiao.5112233.xyz
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: juzibaipiao.5112233.xyz
-- name: 🇨🇳+CN+中国+36
-  type: vless
-  server: 103.184.44.62
-  port: 2053
-  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-  tls: true
-  network: ws
-  servername: juzibaipiao.5112233.xyz
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: juzibaipiao.5112233.xyz
-- name: TG频道:@hkaa0▓美国_5
-  type: vmess
-  server: de-01.cloudlion.me
-  port: 8080
-  uuid: 70666776-4e9f-4350-b3f0-afaff6a70db0
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: de-01.cloudlion.me
-  servername: de-01.cloudlion.me
-- name: 🇰🇷+KR+韩国+22
-  type: vless
-  server: 20.249.83.244
-  port: 8443
-  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-  tls: true
-  network: ws
-  servername: cfed.tgzdyz2.top
-  ws-opts:
-    path: tg@zdyz2
-    headers:
-      Host: cfed.tgzdyz2.top
-- name: TG频道:@hkaa0▓中国 _6
-  type: trojan
-  server: xibaozi.19890604.day
-  port: 10841
-  password: 1fce7b14-5ce9-4dfd-aea6-db881d50ec87
-  tls: true
-  sni: cloudflare.node-ssl.cdn-alibaba.com
-- name: TG频道:@hkaa0▓中国 _1
-  type: trojan
-  server: xibaozi.19890604.day
-  port: 10845
-  password: 1fce7b14-5ce9-4dfd-aea6-db881d50ec87
-  tls: true
-  sni: cloudflare.node-ssl.cdn-alibaba.com
-- name: 臺灣省丨yoyapai.com\r
-  type: trojan
-  server: 211.76.176.98
+  server: jpbgp.netvigor.cc
   port: 19128
   password: gcuCpQfaiVeDBdWG
   tls: true
   sni: yazhou10.dynu.net
-- name: 亞太地區丨yoyapai.com\r
-  type: trojan
-  server: 103.45.245.208
-  port: 2053
-  password: rYuChHcwQZskq9E0zdoR
-  tls: true
-  sni: vpn5.rnmcnm.com
-- name: 俄羅斯
-  type: vmess
-  server: renderer-stream-1-411.mirra.now
-  port: 443
-  uuid: df9c9355-b02c-4c12-909d-0dbeb725d52b
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /api/v1/gpu-stream/socket
-  ws-headers:
-    Host: renderer-stream-1-411.mirra.now
-- name: 香港節點丨yoyapai.com\r
-  type: trojan
-  server: adak.sonofthewinds.com
-  port: 34436
-  password: 825929f4-c702-35ce-9124-00d3f95b8c32
-  tls: true
-  sni: hh4.sonofthewinds.com
-- name: 臺灣節點丨yoyapai.com\r
-  type: trojan
-  server: adak.sonofthewinds.com
-  port: 34450
-  password: 825929f4-c702-35ce-9124-00d3f95b8c32
-  tls: true
-  sni: tt1.sonofthewinds.com
-- name: 日本節點丨yoyapai.com\r
-  type: trojan
-  server: adak.sonofthewinds.com
-  port: 34470
-  password: 825929f4-c702-35ce-9124-00d3f95b8c32
-  tls: true
-  sni: gj1.sonofthewinds.com
 - name: 巴西聖保羅丨yoyapai.com\r
   type: trojan
   server: 188.114.97.6
@@ -3693,16 +3447,276 @@ proxies:
   password: mitivpn
   tls: true
   sni: 2.1.mitivpn.dee.srfsl.gleobal.fastl3y.n3et.mitivpn.site
-- name: 韓國丨yoyapai.com\r_2
+- name: 🇺🇸 美国 V2CROSS.COM
   type: trojan
-  server: 211.49.57.175
+  server: 149.104.104.58
   port: 443
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  password: S.ibYdZshHTF-ne.M+.Fznp_-hyFFnCSix
   tls: true
-  sni: hhcm.hhxaf.cc.cd
-- name: 法國節點
+  sni: 149.104.104.58
+- name: 🇮🇳 印度 V2CROSS.COM
+  type: ss
+  server: 103.111.114.82
+  port: 28061
+  cipher: chacha20-ietf-poly1305
+  password: WOir3lXBhMHDcLFPQdEZXPu37_pTQDCXfm
+- name: 🇺🇸 美国 华盛顿Cogent通信公司
+  type: ss
+  server: 38.180.221.143
+  port: 17283
+  cipher: chacha20-ietf-poly1305
+  password: bwjNPcwgz5+1gCyi+rB+nfqugw38B7tqVa
+- name: 🇭🇰 香港4|@ripaojiedian
+  type: trojan
+  server: 95.40.26.121
+  port: 29449
+  password: BxceQaOe
+  tls: true
+  sni: t.me/ripaojiedian
+- name: 美國節點_1
   type: vmess
-  server: 69.84.182.49
+  server: 82.198.246.97
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: tcp
+  ws-path: /kT5VHYcMrphesqROzSPoHrBo
+  ws-headers:
+    Host: 4120-be04-13EF56096989.457.Pp.Ua
+- name: 🇭🇰 香港3|@ripaojiedian
+  type: trojan
+  server: 18.162.58.236
+  port: 2008
+  password: b8494776252056a1b62e77c4ff6a6d61
+  tls: true
+  sni: www.nintendogames.net
+- name: 🇸🇬 新加坡|@ripaojiedian
+  type: trojan
+  server: 16.163.43.143
+  port: 29642
+  password: b8494776252056a1b62e77c4ff6a6d61
+  tls: true
+  sni: www.nintendogames.net
+- name: 🇺🇸 美国|@ripaojiedian
+  type: trojan
+  server: 16.163.43.143
+  port: 17005
+  password: b8494776252056a1b62e77c4ff6a6d61
+  tls: true
+  sni: www.nintendogames.net
+- name: 🇯🇵 日本3|@ripaojiedian
+  type: trojan
+  server: 16.163.138.198
+  port: 3743
+  password: b8494776252056a1b62e77c4ff6a6d61
+  tls: true
+  sni: www.nintendogames.net
+- name: 未知26
+  type: vmess
+  server: 47.251.91.241
+  port: 42899
+  uuid: 0925b355-2bcd-4eae-9720-d2709e4f7e36
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: tcp
+- name: 未知27
+  type: vmess
+  server: time.ir
+  port: 443
+  uuid: last-update-time
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: time.ir
+  servername: time.ir
+- name: 未知28
+  type: vmess
+  server: TM_AZARBAYJAB1.SERV.9.pagES.DEV
+  port: 80
+  uuid: 43dcdce1-3cea-4193-bc8d-90b92071d779
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/?de=2560
+  ws-headers:
+    Host: tr1-smart.adelping.com
+- name: HK3 1.1MB/s
+  type: vmess
+  server: 31.77.144.80
+  port: 110
+  uuid: fbd4fc4c-5a2c-4c28-81d1-3d44bb3757f3
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: tcp
+- name: 未知30
+  type: vmess
+  server: heu83ujieiwoeu83j2ewjehuwehu8.dentiscan.ca
+  port: 80
+  uuid: e2923bc6-8204-4768-98ea-379d48ea8a7a
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /1awNzxRSwKsdkPVKP0ZQqlHjt10sp
+  ws-headers:
+    Host: heu83ujieiwoeu83j2ewjehuwehu8.dentiscan.ca
+- name: 未知31
+  type: vmess
+  server: 158.51.121.63
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: ws
+  ws-path: linkvws
+  ws-headers:
+    Host: seribus.org
+  servername: seribus.org
+- name: 未知15
+  type: vmess
+  server: yichueng.org
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: ws
+  ws-path: linkvws
+  ws-headers:
+    Host: yichueng.org
+  servername: yichueng.org
+- name: 未知17
+  type: vmess
+  server: 185.104.189.38
+  port: 80
+  uuid: 43dcdce1-3cea-4193-bc8d-90b92071d779
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/?de=2560
+  ws-headers:
+    Host: 185.104.189.38
+- name: 未知18
+  type: vmess
+  server: 47.83.18.10
+  port: 36968
+  uuid: 176bf1dd-647f-4c09-892e-5f9223dc8617
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /arki?ed=2048
+- name: 未知19
+  type: trojan
+  server: 199.181.197.228
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.calmloud.com
+- name: HK2
+  type: vmess
+  server: e0349a52-sv8cg0-t7uinf-i8ie.hk3.p5pv.com
+  port: 80
+  uuid: 990e8f34-bd4f-11ef-bdb9-f23c91cfbbc9
+  alterId: 2
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: broadcastlv.chat.bilibili.com
+- name: 未知22
+  type: vmess
+  server: 188.114.96.145
+  port: 80
+  uuid: 43dcdce1-3cea-4193-bc8d-90b92071d779
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1
+  ws-headers:
+    Host: tr1-smart.adelping.com
+- name: 未知23
+  type: vmess
+  server: de5.taskflowhub.org
+  port: 2087
+  uuid: 01ccfa7a-8de7-451d-bd41-1957acaba15f
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: ws
+  ws-path: /realtime
+  ws-headers:
+    Host: de5.taskflowhub.org
+  servername: de5.taskflowhub.org
+- name: 未知24
+  type: vmess
+  server: tr1-smart.adelping.com
+  port: 80
+  uuid: 68c8f462-8468-4931-90a8-680c3d6cb3c1
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1
+  ws-headers:
+    Host: tr1-smart.adelping.com
+- name: 未知6
+  type: vmess
+  server: 8.217.13.74
+  port: 31769
+  uuid: cf1ad6c7-5987-4314-82bb-b4399040d047
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: tcp
+- name: 未知7
+  type: vmess
+  server: 161.248.30.3
+  port: 20086
+  uuid: 1006a928-2021-4a3b-beb5-d5853c6281c5
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /
+- name: 未知8
+  type: vmess
+  server: 45.38.249.190
+  port: 55972
+  uuid: 89e395c5-a3f4-4056-9a17-a610c081f687
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: tcp
+  ws-path: /netprotects
+  ws-headers:
+    Host: play.google.com
+- name: 未知10
+  type: vmess
+  server: 57.129.28.64
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: ws
+  ws-path: linkvws
+  servername: serkat.org
+- name: 未知11 4.1MB/s
+  type: vmess
+  server: bestcf.030101.xyz
   port: 80
   uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
   alterId: 0
@@ -3712,41 +3726,51 @@ proxies:
   ws-path: /
   ws-headers:
     Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: 日本 03
-  type: ss
-  server: zhuanfayyds.xn--pssq69d.xyz
-  port: 64154
-  cipher: chacha20-ietf-poly1305
-  password: a7810702-8fd1-4df6-a060-79e840a7b652
-- name: 🇳🇱NL-109.201.152.181-0711
-  type: ss
-  server: 109.201.152.181
-  port: 443
-  cipher: aes-128-cfb
-  password: shadowsocks
-- name: TG频道:@hkaa0▓韩国 _2
-  type: ss
-  server: 211.201.169.70
-  port: 54345
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-- name: 未知17
-  type: trojan
-  server: 104.18.153.10
-  port: 443
-  password: 86957ec0-b213-433b-a43b-51f2175e0ec3
-  tls: true
-  sni: space.byu.id.yxls.eu.cc
-- name: 未知18 5.0MB/s
+- name: HK
   type: vmess
-  server: 134.195.196.211
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  server: 131.186.63.89
+  port: 11655
+  uuid: 4bf075f5-4d5e-4d39-f5ab-b32a86250f0e
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: ws
+  ws-path: /aa
+  ws-headers:
+    Host: hk.nbee.pp.ua
+  servername: hk.nbee.pp.ua
+- name: 未知13 400.6KB/s
+  type: vmess
+  server: 138.252.100.85
+  port: 18746
+  uuid: e314349a-7e56-4a3e-9318-eda62b5d6bd3
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /
+- name: US2
+  type: vmess
+  server: vip3.sanaiehdasti.com
+  port: 1546
+  uuid: 6c5fcae3-16e8-4a93-b28e-05588d5d9342
   alterId: 0
   cipher: auto
   tls: false
   network: tcp
-- name: 未知19
+  ws-path: /
+  ws-headers:
+    Host: play.google.com
+- name: 未知14
+  type: vmess
+  server: 65.109.218.60
+  port: 8088
+  uuid: 65488bcf-8573-44ee-9b4f-9abf4390acca
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: tcp
+- name: 未知5
   type: vmess
   server: 104.16.90.120
   port: 8443
@@ -3759,50 +3783,253 @@ proxies:
   ws-headers:
     Host: node-de-1.e4e3e2.top
   servername: node-de-1.e4e3e2.top
-- name: US
-  type: vmess
-  server: vip3.sanaiehdasti.com
-  port: 1546
-  uuid: 6c5fcae3-16e8-4a93-b28e-05588d5d9342
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-  ws-path: /
-  ws-headers:
-    Host: play.google.com
-- name: 未知20
-  type: vmess
-  server: linkxt.gozar8.ir
+- name: 未知3
+  type: trojan
+  server: 104.18.152.225
   port: 443
-  uuid: 6ad27411-ee45-46ed-a33a-5f67e3d13d6a
+  password: MiTiVPN
+  tls: true
+  sni: swe.App-Cloud.ir
+- name: 未知66
+  type: vmess
+  server: www.speedtest.net
+  port: 443
+  uuid: c8b3fd38-cb60-434c-bd7e-63638226f4a8
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: httpupgrade
+  ws-path: /custom_config?ed=2560
+  ws-headers:
+    Host: grade.dgclix.ir
+  servername: grade.dgclix.ir
+- name: 更新于 07-04 12:01 by https://github.com/ts-sf/fly
+  type: vmess
+  server: 127.1.1.127
+  port: 80
+  uuid: 602736e4-a2e8-4eb3-9fc9-7c7082925365
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: tcp
+- name: 未知
+  type: vmess
+  server: 45.89.223.61
+  port: 2083
+  uuid: b56e65b2-18b1-44fb-90ac-5314d261f01d
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /
+- name: 未知2
+  type: vmess
+  server: 104.17.121.43
+  port: 443
+  uuid: e9947b42-27ed-401e-b75e-c9ebd357c0f3
   alterId: 0
   cipher: auto
   tls: true
   network: ws
   ws-path: /
   ws-headers:
-    Host: linkxt.gozar8.ir
-  servername: linkxt.gozar8.ir
-- name: 未知21
+    Host: omkuzygiv.com
+  servername: omkuzygiv.com
+- name: 未知4
   type: vmess
-  server: 57.129.121.230
-  port: 2053
-  uuid: 3d358ea5-465b-46ac-a2df-98ca1555194f
+  server: vip1314.vip
+  port: 443
+  uuid: 5f72f180-b21b-4b7a-8484-240759012606
   alterId: 0
   cipher: auto
   tls: true
-  network: tcp
-- name: 未知23
+  network: ws
+  ws-path: /5f72f180-b21b-4b7a-8484-240759096785
+  ws-headers:
+    Host: vip1314.vip
+  servername: vip1314.vip
+- name: 🇬🇧+GB+英国+3
+  type: vless
+  server: 194.36.55.198
+  port: 8443
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+  tls: true
+  network: ws
+  servername: juzibaipiao.5112233.xyz
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: juzibaipiao.5112233.xyz
+- name: 🇺🇸_US_美国->🇨🇦_CA_加拿大
   type: vmess
-  server: 161.248.30.3
-  port: 20086
-  uuid: 1006a928-2021-4a3b-beb5-d5853c6281c5
+  server: 162.159.1.33
+  port: 8080
+  uuid: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96-vm
+  ws-headers:
+    Host: pcs-referenced-camera-concerns.trycloudflare.com
+  servername: pcs-referenced-camera-concerns.trycloudflare.com
+- name: TG@ZDYZ2 -SG-Singapore1
+  type: vless
+  server: 35.240.184.147
+  port: 8092
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  tls: true
+  network: ws
+  servername: cfed.tgzdyz2.top
+  ws-opts:
+    path: TG@ZDYZ2
+    headers:
+      Host: cfed.tgzdyz2.top
+- name: 🏁RELAY-172.67.183.220-3842
+  type: vmess
+  server: jahfkjha.cfd
+  port: 443
+  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: ws
+  ws-path: /linkws
+  ws-headers:
+    Host: jahfkjha.cfd
+- name: 日本4|@ripaojiedian
+  type: ss
+  server: jp2.mhw7e2.online
+  port: 20014
+  cipher: chacha20-ietf-poly1305
+  password: 70747514-fb14-4f31-8390-e1f0453eff6d
+- name: 5Y-w5rm-fEByaXBhb2ppZWRpYW4=
+  type: ssr
+  server: vip3.niuniupremium.xyz
+  port: 11428
+  cipher: chacha20-ietf
+  password: Fhbe0z
+  obfs: tls1.2_ticket_auth
+  protocol: auth_aes128_sha1
+  obfs-param: 5db9910182.microsoft.com
+  protocol-param: auth_aes128_sha1
+- name: 🇰🇷+KR+韩国+44
+  type: vless
+  server: 112.168.91.60
+  port: 18888
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+  tls: true
+  network: ws
+  servername: juzibaipiao.5112233.xyz
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: juzibaipiao.5112233.xyz
+- name: 🇰🇷KR-152.67.218.38-0746
+  type: vmess
+  server: 152.67.218.38
+  port: 443
+  uuid: b5e9480a-b7aa-40a4-f9a7-5299b5e363b4
   alterId: 0
   cipher: auto
   tls: false
   network: ws
   ws-path: /
+  ws-headers:
+    Host: 152.67.218.38
+- name: 🇭🇰+HK+香港+65
+  type: vless
+  server: 129.227.139.137
+  port: 443
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  tls: true
+  network: ws
+  servername: cfed.tgzdyz2.top
+  ws-opts:
+    path: tg@zdyz2
+    headers:
+      Host: cfed.tgzdyz2.top
+- name: 🇩🇪DE-213.183.44.17-0813
+  type: ss
+  server: 213.183.44.17
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: XwWVRmO2kKu6qK1Xlih3Lfe6Lh3RRa9r
+- name: 🇰🇷+KR+韩国+53
+  type: vless
+  server: 129.154.222.116
+  port: 20010
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  tls: true
+  network: ws
+  servername: cfed.tgzdyz2.top
+  ws-opts:
+    path: tg@zdyz2
+    headers:
+      Host: cfed.tgzdyz2.top
+- name: 🏳️‍🌈应急节点- 网站:my.335570.xyz
+  type: vmess
+  server: cf.iepl1.me
+  port: 443
+  uuid: 3960f128-1163-40a3-8dd7-7c91176e14a5
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: ws
+  ws-path: /ws?ed=2048
+  ws-headers:
+    Host: 01.appleid.bf
+  servername: 01.appleid.bf
+- name: 🇰🇷韩国 01
+  type: vmess
+  server: cf.iepl1.me
+  port: 2086
+  uuid: 3960f128-1163-40a3-8dd7-7c91176e14a5
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /ws?ed=2048
+  ws-headers:
+    Host: krcc1.topf6.com
+  servername: krcc1.topf6.com
+- name: TG@ZDYZ2 -HK-Hong Kong8
+  type: vless
+  server: 101.36.118.159
+  port: 9988
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  tls: true
+  network: ws
+  servername: cfed.tgzdyz2.top
+  ws-opts:
+    path: TG@ZDYZ2
+    headers:
+      Host: cfed.tgzdyz2.top
+- name: 美国 CloudFlare节点_8
+  type: vmess
+  server: 104.21.224.8
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-path: /?ed=2048&Telegram🇨🇳
+  ws-headers:
+    Host: a.prapt1.ir
+  servername: a.prapt1.ir
+- name: 🇪🇸ES-5.188.181.201-0768
+  type: ss
+  server: 5.188.181.201
+  port: 9031
+  cipher: aes-256-cfb
+  password: BwcAUZk8hUFAkDGN
+- name: 🇪🇸ES-5.188.181.201-0794
+  type: ss
+  server: 5.188.181.201
+  port: 9037
+  cipher: aes-256-cfb
+  password: TN2YqghxeFDKZfLU
 - name: 🏁RELAY-104.21.7.162-3827
   type: vmess
   server: backend.app-browser.org
@@ -3850,130 +4077,6 @@ proxies:
   port: 8008
   cipher: aes-256-gcm
   password: XKFKl2rULjIp74
-- name: HK
-  type: vmess
-  server: 131.186.63.89
-  port: 11655
-  uuid: 4bf075f5-4d5e-4d39-f5ab-b32a86250f0e
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-path: /aa
-  ws-headers:
-    Host: hk.nbee.pp.ua
-  servername: hk.nbee.pp.ua
-- name: 未知8
-  type: vmess
-  server: nlt.reata.ir
-  port: 1020
-  uuid: 6244c41a-f4c1-4733-a654-c38f7729b13c
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-- name: HK2 589.4KB/s
-  type: vmess
-  server: 31.77.144.80
-  port: 110
-  uuid: fbd4fc4c-5a2c-4c28-81d1-3d44bb3757f3
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-- name: HK3
-  type: vmess
-  server: e0349a52-sv8cg0-t7uinf-i8ie.hk3.p5pv.com
-  port: 80
-  uuid: 990e8f34-bd4f-11ef-bdb9-f23c91cfbbc9
-  alterId: 2
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: broadcastlv.chat.bilibili.com
-- name: 未知10
-  type: trojan
-  server: 104.16.72.41
-  port: 443
-  password: f922fa0f-3311-4368-85ff-cf65e727c854
-  tls: true
-  sni: space.byu.id.yxls.eu.cc
-- name: 未知11
-  type: trojan
-  server: 104.19.230.21
-  port: 443
-  password: MiTiVPN
-  tls: true
-  sni: Nl.App-Cloud.ir
-- name: 未知12
-  type: vmess
-  server: 158.51.121.63
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-path: linkvws
-  ws-headers:
-    Host: seribus.org
-  servername: seribus.org
-- name: 未知13
-  type: vmess
-  server: 47.251.91.241
-  port: 42899
-  uuid: 0925b355-2bcd-4eae-9720-d2709e4f7e36
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-- name: 未知14
-  type: vmess
-  server: 12812.shomaparvazroyadetonnist-bypassishere.lat
-  port: 12812
-  uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-path: /ad80f8ec-4861-11f0-a948-6a75f667b472?ed=2048
-  ws-headers:
-    Host: ad80f8ec-4861-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
-  servername: ad80f8ec-4861-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
-- name: 未知15
-  type: trojan
-  server: 104.16.72.2
-  port: 443
-  password: 86957ec0-b213-433b-a43b-51f2175e0ec3
-  tls: true
-  sni: space.byu.id.yxls.eu.cc
-- name: 未知16
-  type: vmess
-  server: de5.taskflowhub.org
-  port: 2087
-  uuid: 01ccfa7a-8de7-451d-bd41-1957acaba15f
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-path: /realtime
-  ws-headers:
-    Host: de5.taskflowhub.org
-  servername: de5.taskflowhub.org
-- name: TG@ZDYZ2 -HK-Hong Kong8
-  type: vless
-  server: 101.36.118.159
-  port: 9988
-  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-  tls: true
-  network: ws
-  servername: cfed.tgzdyz2.top
-  ws-opts:
-    path: TG@ZDYZ2
-    headers:
-      Host: cfed.tgzdyz2.top
 - name: TG频道:@hkaa0▓中国
   type: trojan
   server: falungong.19890604.day
@@ -3993,177 +4096,6 @@ proxies:
   ws-path: /sba-vm?ed=2048
   ws-headers:
     Host: deee.horryan4.eu.org
-- name: 🏁RELAY-172.67.183.220-3842
-  type: vmess
-  server: jahfkjha.cfd
-  port: 443
-  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-path: /linkws
-  ws-headers:
-    Host: jahfkjha.cfd
-- name: 日本4|@ripaojiedian
-  type: ss
-  server: jp2.mhw7e2.online
-  port: 20014
-  cipher: chacha20-ietf-poly1305
-  password: 70747514-fb14-4f31-8390-e1f0453eff6d
-- name: 5Y-w5rm-fEByaXBhb2ppZWRpYW4=
-  type: ssr
-  server: vip3.niuniupremium.xyz
-  port: 11428
-  cipher: chacha20-ietf
-  password: Fhbe0z
-  obfs: tls1.2_ticket_auth
-  protocol: auth_aes128_sha1
-  obfs-param: 5db9910182.microsoft.com
-  protocol-param: auth_aes128_sha1
-- name: 🇰🇷+KR+韩国+44
-  type: vless
-  server: 112.168.91.60
-  port: 18888
-  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-  tls: true
-  network: ws
-  servername: juzibaipiao.5112233.xyz
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: juzibaipiao.5112233.xyz
-- name: 🇬🇧+GB+英国+3
-  type: vless
-  server: 194.36.55.198
-  port: 8443
-  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-  tls: true
-  network: ws
-  servername: juzibaipiao.5112233.xyz
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: juzibaipiao.5112233.xyz
-- name: 未知6
-  type: vmess
-  server: www.speedtest.net
-  port: 443
-  uuid: c8b3fd38-cb60-434c-bd7e-63638226f4a8
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: httpupgrade
-  ws-path: /custom_config?ed=2560
-  ws-headers:
-    Host: grade.dgclix.ir
-  servername: grade.dgclix.ir
-- name: 未知22
-  type: vmess
-  server: www.speedtest.net
-  port: 8080
-  uuid: 72f5bd85-6d92-4644-a1c4-542a92896a8b
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: httpupgrade
-  ws-path: /custom_config?ed=2560
-  ws-headers:
-    Host: up.dgclix.ir
-- name: 未知9
-  type: trojan
-  server: 188.114.97.6
-  port: 443
-  password: humanity
-  tls: true
-  sni: www.calmloud.com
-- name: 更新于 07-04 01:47 by https://github.com/ts-sf/fly
-  type: vmess
-  server: 127.1.1.127
-  port: 80
-  uuid: 602736e4-a2e8-4eb3-9fc9-7c7082925365
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-- name: 未知
-  type: vmess
-  server: 102.177.189.101
-  port: 443
-  uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-path: /4fc128ce-4845-11f0-a948-6a75f667b472?ed=2365
-  ws-headers:
-    Host: 4fc128ce-4845-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
-  servername: 4fc128ce-4845-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
-- name: 未知2
-  type: vmess
-  server: 188.114.96.145
-  port: 80
-  uuid: 43dcdce1-3cea-4193-bc8d-90b92071d779
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1
-  ws-headers:
-    Host: tr1-smart.adelping.com
-- name: 未知3
-  type: vmess
-  server: 103.179.142.212
-  port: 22047
-  uuid: 948763b5-a064-453c-a015-185cb183bbfe
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /
-- name: 🇺🇸US美国
-  type: trojan
-  server: 104.18.152.204
-  port: 443
-  password: humanity
-  tls: true
-  sni: www.ignitelimit.com
-- name: 未知4
-  type: trojan
-  server: 104.18.152.225
-  port: 443
-  password: MiTiVPN
-  tls: true
-  sni: swe.App-Cloud.ir
-- name: 未知5
-  type: vmess
-  server: time.ir
-  port: 443
-  uuid: last-update-time
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: time.ir
-  servername: time.ir
-- name: 未知7
-  type: vmess
-  server: daroo.iran-shop.co
-  port: 2087
-  uuid: f192a2a2-b1f8-4acb-b51d-8f9aa276ef42
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /vmess
-- name: 🇺🇸US美国2 300.1KB/s
-  type: ss
-  server: 38.54.80.160
-  port: 16292
-  cipher: chacha20-ietf-poly1305
-  password: r_NRe-+WRq2zVqMpCnJtTESlT8WyffHyFy
 - name: 🇫🇷FR-51.15.27.48-0708
   type: ss
   server: 51.15.27.48
@@ -4195,61 +4127,6 @@ proxies:
   port: 9056
   cipher: aes-256-cfb
   password: rNBfNuuANFCAk7KB
-- name: 🇺🇸_US_美国->🇨🇦_CA_加拿大
-  type: vmess
-  server: 162.159.1.33
-  port: 8080
-  uuid: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96-vm
-  ws-headers:
-    Host: pcs-referenced-camera-concerns.trycloudflare.com
-  servername: pcs-referenced-camera-concerns.trycloudflare.com
-- name: TG@ZDYZ2 -SG-Singapore1
-  type: vless
-  server: 35.240.184.147
-  port: 8092
-  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-  tls: true
-  network: ws
-  servername: cfed.tgzdyz2.top
-  ws-opts:
-    path: TG@ZDYZ2
-    headers:
-      Host: cfed.tgzdyz2.top
-- name: 🇰🇷KR-152.67.218.38-0746
-  type: vmess
-  server: 152.67.218.38
-  port: 443
-  uuid: b5e9480a-b7aa-40a4-f9a7-5299b5e363b4
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: 152.67.218.38
-- name: 🇭🇰+HK+香港+65
-  type: vless
-  server: 129.227.139.137
-  port: 443
-  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-  tls: true
-  network: ws
-  servername: cfed.tgzdyz2.top
-  ws-opts:
-    path: tg@zdyz2
-    headers:
-      Host: cfed.tgzdyz2.top
-- name: 🇩🇪DE-213.183.44.17-0813
-  type: ss
-  server: 213.183.44.17
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: XwWVRmO2kKu6qK1Xlih3Lfe6Lh3RRa9r
 - name: 🇺🇸US-38.75.136.135-0832
   type: ss
   server: 38.75.136.135
@@ -4262,173 +4139,322 @@ proxies:
   port: 443
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 美国 CloudFlare节点_8
-  type: vmess
-  server: 104.21.224.8
-  port: 80
-  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-path: /?ed=2048&Telegram🇨🇳
-  ws-headers:
-    Host: a.prapt1.ir
-  servername: a.prapt1.ir
-- name: 🇪🇸ES-5.188.181.201-0768
-  type: ss
-  server: 5.188.181.201
-  port: 9031
-  cipher: aes-256-cfb
-  password: BwcAUZk8hUFAkDGN
-- name: 🇪🇸ES-5.188.181.201-0794
-  type: ss
-  server: 5.188.181.201
-  port: 9037
-  cipher: aes-256-cfb
-  password: TN2YqghxeFDKZfLU
-- name: 🇰🇷+KR+韩国+53
+- name: 🇺🇸_美国_43
   type: vless
-  server: 129.154.222.116
-  port: 20010
-  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  server: 192.9.138.69
+  port: 21009
+  uuid: ea057aa8-6c6f-44f4-d347-7a87e835c0dc
   tls: true
   network: ws
-  servername: cfed.tgzdyz2.top
+  servername: us2.wxgqlfx.icu
   ws-opts:
-    path: tg@zdyz2
+    path: /TG@wxgqlfx
     headers:
-      Host: cfed.tgzdyz2.top
-- name: 🏳️‍🌈应急节点- 网站:my.335570.xyz
-  type: vmess
-  server: cf.iepl1.me
+      Host: us2.wxgqlfx.icu
+- name: 🏳️_未知_44
+  type: trojan
+  server: 104.25.112.190
   port: 443
-  uuid: 3960f128-1163-40a3-8dd7-7c91176e14a5
-  alterId: 0
-  cipher: auto
+  password: humanity
+  tls: true
+  sni: www.gossipglove.com
+- name: 🏳️_未知_45
+  type: trojan
+  server: 188.114.98.0
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.creationlong.org
+- name: 🏳️_未知_46
+  type: trojan
+  server: 104.18.139.67
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.creationlong.org
+- name: 🏳️_未知_47
+  type: trojan
+  server: www.creationlong.org
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.creationlong.org
+- name: 🏳️_未知_48
+  type: trojan
+  server: 104.17.177.143
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.ignitelimit.com
+- name: 🏳️_未知_49
+  type: trojan
+  server: 104.19.208.184
+  port: 443
+  password: humanity
+  tls: true
+  sni: www.multiplydose.com
+- name: 🇪🇸_西班牙_33
+  type: trojan
+  server: 103.45.245.33
+  port: 38917
+  password: 3488bece2c80da3273816256daf0ba46
+  tls: true
+  sni: madrid-1.edge.artfilters-ai.com
+- name: 🇬🇧_英国_34
+  type: trojan
+  server: 185.127.17.101
+  port: 47291
+  password: c305d2794bd6f9aa3588aff4cd1797fb
+  tls: true
+  sni: 185.127.17.101.sslip.io
+- name: 🇮🇱_以色列_35
+  type: trojan
+  server: 185.162.126.75
+  port: 43917
+  password: 67348f793523cdbc0497059a76b1d54f
+  tls: true
+  sni: 185.162.126.75.sslip.io
+- name: 🇫🇷_法国_39
+  type: vless
+  server: 162.19.79.101
+  port: 8443
+  uuid: ea057aa8-6c6f-44f4-d347-7a87e835c0dc
   tls: true
   network: ws
-  ws-path: /ws?ed=2048
-  ws-headers:
-    Host: 01.appleid.bf
-  servername: 01.appleid.bf
-- name: 🇰🇷韩国 01
+  servername: us2.wxgqlfx.icu
+  ws-opts:
+    path: /TG@wxgqlfx
+    headers:
+      Host: us2.wxgqlfx.icu
+- name: 🇺🇸_美国_40
+  type: vless
+  server: 185.186.245.22
+  port: 81
+  uuid: ea057aa8-6c6f-44f4-d347-7a87e835c0dc
+  tls: true
+  network: ws
+  servername: us2.wxgqlfx.icu
+  ws-opts:
+    path: /TG@wxgqlfx
+    headers:
+      Host: us2.wxgqlfx.icu
+- name: 🇯🇵_日本_41
+  type: vless
+  server: 158.101.146.3
+  port: 54516
+  uuid: ea057aa8-6c6f-44f4-d347-7a87e835c0dc
+  tls: true
+  network: ws
+  servername: us2.wxgqlfx.icu
+  ws-opts:
+    path: /TG@wxgqlfx
+    headers:
+      Host: us2.wxgqlfx.icu
+- name: 🇯🇵_日本_85
+  type: vless
+  server: 158.101.146.3
+  port: 44872
+  uuid: ea057aa8-6c6f-44f4-d347-7a87e835c0dc
+  tls: true
+  network: ws
+  servername: us2.wxgqlfx.icu
+  ws-opts:
+    path: /TG@wxgqlfx
+    headers:
+      Host: us2.wxgqlfx.icu
+- name: 🏳️_未知_42
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  uuid: b2f6aa3a-2550-4a1c-b2c0-1c94b1207217
+  tls: true
+  network: ws
+  servername: JoinProxyVPN11.terazhediii.info
+  ws-opts:
+    path: /hdgrbws#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI
+    headers:
+      Host: terazhediii.info
+- name: 🇫🇷_法国_13
+  type: vless
+  server: gr1.fifapes.monster
+  port: 8882
+  uuid: eab915bc-d2df-73d1-47d0-6eb240497055
+  tls: false
+  network: tcp
+  ws-opts:
+    path: /
+- name: 🇦🇪_阿拉伯联合酋长国_14
+  type: vless
+  server: 78.17.198.194
+  port: 443
+  uuid: de2edd29-c746-4dc7-a50b-e0692b01209d
+  tls: false
+  network: tcp
+  servername: yahoo.com
+  ws-opts:
+    path: /
+- name: 🇱🇻_拉脱维亚_15
+  type: vless
+  server: fn.fifapes.monster
+  port: 2090
+  uuid: eab915bc-d2df-73d1-47d0-6eb240497055
+  tls: false
+  network: tcp
+  ws-opts:
+    path: /
+- name: 🇫🇷_法国_16
+  type: vless
+  server: it.fifapes.monster
+  port: 29148
+  uuid: eab915bc-d2df-73d1-47d0-6eb240497055
+  tls: false
+  network: tcp
+  ws-opts:
+    path: /
+- name: 🇲🇩_摩尔多瓦_17
+  type: vless
+  server: kzt-t14.plugvpn.ru
+  port: 443
+  uuid: 3d6518df-cab2-4840-83fa-a0d0759d1309
+  tls: false
+  network: tcp
+  servername: kzt-t14.plugvpn.ru
+  ws-opts:
+    path: /
+- name: 🇩🇪_德国_18
   type: vmess
-  server: cf.iepl1.me
-  port: 2086
-  uuid: 3960f128-1163-40a3-8dd7-7c91176e14a5
+  server: 82.198.246.250
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
   tls: false
-  network: ws
-  ws-path: /ws?ed=2048
-  ws-headers:
-    Host: krcc1.topf6.com
-  servername: krcc1.topf6.com
-- name: 8|美国2
-  type: hysteria2
-  server: mg2.mangshe.xyz
-  port: 2056
-  password: 78c2bad7-f5f3-41f2-88cc-81de9d05040b
-  sni: mg2.mangshe.xyz
-- name: 8|1
-  type: hysteria2
-  server: xjp1.mangshe.xyz
-  port: 2055
-  password: 78c2bad7-f5f3-41f2-88cc-81de9d05040b
-  sni: xjp1.mangshe.xyz
-- name: 8|JP
-  type: hysteria2
-  server: jp7.dexlos.com
-  port: 13778
-  password: 95D27EEF-B7AE-4076-BA39-40FDFA3D0F61
-- name: 8|DE
-  type: hysteria2
-  server: de.eyucdn.xyz
-  port: 2056
-  password: a084933d-0b41-4571-ae0c-7163b8c71ed1
-  sni: de.eyucdn.xyz
-- name: 8| HK
-  type: hysteria2
-  server: ffc60249-t53wg0-t92wi1-1qkeg.hk2.hyhuawei.com
+  network: tcp
+- name: 🇩🇪_德国_19
+  type: vmess
+  server: 82.198.246.214
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: tcp
+- name: 每天更新，请加电报群防止失联
+  type: vless
+  server: tr.iranfastspeed.com.tr
+  port: 59492
+  uuid: 5aa708a4-0134-4f24-ba6f-d775651bd21e
+  tls: false
+  network: tcp
+  servername: www.google.com:443
+  ws-opts:
+    path: /
+- name: 电报群：https://t.me/vvkj11
+  type: vless
+  server: 185.245.40.251
   port: 443
-  password: a305ac08-d136-11ee-b6db-f23c91cfbbc9
-  sni: ffc60249-t53wg0-t92wi1-1qkeg.hk2.hyhuawei.com
-- name: 8,9|@KAFING_2
-  type: hysteria2
-  server: 181.214.99.162
-  port: 35000
-  password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
-  sni: api.kermanshahi.org
-- name: 8|SG
-  type: hysteria2
-  server: sg3.oomz.ru
-  port: 30000
-  password: e7965e64-e001-4e8c-8273-39c61ff4a094
-  sni: bing.com
-- name: 8|TW
-  type: hysteria2
-  server: tw.oomz.ru
-  port: 30000
-  password: e7965e64-e001-4e8c-8273-39c61ff4a094
-  sni: bing.com
-- name: 9|🏠68@oneclickvpnkeys
-  type: hysteria2
-  server: fta.fontanvpn.com
+  uuid: a2415a12-3f92-4636-9823-9828d3ceb818
+  tls: false
+  network: tcp
+  servername: sun6-20.userapi.com
+  ws-opts:
+    path: /
+- name: 🇱🇹_立陶宛_5
+  type: vless
+  server: cherry-lt-01.live
+  port: 8443
+  uuid: a1472a7d-ca70-4490-a5a5-81537599861c
+  tls: false
+  network: tcp
+  servername: storage.yandex.net
+  ws-opts:
+    path: /
+- name: 🇭🇰_香港_6
+  type: trojan
+  server: jpbgp.netvigor.cc
+  port: 19128
+  password: OccIqeORGQwiNkwS
+  tls: true
+  sni: yazhou10.dynu.net
+- name: 🇳🇱_荷兰_7
+  type: vless
+  server: nid.hatvpn.org
   port: 443
-  password: 00dcd873-9211-4d61-ad35-87999906e5c8
-  sni: fta.fontanvpn.com
-- name: 9|84@oneclickvpnkeys
+  uuid: ebf2b955-ebff-4913-9cc0-d9c56870cfbe
+  tls: false
+  network: tcp
+  servername: nid.hatvpn.org
+  ws-opts:
+    path: /
+- name: 🇳🇱_荷兰_8
+  type: vless
+  server: 45.139.76.72
+  port: 443
+  uuid: 7d5fc75d-5353-49e8-ac3a-ccbada84840c
+  tls: false
+  network: tcp
+  servername: www.amd.com
+  ws-opts:
+    path: /
+- name: 🇸🇨_塞舌尔_9
+  type: vless
+  server: 45.145.56.145
+  port: 1932
+  uuid: 17930cee-cbea-484b-ad7f-7b8062825fee
+  tls: false
+  network: tcp
+  servername: www.vk.com
+  ws-opts:
+    path: /
+- name: 🇷🇺_俄罗斯_11
+  type: vless
+  server: 130.49.219.126
+  port: 8443
+  uuid: 2ee2b77f-e4cd-4e5d-af22-f9d919eeadd5
+  tls: true
+  network: tcp
+  servername: at16.fastlanehosting.ru
+  ws-opts:
+    path: /
+- name: 9|🍓93@oneclickvpnkeys
   type: hysteria2
-  server: 45.196.182.129
-  port: 8449
-  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
-  sni: https://t.me/WangCai2
-- name: 9|🍓85@oneclickvpnkeys
-  type: hysteria2
-  server: 45.196.182.130
-  port: 8449
-  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
-  sni: https://t.me/WangCai2🇨🇳
-- name: 9|🍓43@oneclickvpnkeys
-  type: hysteria2
-  server: 45.196.182.134
-  port: 8449
-  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
-  sni: https://t.me/WangCai2🇨🇳
-- name: 9|🍓42@oneclickvpnkeys
-  type: hysteria2
-  server: 45.196.182.138
-  port: 8449
-  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
-  sni: https://t.me/WangCai2🇨🇳
-- name: 9|🍓62@oneclickvpnkeys
-  type: hysteria2
-  server: 45.196.182.139
-  port: 8449
-  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
-  sni: https://t.me/WangCai2🇨🇳
-- name: 9|🍓65@oneclickvpnkeys
-  type: hysteria2
-  server: 45.196.182.150
-  port: 8449
-  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
-  sni: https://t.me/WangCai2🇨🇳
-- name: 9|🍓68@oneclickvpnkeys
-  type: hysteria2
-  server: 45.196.182.151
-  port: 8449
-  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
-  sni: https://t.me/WangCai2🇨🇳
-- name: 9|🍓69@oneclickvpnkeys
-  type: hysteria2
-  server: 45.196.182.152
+  server: 45.196.182.210
   port: 8449
   password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
   sni: https://t.me/WangCai2🇨🇳
-- name: 9|🍓74@oneclickvpnkeys
+- name: 9|🍓94@oneclickvpnkeys
   type: hysteria2
-  server: 45.196.182.153
+  server: 45.196.182.211
+  port: 8449
+  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
+  sni: https://t.me/WangCai2🇨🇳
+- name: 9|🍓95@oneclickvpnkeys
+  type: hysteria2
+  server: 45.196.182.205
+  port: 8449
+  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
+  sni: https://t.me/WangCai2🇨🇳
+- name: 9|🍓98@oneclickvpnkeys
+  type: hysteria2
+  server: 45.196.182.206
+  port: 8449
+  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
+  sni: https://t.me/WangCai2🇨🇳
+- name: 9|🍓92@oneclickvpnkeys
+  type: hysteria2
+  server: 45.196.182.207
+  port: 8449
+  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
+  sni: https://t.me/WangCai2🇨🇳
+- name: 9|3🍓@oneclickvpnkeys
+  type: hysteria2
+  server: 45.196.182.208
+  port: 8449
+  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
+  sni: https://t.me/WangCai2🇨🇳
+- name: 9|🍓99@oneclickvpnkeys
+  type: hysteria2
+  server: 45.196.182.209
   port: 8449
   password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
   sni: https://t.me/WangCai2🇨🇳
@@ -4468,39 +4494,104 @@ proxies:
   port: 8449
   password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
   sni: https://t.me/WangCai2🇨🇳
-- name: 9|🍓95@oneclickvpnkeys
+- name: 9|🍓65@oneclickvpnkeys
   type: hysteria2
-  server: 45.196.182.205
+  server: 45.196.182.150
   port: 8449
   password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
   sni: https://t.me/WangCai2🇨🇳
-- name: 9|🍓98@oneclickvpnkeys
+- name: 9|🍓68@oneclickvpnkeys
   type: hysteria2
-  server: 45.196.182.206
+  server: 45.196.182.151
   port: 8449
   password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
   sni: https://t.me/WangCai2🇨🇳
-- name: 9|🍓92@oneclickvpnkeys
+- name: 9|🍓69@oneclickvpnkeys
   type: hysteria2
-  server: 45.196.182.207
+  server: 45.196.182.152
   port: 8449
   password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
   sni: https://t.me/WangCai2🇨🇳
-- name: 9|3🍓@oneclickvpnkeys
+- name: 9|🍓74@oneclickvpnkeys
   type: hysteria2
-  server: 45.196.182.208
+  server: 45.196.182.153
   port: 8449
   password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
   sni: https://t.me/WangCai2🇨🇳
-- name: 9|🍓99@oneclickvpnkeys
+- name: 9|🍓84@oneclickvpnkeys
   type: hysteria2
-  server: 45.196.182.209
+  server: 45.196.182.129
   port: 8449
   password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
   sni: https://t.me/WangCai2🇨🇳
-- name: 9|🍓93@oneclickvpnkeys
+- name: 9|🍓85@oneclickvpnkeys
   type: hysteria2
-  server: 45.196.182.210
+  server: 45.196.182.130
   port: 8449
   password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
   sni: https://t.me/WangCai2🇨🇳
+- name: 9|🍓43@oneclickvpnkeys
+  type: hysteria2
+  server: 45.196.182.134
+  port: 8449
+  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
+  sni: https://t.me/WangCai2🇨🇳
+- name: 9|🍓42@oneclickvpnkeys
+  type: hysteria2
+  server: 45.196.182.138
+  port: 8449
+  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
+  sni: https://t.me/WangCai2🇨🇳
+- name: 9|🍓62@oneclickvpnkeys
+  type: hysteria2
+  server: 45.196.182.139
+  port: 8449
+  password: 03e7f55f-22f8-4564-880f-b86c8cdbf140
+  sni: https://t.me/WangCai2🇨🇳
+- name: 8|美国2
+  type: hysteria2
+  server: mg2.mangshe.xyz
+  port: 2056
+  password: 78c2bad7-f5f3-41f2-88cc-81de9d05040b
+  sni: mg2.mangshe.xyz
+- name: 8|JP
+  type: hysteria2
+  server: jp7.dexlos.com
+  port: 13778
+  password: 95D27EEF-B7AE-4076-BA39-40FDFA3D0F61
+- name: 8|DE
+  type: hysteria2
+  server: de.eyucdn.xyz
+  port: 2056
+  password: a084933d-0b41-4571-ae0c-7163b8c71ed1
+  sni: de.eyucdn.xyz
+- name: 8| HK
+  type: hysteria2
+  server: ffc60249-t53wg0-t92wi1-1qkeg.hk2.hyhuawei.com
+  port: 443
+  password: a305ac08-d136-11ee-b6db-f23c91cfbbc9
+  sni: ffc60249-t53wg0-t92wi1-1qkeg.hk2.hyhuawei.com
+- name: 8,9|@KAFING_2
+  type: hysteria2
+  server: 181.214.99.162
+  port: 35000
+  password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
+  sni: api.kermanshahi.org
+- name: 8|SG
+  type: hysteria2
+  server: sg3.oomz.ru
+  port: 30000
+  password: e7965e64-e001-4e8c-8273-39c61ff4a094
+  sni: bing.com
+- name: 8|TW
+  type: hysteria2
+  server: tw.oomz.ru
+  port: 30000
+  password: e7965e64-e001-4e8c-8273-39c61ff4a094
+  sni: bing.com
+- name: 8|1
+  type: hysteria2
+  server: xjp1.mangshe.xyz
+  port: 2055
+  password: 78c2bad7-f5f3-41f2-88cc-81de9d05040b
+  sni: xjp1.mangshe.xyz
